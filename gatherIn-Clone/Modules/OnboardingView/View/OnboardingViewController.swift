@@ -43,11 +43,8 @@ class OnboardingViewController: UIViewController {
     
     // MARK:- Actions
     @IBAction func skipButton(_ sender: UIButton) {
-        // Skip and present the new viewController and dissmiss the previous
-        
-        print("Skip.")
-        print("present next ViewController")
-        
+        self.saveOnBoardingToDefaults()
+        self.showMainVC()
     }
     
     @IBAction func NextButton(_ sender: UIButton) {
@@ -58,9 +55,11 @@ class OnboardingViewController: UIViewController {
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             if currentCell == 2 {
                 nextBtn.setTitle("Login", for: .normal)
-                onboardingSeenByUser = true
-                self.defaults.setValue(onboardingSeenByUser, forKey: "HasSeenOnBoarding")
+                saveOnBoardingToDefaults()
+                self.showMainVC()
+
             }
+
         }else{
             currentCell = 0
             let indexPath = IndexPath(item: 0, section: 0)
@@ -70,7 +69,24 @@ class OnboardingViewController: UIViewController {
         
     }
     
+    private func saveOnBoardingToDefaults() {
+        onboardingSeenByUser = true
+        self.defaults.setValue(onboardingSeenByUser, forKey: "HasSeenOnBoarding")
+
+    }
     
+    private func showMainVC() {
+        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainView") as! MainViewController
+        let navControl = UINavigationController()
+        
+        navControl.modalPresentationStyle = .fullScreen
+        navControl.pushViewController(mainVC, animated: true)
+        
+        self.dismiss(animated: true, completion: nil)
+        self.present(navControl, animated: true, completion: nil)
+
+    }
+
 }
 
 // MARK:- CollectionView
@@ -110,14 +126,4 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         return cell
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if currentCell == 2  {
-            print("Last one")
-        }
-        
-    }
-    
-    
 }
-

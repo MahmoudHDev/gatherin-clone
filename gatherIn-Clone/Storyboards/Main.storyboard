@@ -12,7 +12,7 @@
         <!--Welcome-->
         <scene sceneID="Fbl-Bk-B3g">
             <objects>
-                <viewController storyboardIdentifier="MainView" id="sbf-ew-mDy" customClass="MainViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainView" modalPresentationStyle="fullScreen" id="sbf-ew-mDy" customClass="MainViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w9U-I4-zBq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
