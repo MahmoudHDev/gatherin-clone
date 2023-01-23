@@ -22,19 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="590" height="904"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBL-w4-hVL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                                <rect key="frame" x="95" y="102" width="400" height="700"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="B9z-GM-rbI"/>
-                                    <constraint firstAttribute="height" constant="700" id="nBa-Sn-Kgy"/>
+                                    <constraint firstAttribute="height" constant="700" id="GVW-wp-Snt"/>
+                                    <constraint firstAttribute="width" constant="400" id="ugE-I6-Xe4"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="TBL-w4-hVL" secondAttribute="bottom" id="LeI-gg-3R6"/>
-                            <constraint firstAttribute="trailing" secondItem="TBL-w4-hVL" secondAttribute="trailing" id="UyE-dQ-0KW"/>
-                            <constraint firstItem="TBL-w4-hVL" firstAttribute="top" secondItem="VXz-Y3-UyF" secondAttribute="top" id="gVy-Ol-s1B"/>
-                            <constraint firstItem="TBL-w4-hVL" firstAttribute="leading" secondItem="VXz-Y3-UyF" secondAttribute="leading" id="yAj-hE-21E"/>
+                            <constraint firstItem="TBL-w4-hVL" firstAttribute="centerY" secondItem="VXz-Y3-UyF" secondAttribute="centerY" id="0PU-3X-JR1"/>
+                            <constraint firstItem="TBL-w4-hVL" firstAttribute="centerX" secondItem="VXz-Y3-UyF" secondAttribute="centerX" id="5c5-1m-eHd"/>
                         </constraints>
                     </view>
                 </subviews>

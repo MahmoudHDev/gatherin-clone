@@ -17,7 +17,7 @@ class OnboardingCVC: UICollectionViewCell {
     // MARK:- Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("nib has been awaken")
+        
     }
     
     // MARK:- Methods
