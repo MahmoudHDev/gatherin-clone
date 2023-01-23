@@ -114,8 +114,8 @@
 		BCB2B748297ABBA20083975C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BCCBA61F297ABFC9008669F4 /* collectionView */,
 				BCF8E1EA297D625F00368E18 /* OnboardingViewController.swift */,
+				BCCBA61F297ABFC9008669F4 /* collectionView */,
 				BCF8E1ED297D628300368E18 /* Onboarding.storyboard */,
 			);
 			path = View;

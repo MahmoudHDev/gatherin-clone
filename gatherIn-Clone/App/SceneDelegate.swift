@@ -10,16 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let defaults = UserDefaults.standard
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        // if userHasSeenIntro = true { show the loginViewController
-//        let layout = UICollectionViewLayout()
+        let hasSeenByUser = defaults.bool(forKey: "HasSeenOnBoarding")
         
-//        let cvc = OnboardingCollectionViewController(collectionViewLayout: layout)
+        if hasSeenByUser {
+            // Show Main
+            print("ShowMain")
+        }else{
+            print("Show Onboarding")
+        }
+        
+        
         let initVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "onboarding") as! OnboardingViewController
         window.rootViewController = initVC
         self.window = window

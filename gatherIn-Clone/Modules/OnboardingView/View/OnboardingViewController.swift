@@ -17,6 +17,9 @@ class OnboardingViewController: UIViewController {
     // MARK:- Properties
     var arrImgs = [UIImage]()
     var currentCell = 0
+    var onboardingSeenByUser: Bool = false
+    let defaults = UserDefaults.standard
+    
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,7 @@ class OnboardingViewController: UIViewController {
     // MARK:- Actions
     @IBAction func skipButton(_ sender: UIButton) {
         // Skip and present the new viewController and dissmiss the previous
+        
         print("Skip.")
         print("present next ViewController")
         
@@ -54,6 +58,8 @@ class OnboardingViewController: UIViewController {
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             if currentCell == 2 {
                 nextBtn.setTitle("Login", for: .normal)
+                onboardingSeenByUser = true
+                self.defaults.setValue(onboardingSeenByUser, forKey: "HasSeenOnBoarding")
             }
         }else{
             currentCell = 0
@@ -63,6 +69,7 @@ class OnboardingViewController: UIViewController {
         }
         
     }
+    
     
 }
 
