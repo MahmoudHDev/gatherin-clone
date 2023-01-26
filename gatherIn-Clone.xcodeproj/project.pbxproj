@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7672B09EF16A759EC6DF2C71 /* Pods_gatherIn_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2968C29791BCF7DA1F6CAE6 /* Pods_gatherIn_Clone.framework */; };
+		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
 		BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B735297ABA0D0083975C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		70B3EAA6EFCF9EC80B223846 /* Pods-gatherIn-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gatherIn-Clone.release.xcconfig"; path = "Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		90849C973129D3B255DE986A /* Pods-gatherIn-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gatherIn-Clone.debug.xcconfig"; path = "Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		B2968C29791BCF7DA1F6CAE6 /* Pods_gatherIn_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gatherIn_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB2B72C297ABA080083975C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB2B72E297ABA080083975C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC171307298296E500300C29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC1713082982973D00300C29 /* ShadowEffect.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BCB2B720297ABA080083975C = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		BCB2B72B297ABA080083975C /* gatherIn-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BC171307298296E500300C29 /* Extensions */,
 				BCB2B744297ABB6D0083975C /* Configuration */,
 				BCB2B743297ABB5D0083975C /* App */,
 				BCB2B74A297ABBC70083975C /* Storyboards */,
@@ -357,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,

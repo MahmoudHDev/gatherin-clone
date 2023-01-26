@@ -110,6 +110,20 @@
                                                                     <constraint firstItem="FvD-XU-ecC" firstAttribute="centerY" secondItem="xwm-dw-n9z" secondAttribute="centerY" id="f1p-uK-eOO"/>
                                                                     <constraint firstItem="FvD-XU-ecC" firstAttribute="centerX" secondItem="xwm-dw-n9z" secondAttribute="centerX" id="hQn-kv-O4X"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="0.20000000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
                                                                 <rect key="frame" x="135" y="0.0" width="239" height="60"/>
@@ -129,6 +143,14 @@
                                                                     <constraint firstItem="5fY-bo-In7" firstAttribute="leading" secondItem="XFU-6P-ckV" secondAttribute="leading" id="q35-JX-Ge3"/>
                                                                     <constraint firstAttribute="trailing" secondItem="5fY-bo-In7" secondAttribute="trailing" id="rQT-WT-Cyv"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="0.20000000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
