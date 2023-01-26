@@ -36,6 +36,8 @@ class MainViewController: UIViewController {
     @IBAction func forIndividutualBtn(_ sender: UIButton) {
         print("Individuals' view")
         // self.push(//)
+        let individualsVC = UIStoryboard(name: "Individuals", bundle: nil).instantiateViewController(identifier: "individualsView") as! IndividualsViewController
+        self.navigationController?.pushViewController(individualsVC, animated: true)
     }
     
     @IBAction func forBusinessBtn(_ sender: UIButton) {

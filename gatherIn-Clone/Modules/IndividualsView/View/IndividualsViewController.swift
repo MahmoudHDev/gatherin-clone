@@ -14,9 +14,9 @@ class IndividualsViewController: UIViewController {
     @IBOutlet weak var phoneNumberLbl           : UILabel!
     
     @IBOutlet weak var countryCodeContainerView : UIView!
-    @IBOutlet weak var countrycodeImg           : UIImage!
+    @IBOutlet weak var countrycodeImg           : UIImageView!
     @IBOutlet weak var CountryCodeBtn           : UIButton!
-    @IBOutlet weak var chevonorArrowImg         : UIImage!
+    @IBOutlet weak var chevonorArrowImg         : UIImageView!
     
     @IBOutlet weak var phoneNumberContainerView : UIView!
     @IBOutlet weak var phoneNumberTextField     : UITextField!
@@ -37,9 +37,17 @@ class IndividualsViewController: UIViewController {
     }
     
     // MARK:- Methods
+    private func styleUI() {
+        
+    }
+    
     
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func countryCodeBtn(_ sender: UIButton) {
         
     }
     
