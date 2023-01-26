@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Xcd-71-IU1" secondAttribute="bottom" id="qpb-VV-ssn"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-0j-Ozv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-0j-Ozv">
                                 <rect key="frame" x="0.0" y="130" width="414" height="606"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6u-CQ-0um">
@@ -58,7 +58,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QYb-ny-Dea" userLabel="CenterStackView">
-                                                <rect key="frame" x="20" y="141.66666666666671" width="374" height="268.33333333333326"/>
+                                                <rect key="frame" x="20" y="141.66666666666671" width="374" height="283.33333333333326"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZD-Ee-epN">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
@@ -66,7 +66,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="39r-Jr-BqO" userLabel="PhoneAndCodeStackView">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="39r-Jr-BqO" userLabel="PhoneAndCodeStackView">
                                                         <rect key="frame" x="0.0" y="30.333333333333314" width="374" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwm-dw-n9z" userLabel="CountryCodeView">
@@ -83,7 +83,6 @@
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-mw-yaQ">
                                                                                 <rect key="frame" x="28" y="0.0" width="53" height="30"/>
-                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                                                 <state key="normal" title=" ++966">
                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,21 +104,23 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="120" id="5Kc-ih-fHe"/>
                                                                     <constraint firstItem="FvD-XU-ecC" firstAttribute="centerY" secondItem="xwm-dw-n9z" secondAttribute="centerY" id="f1p-uK-eOO"/>
                                                                     <constraint firstItem="FvD-XU-ecC" firstAttribute="centerX" secondItem="xwm-dw-n9z" secondAttribute="centerX" id="hQn-kv-O4X"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
-                                                                <rect key="frame" x="146" y="0.0" width="228" height="60"/>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
+                                                                <rect key="frame" x="135" y="0.0" width="239" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05123456789" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="228" height="60"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05123456789" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="239" height="60"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                     </textField>
                                                                 </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="5fY-bo-In7" firstAttribute="centerY" secondItem="XFU-6P-ckV" secondAttribute="centerY" id="1SM-a3-ERf"/>
                                                                     <constraint firstAttribute="bottom" secondItem="5fY-bo-In7" secondAttribute="bottom" id="4J1-xc-ZR4"/>
@@ -140,32 +141,42 @@
                                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-rG-SfX">
-                                                        <rect key="frame" x="0.0" y="100.33333333333331" width="374" height="60"/>
-                                                        <color key="backgroundColor" red="0.35294117650000001" green="0.25098039220000001" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="UEO-q0-2cq"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="Sign in">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="loginBtn:" destination="PNQ-W9-SMq" eventType="touchUpInside" id="md8-xS-wnd"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will message you with the code shortly to the number that you have entered. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-19-ca5">
-                                                        <rect key="frame" x="0.0" y="170.33333333333331" width="374" height="44"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                        <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please make sure that your phone number is correct." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YS-o6-EAI">
-                                                        <rect key="frame" x="0.0" y="224.33333333333331" width="374" height="44"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                                        <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TLi-cw-4qs" userLabel="LoginBtnAndNoteStackViews">
+                                                        <rect key="frame" x="0.0" y="100.33333333333331" width="374" height="183"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-rG-SfX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                                <color key="backgroundColor" red="0.35294117650000001" green="0.25098039220000001" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="UEO-q0-2cq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                                <state key="normal" title="Sign in">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="loginBtn:" destination="PNQ-W9-SMq" eventType="touchUpInside" id="md8-xS-wnd"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-97-9Hv" userLabel="NoteAndConfirmationStackView">
+                                                                <rect key="frame" x="0.0" y="85" width="374" height="98"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will message you with the code shortly to the number that you have entered. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-19-ca5">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                        <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please make sure that your phone number is correct." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YS-o6-EAI">
+                                                                        <rect key="frame" x="0.0" y="54" width="374" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                                        <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -214,7 +225,7 @@
                         <outlet property="noteMessageLbl" destination="0YS-o6-EAI" id="heg-ak-7EV"/>
                         <outlet property="phoneNumberContainerView" destination="5fY-bo-In7" id="Kkn-AS-8lq"/>
                         <outlet property="phoneNumberLbl" destination="1ZD-Ee-epN" id="8IH-4r-6h4"/>
-                        <outlet property="phoneNumberTextField" destination="5fY-bo-In7" id="ZUN-YU-IkB"/>
+                        <outlet property="phoneNumberTextField" destination="5fY-bo-In7" id="GzZ-cJ-iMH"/>
                         <outlet property="welcomeLbl" destination="UHA-Nd-rfo" id="RZ4-6F-Kpj"/>
                     </connections>
                 </viewController>

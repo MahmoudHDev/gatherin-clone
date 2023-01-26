@@ -32,23 +32,31 @@ class IndividualsViewController: UIViewController {
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.styleUI()
     }
     
     // MARK:- Methods
     private func styleUI() {
         
+        self.loginBtn.layer.masksToBounds = false
+        self.loginBtn.clipsToBounds = true
+        self.loginBtn.layer.cornerRadius = 20
+
+        self.countryCodeContainerView.layer.cornerRadius = 22
+        self.countryCodeContainerView.layer.masksToBounds = false
+        self.countryCodeContainerView.clipsToBounds = true
+        
+        self.phoneNumberContainerView.layer.cornerRadius = 22
     }
     
     
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
-        
+        print("Send the confirmation code to the user")
     }
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {
-        
+        print("Show a tableview with the country Code")
     }
     
 }
