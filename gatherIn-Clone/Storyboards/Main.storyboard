@@ -9,24 +9,125 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome-->
+        <!--Main View Controller-->
         <scene sceneID="Fbl-Bk-B3g">
             <objects>
                 <viewController storyboardIdentifier="MainView" modalPresentationStyle="fullScreen" id="sbf-ew-mDy" customClass="MainViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w9U-I4-zBq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-gE-stS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfd-HO-z9V">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W89-Wj-IQG">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gather-in-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-ha-Ad6">
+                                                        <rect key="frame" x="75" y="37.5" width="225" height="175"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to use gather-in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-4C-c3g">
+                                                        <rect key="frame" x="10" y="214" width="355" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="s4a-4C-c3g" secondAttribute="trailing" constant="10" id="Gjn-GA-PP7"/>
+                                                    <constraint firstAttribute="height" constant="250" id="HYG-pT-8x6"/>
+                                                    <constraint firstItem="u2b-ha-Ad6" firstAttribute="centerY" secondItem="W89-Wj-IQG" secondAttribute="centerY" id="Lru-T7-An3"/>
+                                                    <constraint firstItem="s4a-4C-c3g" firstAttribute="leading" secondItem="W89-Wj-IQG" secondAttribute="leading" constant="10" id="dZK-Zi-psG"/>
+                                                    <constraint firstItem="u2b-ha-Ad6" firstAttribute="width" secondItem="W89-Wj-IQG" secondAttribute="width" multiplier="0.6" id="gyc-Py-haR"/>
+                                                    <constraint firstItem="u2b-ha-Ad6" firstAttribute="height" secondItem="W89-Wj-IQG" secondAttribute="height" multiplier="0.7" id="n9w-Eu-8iQ"/>
+                                                    <constraint firstItem="u2b-ha-Ad6" firstAttribute="centerX" secondItem="W89-Wj-IQG" secondAttribute="centerX" id="uwF-sZ-AcH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="s4a-4C-c3g" secondAttribute="bottom" constant="10" id="yJ8-sT-CR1"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0jl-KT-CzJ">
+                                                <rect key="frame" x="20" y="250" width="335" height="210"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-Uv-FnZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                                        <color key="backgroundColor" red="0.3529411764705882" green="0.25098039215686274" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="ocL-Lf-Ivr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                                        <state key="normal" title="For Individuals 👨‍👧‍👧">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="forIndividutualBtn:" destination="sbf-ew-mDy" eventType="touchUpInside" id="ou8-JO-h2r"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zd-4x-0At">
+                                                        <rect key="frame" x="0.0" y="110" width="335" height="100"/>
+                                                        <color key="backgroundColor" red="0.76922303439999995" green="0.68772745130000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="hbv-Xw-fhY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                                        <state key="normal" title="For Business 🏭">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="forBusinessBtn:" destination="sbf-ew-mDy" eventType="touchUpInside" id="Odd-Pt-BDW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="3tM-eC-Djo"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0jl-KT-CzJ" secondAttribute="trailing" constant="20" id="5NZ-XU-avQ"/>
+                                            <constraint firstItem="W89-Wj-IQG" firstAttribute="leading" secondItem="Gfd-HO-z9V" secondAttribute="leading" id="7xw-DE-Q9b"/>
+                                            <constraint firstItem="0jl-KT-CzJ" firstAttribute="top" secondItem="W89-Wj-IQG" secondAttribute="bottom" id="9x0-0c-N2G"/>
+                                            <constraint firstItem="0jl-KT-CzJ" firstAttribute="leading" secondItem="Gfd-HO-z9V" secondAttribute="leading" constant="20" id="U1Q-vc-QsY"/>
+                                            <constraint firstAttribute="bottom" secondItem="0jl-KT-CzJ" secondAttribute="bottom" constant="200" id="VZO-QR-0Gq"/>
+                                            <constraint firstAttribute="trailing" secondItem="W89-Wj-IQG" secondAttribute="trailing" id="jXn-ZO-umu"/>
+                                            <constraint firstItem="W89-Wj-IQG" firstAttribute="top" secondItem="Gfd-HO-z9V" secondAttribute="top" id="spn-jj-yuB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gfd-HO-z9V" firstAttribute="width" secondItem="lUq-gE-stS" secondAttribute="width" id="21A-Mg-4fG"/>
+                                    <constraint firstItem="Gfd-HO-z9V" firstAttribute="leading" secondItem="lUq-gE-stS" secondAttribute="leading" id="5ER-gH-uSC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gfd-HO-z9V" secondAttribute="bottom" id="c7u-EJ-IPU"/>
+                                    <constraint firstItem="Gfd-HO-z9V" firstAttribute="top" secondItem="lUq-gE-stS" secondAttribute="top" id="n1r-gm-qYk"/>
+                                    <constraint firstItem="Gfd-HO-z9V" firstAttribute="height" secondItem="lUq-gE-stS" secondAttribute="height" priority="250" id="sKx-XS-8fy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gfd-HO-z9V" secondAttribute="trailing" id="ui7-ZV-2PI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="48U-N2-7gc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="48U-N2-7gc" firstAttribute="bottom" secondItem="lUq-gE-stS" secondAttribute="bottom" id="TLA-V7-Jfa"/>
+                            <constraint firstItem="48U-N2-7gc" firstAttribute="trailing" secondItem="lUq-gE-stS" secondAttribute="trailing" id="kpf-5v-TK2"/>
+                            <constraint firstItem="lUq-gE-stS" firstAttribute="top" secondItem="48U-N2-7gc" secondAttribute="top" id="p6R-iJ-pgz"/>
+                            <constraint firstItem="lUq-gE-stS" firstAttribute="leading" secondItem="48U-N2-7gc" secondAttribute="leading" id="u6E-yr-ISD"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="wY9-yK-zsp"/>
+                    <navigationItem key="navigationItem" id="wY9-yK-zsp"/>
+                    <connections>
+                        <outlet property="businessBtn" destination="0Zd-4x-0At" id="qDT-Fu-eql"/>
+                        <outlet property="individualsBtn" destination="4dB-Uv-FnZ" id="pQw-h1-J04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJt-EK-Cv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="84.107946026986511"/>
+            <point key="canvasLocation" x="2039.2" y="84.107946026986511"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Gather-in-Logo" width="300" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

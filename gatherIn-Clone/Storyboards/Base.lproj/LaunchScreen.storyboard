@@ -17,18 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy2-ZL-M2g">
-                                <rect key="frame" x="86.5" y="316.5" width="202" height="34.5"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gather-in-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gto-2A-010">
+                                <rect key="frame" x="37.5" y="200" width="300" height="267"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fy2-ZL-M2g" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NjX-h3-G1U"/>
-                            <constraint firstItem="Fy2-ZL-M2g" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Wmf-pM-Wff"/>
+                            <constraint firstItem="gto-2A-010" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="O2b-kt-ugc"/>
+                            <constraint firstItem="gto-2A-010" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UDf-Tl-gDH"/>
+                            <constraint firstItem="gto-2A-010" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ylb-ln-L24"/>
+                            <constraint firstItem="gto-2A-010" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="eR7-vJ-dHP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +37,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gather-in-Logo" width="300" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
