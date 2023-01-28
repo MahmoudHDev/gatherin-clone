@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import PhoneNumberKit
+
 
 class IndividualsViewController: UIViewController {
     //MARK:- Outlets
@@ -19,7 +21,7 @@ class IndividualsViewController: UIViewController {
     @IBOutlet weak var chevonorArrowImg         : UIImageView!
     
     @IBOutlet weak var phoneNumberContainerView : UIView!
-    @IBOutlet weak var phoneNumberTextField     : UITextField!
+    @IBOutlet weak var phoneNumberTextField     : PhoneNumberTextField!
     
     @IBOutlet weak var errorMessageLbl          : UILabel!
     @IBOutlet weak var loginBtn                 : UIButton!
@@ -28,11 +30,16 @@ class IndividualsViewController: UIViewController {
     
     
     // MARK:- Properties
-    
+    let phoneNumber = PhoneNumberKit()
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.styleUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.phoneNumberTextStyle()
     }
     
     // MARK:- Methods
@@ -50,6 +57,7 @@ class IndividualsViewController: UIViewController {
     }
     
     
+    
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
         print("Send the confirmation code to the user")
@@ -57,6 +65,10 @@ class IndividualsViewController: UIViewController {
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {
         print("Show a tableview with the country Code")
+        
+        let countries = UINavigationController(rootViewController: CountryTableViewController())
+        countries.modalPresentationStyle = .fullScreen
+        self.present(countries, animated: true, completion: nil)
     }
     
 }

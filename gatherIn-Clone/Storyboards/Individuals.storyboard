@@ -128,7 +128,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
                                                                 <rect key="frame" x="135" y="0.0" width="239" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05123456789" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="XXXXXXXX" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                                                         <rect key="frame" x="0.0" y="0.0" width="239" height="60"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7672B09EF16A759EC6DF2C71 /* Pods_gatherIn_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2968C29791BCF7DA1F6CAE6 /* Pods_gatherIn_Clone.framework */; };
+		BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF662985791000667EE0 /* IndividualsView+TextField.swift */; };
+		BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */; };
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
@@ -28,6 +30,8 @@
 		70B3EAA6EFCF9EC80B223846 /* Pods-gatherIn-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gatherIn-Clone.release.xcconfig"; path = "Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		90849C973129D3B255DE986A /* Pods-gatherIn-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gatherIn-Clone.debug.xcconfig"; path = "Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		B2968C29791BCF7DA1F6CAE6 /* Pods_gatherIn_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gatherIn_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC07AF662985791000667EE0 /* IndividualsView+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndividualsView+TextField.swift"; sourceTree = "<group>"; };
+		BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB2B72C297ABA080083975C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		BC07AF632985760C00667EE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF9CD39298279FA00AD4091 /* IndividualsViewController.swift */,
+				BC07AF662985791000667EE0 /* IndividualsView+TextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,10 +398,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
+				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,

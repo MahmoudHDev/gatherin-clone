@@ -16,17 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gathern-cover" translatesAutoresizingMaskIntoConstraints="NO" id="gto-2A-010">
-                                <rect key="frame" x="9.5" y="200" width="356" height="267"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gathern-cover" translatesAutoresizingMaskIntoConstraints="NO" id="gto-2A-010">
+                                <rect key="frame" x="75" y="283.5" width="225" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="g6v-T2-eB4"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شقق، شاليهات ، مزارع واكثر.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43N-Nk-ZFC">
+                                <rect key="frame" x="75" y="393.5" width="225" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.34746426339999997" green="0.24043583869999999" blue="0.63102877140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gto-2A-010" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="O2b-kt-ugc"/>
+                            <constraint firstItem="43N-Nk-ZFC" firstAttribute="top" secondItem="gto-2A-010" secondAttribute="bottom" constant="10" id="DAx-PK-RdQ"/>
+                            <constraint firstItem="43N-Nk-ZFC" firstAttribute="leading" secondItem="gto-2A-010" secondAttribute="leading" id="QNp-vY-9si"/>
                             <constraint firstItem="gto-2A-010" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UDf-Tl-gDH"/>
+                            <constraint firstItem="43N-Nk-ZFC" firstAttribute="trailing" secondItem="gto-2A-010" secondAttribute="trailing" id="VRa-y4-SSi"/>
                             <constraint firstItem="gto-2A-010" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ylb-ln-L24"/>
-                            <constraint firstItem="gto-2A-010" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.95" id="eR7-vJ-dHP"/>
+                            <constraint firstItem="gto-2A-010" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.6" id="eR7-vJ-dHP"/>
                         </constraints>
                     </view>
                 </viewController>
