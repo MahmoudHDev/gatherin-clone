@@ -75,12 +75,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC07AF632985760C00667EE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC07AF642985761100667EE0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BC171307298296E500300C29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BC1713082982973D00300C29 /* ShadowEffect.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC17130B298298E000300C29 /* CountryCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				BC07AF632985760C00667EE0 /* View */,
+				BC07AF642985761100667EE0 /* Presenter */,
+			);
+			path = CountryCodeView;
 			sourceTree = "<group>";
 		};
 		BCB2B720297ABA080083975C = {
@@ -145,6 +168,7 @@
 				BCB2B747297ABB960083975C /* OnboardingView */,
 				BCE4BC6A297F0B3E007119C8 /* MainView */,
 				BCF9CD36298279A500AD4091 /* IndividualsView */,
+				BC17130B298298E000300C29 /* CountryCodeView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
