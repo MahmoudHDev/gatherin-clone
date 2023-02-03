@@ -7,11 +7,17 @@
 
 import UIKit
 import PhoneNumberKit
+import ContactsUI
+
+protocol CountryDelegate {
+    func selectedCoutry(country: String)
+}
+
 
 class CountryTableViewController: UITableViewController {
     //MARK:- Properties
     let arrCountries = PhoneNumberKit().allCountries()
-    
+    var delegate : CountryDelegate?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -48,6 +54,8 @@ class CountryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // send it the previous viewController
+        let selectedItem = arrCountries[indexPath.row]
+        self.delegate?.selectedCoutry(country: selectedItem)
         self.dismiss(animated: true, completion: nil)
     }
     

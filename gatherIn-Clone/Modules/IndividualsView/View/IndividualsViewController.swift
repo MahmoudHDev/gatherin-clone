@@ -9,7 +9,8 @@ import UIKit
 import PhoneNumberKit
 
 
-class IndividualsViewController: UIViewController {
+class IndividualsViewController: UIViewController, CountryDelegate {
+
     //MARK:- Outlets
     @IBOutlet weak var welcomeLbl               : UILabel!
     @IBOutlet weak var PhoneNumberIntroLbl      : UILabel!
@@ -57,6 +58,11 @@ class IndividualsViewController: UIViewController {
     }
     
     
+    func selectedCoutry(country: String) {
+        
+        let countryCode = phoneNumber.countryCode(for: country)
+        phoneNumberTextField.text = "+\(countryCode ?? 966)"
+    }
     
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
@@ -66,9 +72,10 @@ class IndividualsViewController: UIViewController {
     @IBAction func countryCodeBtn(_ sender: UIButton) {
         print("Show a tableview with the country Code")
         
-        let countries = UINavigationController(rootViewController: CountryTableViewController())
-        countries.modalPresentationStyle = .fullScreen
-        self.present(countries, animated: true, completion: nil)
+        let countries = CountryTableViewController()
+        countries.delegate = self
+            countries.modalPresentationStyle = .fullScreen
+        self.present(UINavigationController(rootViewController: countries), animated: true, completion: nil)
     }
     
 }
