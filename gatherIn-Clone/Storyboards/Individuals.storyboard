@@ -69,20 +69,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="39r-Jr-BqO" userLabel="PhoneAndCodeStackView">
                                                         <rect key="frame" x="0.0" y="30.333333333333314" width="374" height="60"/>
                                                         <subviews>
-                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwm-dw-n9z" userLabel="CountryCodeView">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwm-dw-n9z" userLabel="CountryCodeView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FvD-XU-ecC">
-                                                                        <rect key="frame" x="5" y="15" width="110" height="30"/>
+                                                                        <rect key="frame" x="19" y="15" width="82" height="30"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saudi-flag" translatesAutoresizingMaskIntoConstraints="NO" id="Ugh-Wh-Wom">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" constant="25" id="bEL-ge-Nq1"/>
-                                                                                </constraints>
-                                                                            </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-mw-yaQ">
-                                                                                <rect key="frame" x="28" y="0.0" width="59" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                                                 <state key="normal" title=" ++966">
                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,7 +86,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="faz-LF-DCR">
-                                                                                <rect key="frame" x="90" y="5.3333333333333321" width="20" height="20"/>
+                                                                                <rect key="frame" x="62" y="5.3333333333333321" width="20" height="20"/>
                                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="20" id="5AQ-qc-474"/>
@@ -126,10 +120,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                                <rect key="frame" x="135" y="0.0" width="239" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123123123" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05 123 4567 89" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="239" height="60"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                     </textField>
@@ -241,7 +235,6 @@
                         <outlet property="chevonorArrowImg" destination="faz-LF-DCR" id="oFr-XL-o9r"/>
                         <outlet property="confirmationMessageLbl" destination="dcg-19-ca5" id="gCn-UM-dgJ"/>
                         <outlet property="countryCodeContainerView" destination="xwm-dw-n9z" id="0NQ-li-KR6"/>
-                        <outlet property="countrycodeImg" destination="Ugh-Wh-Wom" id="PLJ-zg-35M"/>
                         <outlet property="errorMessageLbl" destination="UEb-vR-8zz" id="5DF-eb-hhd"/>
                         <outlet property="loginBtn" destination="rBa-rG-SfX" id="bMl-l5-pEB"/>
                         <outlet property="noteMessageLbl" destination="0YS-o6-EAI" id="heg-ak-7EV"/>
@@ -259,7 +252,6 @@
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="gathern-cover" width="512" height="250"/>
-        <image name="saudi-flag" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

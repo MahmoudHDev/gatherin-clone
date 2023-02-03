@@ -13,7 +13,6 @@ protocol CountryDelegate {
     func selectedCoutry(country: String)
 }
 
-
 class CountryTableViewController: UITableViewController {
     //MARK:- Properties
     let arrCountries = PhoneNumberKit().allCountries()
@@ -80,5 +79,4 @@ class CountryTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
 }

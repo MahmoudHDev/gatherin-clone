@@ -11,6 +11,7 @@
 		BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF662985791000667EE0 /* IndividualsView+TextField.swift */; };
 		BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */; };
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
+		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
 		BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B735297ABA0D0083975C /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		BC07AF662985791000667EE0 /* IndividualsView+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndividualsView+TextField.swift"; sourceTree = "<group>"; };
 		BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
+		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB2B72C297ABA080083975C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB2B72E297ABA080083975C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BC1713082982973D00300C29 /* ShadowEffect.swift */,
+				BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
+				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
