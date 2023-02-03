@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>882366331566-epu861t4cs3k7fmlu30mm7tlii986344.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.882366331566-epu861t4cs3k7fmlu30mm7tlii986344</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB1iD14LzobKy2c15H-QggLxuXdp8jkMyc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>882366331566</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Mahmoud-hashin.gatherIn-Clone</string>
+	<key>PROJECT_ID</key>
+	<string>gathern-clone</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gathern-clone.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:882366331566:ios:7a213173a2d49b61818b3f</string>
+</dict>
+</plist>

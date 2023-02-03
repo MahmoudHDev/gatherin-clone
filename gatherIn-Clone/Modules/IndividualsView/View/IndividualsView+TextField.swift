@@ -16,7 +16,6 @@ extension IndividualsViewController: UITextFieldDelegate {
         self.phoneNumberTextField.flagButton = CountryCodeBtn
         self.phoneNumberTextField.withFlag = false
         self.phoneNumberTextField.withPrefix = false
-        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -30,11 +29,15 @@ extension IndividualsViewController: UITextFieldDelegate {
         }else{
             loginBtn.isEnabled = false
             loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
-
         }
         
         
         return newString.count <= maxLength
     }
 
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return true
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import PhoneNumberKit
 import IQKeyboardManagerSwift
 
@@ -33,6 +34,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     let phoneNumber = PhoneNumberKit()
     var selectedCountryCode = "+966"
     var userNumber = ""
+    var isLogin: Bool = false
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         self.loginBtn.layer.masksToBounds = false
         self.loginBtn.clipsToBounds = true
         self.loginBtn.layer.cornerRadius = 20
-
+        
         self.countryCodeContainerView.layer.cornerRadius = 22
         self.countryCodeContainerView.layer.masksToBounds = false
         self.countryCodeContainerView.clipsToBounds = true
@@ -103,11 +105,18 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     @IBAction func loginBtn(_ sender: UIButton) {
         userNumber = ("\(selectedCountryCode)\(phoneNumberTextField.text ?? "Error")")
 
-        if phoneNumberTextField.text?.isEmpty == false {
-            print("User number is: \(userNumber)")
-        }else {
+        if userNumber.isEmpty {
             print("TextField is empty")
+        }else {
+            AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
+                guard success else {return}
+                DispatchQueue.main.async {
+                    // Next Screen
+                    print("SMS Code View Controller")
+                }
+            }
         }
+        
     }
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {

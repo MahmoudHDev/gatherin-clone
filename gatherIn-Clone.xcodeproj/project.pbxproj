@@ -16,8 +16,11 @@
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
 		BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B735297ABA0D0083975C /* Assets.xcassets */; };
 		BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B737297ABA0D0083975C /* LaunchScreen.storyboard */; };
+		BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F65298D84B400FCD3A2 /* AuthManager.swift */; };
 		BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */; };
 		BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */; };
+		BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */; };
+		BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCF3082298D824700739673 /* GoogleService-Info.plist */; };
 		BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */; };
 		BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */; };
 		BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE4BC75297F0CAA007119C8 /* Main.storyboard */; };
@@ -41,8 +44,11 @@
 		BCB2B735297ABA0D0083975C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCB2B738297ABA0D0083975C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCB2B73A297ABA0D0083975C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB97F65298D84B400FCD3A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVC.swift; sourceTree = "<group>"; };
 		BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCVC.xib; sourceTree = "<group>"; };
+		BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsPresenter.swift; sourceTree = "<group>"; };
+		BCCF3082298D824700739673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BCE4BC75297F0CAA007119C8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		BCB2B744297ABB6D0083975C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF3082298D824700739673 /* GoogleService-Info.plist */,
 				BCB2B73A297ABA0D0083975C /* Info.plist */,
 			);
 			path = Configuration;
@@ -271,6 +278,8 @@
 		BCF9CD37298279B800AD4091 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */,
+				BCB97F65298D84B400FCD3A2 /* AuthManager.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -349,6 +358,7 @@
 				BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */,
 				BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */,
 				BCF9CD3E29827A1500AD4091 /* Individuals.storyboard in Resources */,
+				BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,12 +414,14 @@
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
+				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
+				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,
 			);
