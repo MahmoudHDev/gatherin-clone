@@ -59,10 +59,11 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     
     
     func selectedCoutry(country: String) {
-        
         let countryCode = phoneNumber.countryCode(for: country)
         phoneNumberTextField.text = "+\(countryCode ?? 966)"
     }
+    
+
     
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
@@ -73,8 +74,8 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         print("Show a tableview with the country Code")
         
         let countries = CountryTableViewController()
+        countries.modalPresentationStyle = .fullScreen
         countries.delegate = self
-            countries.modalPresentationStyle = .fullScreen
         self.present(UINavigationController(rootViewController: countries), animated: true, completion: nil)
     }
     
