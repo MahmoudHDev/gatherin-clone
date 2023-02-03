@@ -7,7 +7,7 @@
 
 import UIKit
 import PhoneNumberKit
-
+import IQKeyboardManagerSwift
 
 class IndividualsViewController: UIViewController, CountryDelegate {
 
@@ -64,6 +64,9 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         countryCodeContainerView.addGestureRecognizer(imageGesture)
         CountryCodeBtn.setTitle("\(self.flag(country: "SA")) +966", for: .normal)
         
+        loginBtn.isEnabled = false
+        loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
+        
     }
     
     
@@ -105,7 +108,6 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         }else {
             print("TextField is empty")
         }
-        
     }
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {
