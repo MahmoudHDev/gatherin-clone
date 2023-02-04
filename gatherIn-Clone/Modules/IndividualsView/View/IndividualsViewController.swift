@@ -39,11 +39,17 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.styleUI()
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.phoneNumberTextStyle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.checkNetwork()
     }
     
     // MARK:- Methods
@@ -100,23 +106,50 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         self.present(UINavigationController(rootViewController: countries), animated: true, completion: nil)
 
     }
+    
+    
+    private func checkNetwork() {
+        if Reachability.isConnectedToNetwork() {
+         print("Device is connected to the network")
+        }else {
+            let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cellular", style: .default, handler: { (cellular) in
+                UIApplication.shared.openURL(URL(string: "App-prefs:root=MOBILEDATA")!)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
 
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
         userNumber = ("\(selectedCountryCode)\(phoneNumberTextField.text ?? "Error")")
 
-        if userNumber.isEmpty {
-            print("TextField is empty")
-        }else {
-            AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
-                guard success else {return}
-                DispatchQueue.main.async {
-                    // Next Screen
-                    print("SMS Code View Controller")
+        if Reachability.isConnectedToNetwork() {
+            if userNumber.isEmpty {
+                print("TextField is empty")
+            }else {
+                AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
+                    guard success else {return}
+                    DispatchQueue.main.async {
+                        let vc = UIStoryboard(name: "CodeVerification", bundle: nil).instantiateViewController(identifier: "CodeVerificationViewController") as! CodeVerificationViewController
+                        vc.phoneNumber = self?.userNumber ?? "No Number"
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
             }
+        }else{
+            let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cellular", style: .default, handler: { (cellular) in
+                UIApplication.shared.openURL(URL(string: "App-prefs:root=MOBILEDATA")!)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
         
+
     }
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {

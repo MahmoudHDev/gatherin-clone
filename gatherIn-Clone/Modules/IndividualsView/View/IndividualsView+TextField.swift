@@ -19,7 +19,6 @@ extension IndividualsViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print(textField.text)
         let maxLength = 12
         let currentString = (textField.text ?? "") as NSString
         let newString = currentString.replacingCharacters(in: range, with: string)
@@ -31,13 +30,8 @@ extension IndividualsViewController: UITextFieldDelegate {
             loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
         }
         
-        
         return newString.count <= maxLength
     }
 
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        return true
-    }
+
 }

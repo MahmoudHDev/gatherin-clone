@@ -12,6 +12,9 @@
 		BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */; };
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
+		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
+		BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */; };
+		BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
 		BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B735297ABA0D0083975C /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
+		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CodeVerification.storyboard; sourceTree = "<group>"; };
+		BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB2B72C297ABA080083975C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB2B72E297ABA080083975C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,22 @@
 			path = CountryCodeView;
 			sourceTree = "<group>";
 		};
+		BCAE67B1298E60C300B02EFA /* CodeVerificationView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAE67B6298E611600B02EFA /* View */,
+			);
+			path = CodeVerificationView;
+			sourceTree = "<group>";
+		};
+		BCAE67B6298E611600B02EFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BCB2B720297ABA080083975C = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +178,7 @@
 			children = (
 				BCB2B72C297ABA080083975C /* AppDelegate.swift */,
 				BCB2B72E297ABA080083975C /* SceneDelegate.swift */,
+				BC861EED298E64AA006BBF7D /* Rechability.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -184,6 +207,7 @@
 				BCE4BC6A297F0B3E007119C8 /* MainView */,
 				BCF9CD36298279A500AD4091 /* IndividualsView */,
 				BC17130B298298E000300C29 /* CountryCodeView */,
+				BCAE67B1298E60C300B02EFA /* CodeVerificationView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -220,6 +244,7 @@
 				BCF8E1ED297D628300368E18 /* Onboarding.storyboard */,
 				BCE4BC75297F0CAA007119C8 /* Main.storyboard */,
 				BCF9CD3D29827A1500AD4091 /* Individuals.storyboard */,
+				BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -352,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
@@ -417,12 +443,14 @@
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
+				BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
 				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
+				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
