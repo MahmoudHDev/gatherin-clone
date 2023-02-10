@@ -11,7 +11,7 @@ import PhoneNumberKit
 import IQKeyboardManagerSwift
 
 class IndividualsViewController: UIViewController, CountryDelegate {
-
+    
     //MARK:- Outlets
     @IBOutlet weak var welcomeLbl               : UILabel!
     @IBOutlet weak var PhoneNumberIntroLbl      : UILabel!
@@ -64,7 +64,10 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         self.countryCodeContainerView.layer.masksToBounds = false
         self.countryCodeContainerView.clipsToBounds = true
         
+        
         self.phoneNumberContainerView.layer.cornerRadius = 22
+        self.phoneNumberContainerView.layer.masksToBounds = false
+        self.phoneNumberContainerView.clipsToBounds  = true
         
         
         let imageGesture = UITapGestureRecognizer(target: self, action: #selector(tappedArrow))
@@ -74,7 +77,6 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         
         loginBtn.isEnabled = false
         loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
-        
     }
     
     
@@ -84,7 +86,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         let numberExample = phoneNumber.getExampleNumber(forCountry: country)
         self.selectedCountryCode = "+\(countryCode ?? 966)"
         self.phoneNumberTextField.defaultRegion = country
-
+        
         phoneNumberTextField.placeholder = String(numberExample?.numberString ?? "05123456789")
         CountryCodeBtn.setTitle("\(self.flag(country: country)) +\(countryCode ?? 966)", for: .normal)
         
@@ -104,13 +106,13 @@ class IndividualsViewController: UIViewController, CountryDelegate {
         let countries = CountryTableViewController()
         countries.delegate = self
         self.present(UINavigationController(rootViewController: countries), animated: true, completion: nil)
-
+        
     }
     
     
     private func checkNetwork() {
         if Reachability.isConnectedToNetwork() {
-         print("Device is connected to the network")
+            print("Device is connected to the network")
         }else {
             let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -120,26 +122,35 @@ class IndividualsViewController: UIViewController, CountryDelegate {
             
             self.present(alert, animated: true, completion: nil)
         }
-
+        
     }
-
+    
     // MARK:- Actions
     @IBAction func loginBtn(_ sender: UIButton) {
         userNumber = ("\(selectedCountryCode)\(phoneNumberTextField.text ?? "Error")")
-
+        
         if Reachability.isConnectedToNetwork() {
             if userNumber.isEmpty {
                 print("TextField is empty")
-            }else {
+            }else{
+                loginBtn.isEnabled = false
+                loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
+
                 AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
                     guard success else {return}
+                    self?.CountryCodeBtn.isEnabled = false
+
+                    print("Success")
                     DispatchQueue.main.async {
+                        
                         let vc = UIStoryboard(name: "CodeVerification", bundle: nil).instantiateViewController(identifier: "CodeVerificationViewController") as! CodeVerificationViewController
                         vc.phoneNumber = self?.userNumber ?? "No Number"
                         self?.navigationController?.pushViewController(vc, animated: true)
+                        print("Show the CodeVerificationViewController")
                     }
                 }
             }
+            
         }else{
             let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -148,8 +159,6 @@ class IndividualsViewController: UIViewController, CountryDelegate {
             }))
             self.present(alert, animated: true, completion: nil)
         }
-        
-
     }
     
     @IBAction func countryCodeBtn(_ sender: UIButton) {

@@ -112,18 +112,21 @@
                                                                         <real key="value" value="0.20000000000000001"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                        <real key="value" value="0.0"/>
+                                                                        <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                        <real key="value" value="0.0"/>
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
                                                                 <rect key="frame" x="135" y="0.0" width="239" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05 123 4567 89" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="239" height="60"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05 123456789" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                                                        <rect key="frame" x="10" y="0.0" width="219" height="60"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                     </textField>
@@ -133,8 +136,8 @@
                                                                     <constraint firstAttribute="bottom" secondItem="5fY-bo-In7" secondAttribute="bottom" id="4J1-xc-ZR4"/>
                                                                     <constraint firstItem="5fY-bo-In7" firstAttribute="top" secondItem="XFU-6P-ckV" secondAttribute="top" id="FOk-JG-KJc"/>
                                                                     <constraint firstItem="5fY-bo-In7" firstAttribute="centerX" secondItem="XFU-6P-ckV" secondAttribute="centerX" id="Fi3-zQ-w6t"/>
-                                                                    <constraint firstItem="5fY-bo-In7" firstAttribute="leading" secondItem="XFU-6P-ckV" secondAttribute="leading" id="q35-JX-Ge3"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="5fY-bo-In7" secondAttribute="trailing" id="rQT-WT-Cyv"/>
+                                                                    <constraint firstItem="5fY-bo-In7" firstAttribute="leading" secondItem="XFU-6P-ckV" secondAttribute="leading" constant="10" id="q35-JX-Ge3"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="5fY-bo-In7" secondAttribute="trailing" constant="10" id="rQT-WT-Cyv"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -148,6 +151,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
@@ -243,7 +249,7 @@
                         <outlet property="errorMessageLbl" destination="UEb-vR-8zz" id="5DF-eb-hhd"/>
                         <outlet property="loginBtn" destination="rBa-rG-SfX" id="bMl-l5-pEB"/>
                         <outlet property="noteMessageLbl" destination="0YS-o6-EAI" id="heg-ak-7EV"/>
-                        <outlet property="phoneNumberContainerView" destination="5fY-bo-In7" id="Kkn-AS-8lq"/>
+                        <outlet property="phoneNumberContainerView" destination="XFU-6P-ckV" id="s9m-K9-Qu8"/>
                         <outlet property="phoneNumberLbl" destination="1ZD-Ee-epN" id="8IH-4r-6h4"/>
                         <outlet property="phoneNumberTextField" destination="5fY-bo-In7" id="GzZ-cJ-iMH"/>
                         <outlet property="welcomeLbl" destination="UHA-Nd-rfo" id="RZ4-6F-Kpj"/>

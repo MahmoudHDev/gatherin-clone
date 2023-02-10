@@ -10,8 +10,8 @@ import UIKit
 extension IndividualsViewController: UITextFieldDelegate {
     
     func phoneNumberTextStyle() {
+
         self.phoneNumberTextField.defaultRegion = "SA"
-        
         self.phoneNumberTextField.delegate = self
         self.phoneNumberTextField.flagButton = CountryCodeBtn
         self.phoneNumberTextField.withFlag = false
