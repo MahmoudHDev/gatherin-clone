@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class MainViewController: UIViewController {
     
     // MARK:- Outlets
@@ -33,8 +34,9 @@ class MainViewController: UIViewController {
     }
     
     // MARK:- Actions
+    @available(iOS 13.0, *)
     @IBAction func forIndividutualBtn(_ sender: UIButton) {
-        let individualsVC = UIStoryboard(name: "Individuals", bundle: nil).instantiateViewController(identifier: "individualsView") as! IndividualsViewController
+        let individualsVC = UIStoryboard(name: "Individuals", bundle: nil).instantiateViewController(withIdentifier: "individualsView") as! IndividualsViewController
         self.navigationController?.pushViewController(individualsVC, animated: true)
     }
     
@@ -45,6 +47,7 @@ class MainViewController: UIViewController {
 }
 
 // MARK:- Presenter
+@available(iOS 13.0, *)
 extension MainViewController: MainPresenterPr {
     
 }

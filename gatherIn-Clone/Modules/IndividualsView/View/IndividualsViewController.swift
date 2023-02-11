@@ -126,6 +126,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     }
     
     // MARK:- Actions
+    @available(iOS 13.0, *)
     @IBAction func loginBtn(_ sender: UIButton) {
         userNumber = ("\(selectedCountryCode)\(phoneNumberTextField.text ?? "Error")")
         
@@ -143,7 +144,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
                     print("Success")
                     DispatchQueue.main.async {
                         
-                        let vc = UIStoryboard(name: "CodeVerification", bundle: nil).instantiateViewController(identifier: "CodeVerificationViewController") as! CodeVerificationViewController
+                        let vc = UIStoryboard(name: "CodeVerification", bundle: nil).instantiateViewController(withIdentifier: "CodeVerificationViewController") as! CodeVerificationViewController
                         vc.phoneNumber = self?.userNumber ?? "No Number"
                         self?.navigationController?.pushViewController(vc, animated: true)
                         print("Show the CodeVerificationViewController")

@@ -135,7 +135,7 @@ class CodeVerificationViewController: UIViewController {
         AuthManager.shared.startAuth(phoneNumber: phoneNumber) {  (success) in
             if success {
                 self.seconds = 120
-                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setTimer), userInfo: nil, repeats: true)
+                self.timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.setTimer), userInfo: nil, repeats: true)
                 self.timerLbl.isHidden  = false
                 self.resendCodeBtn.isEnabled = false
             }else {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+@available(iOS 13, *)
 
 class OnboardingViewController: UIViewController {
     
@@ -90,6 +91,7 @@ class OnboardingViewController: UIViewController {
 }
 
 // MARK:- CollectionView
+@available(iOS 13, *)
 
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     
@@ -102,6 +104,7 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+@available(iOS 13, *)
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
