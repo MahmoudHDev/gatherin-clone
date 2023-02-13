@@ -21,7 +21,7 @@ class CodeVerificationViewController: UIViewController {
     @IBOutlet weak var fourthParagraph              : UILabel!
     @IBOutlet weak var resendCodeBtn                : UIButton!
     @IBOutlet weak var timerLbl                     : UILabel!
-
+    
     // MARK: - Properties
     let defaults = UserDefaults.standard
     var phoneNumber = ""
@@ -50,7 +50,7 @@ class CodeVerificationViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         RunLoop.current.add(self.timer, forMode: .common)
-
+        
         self.secondParagraph.text = "We've sent to you the verification code by SMS to ( \(phoneNumber) )"
         
     }
@@ -79,7 +79,7 @@ class CodeVerificationViewController: UIViewController {
             timerLbl.isHidden = false
             resendCodeBtn.isEnabled = false
         }
-
+        
     }
     
     private func timeString(time: TimeInterval) -> String{
@@ -87,7 +87,7 @@ class CodeVerificationViewController: UIViewController {
         let seconds = Int(time) % 60
         return String(format: "%02i:%02i", minutes, seconds)
     }
-
+    
     private func defaultResendButtonStyle() {
         self.resendCodeBtn.isEnabled    = false
         self.resendCodeBtn.isHidden     = false
@@ -153,21 +153,5 @@ class CodeVerificationViewController: UIViewController {
         print("Resened the code, Timer started")
     }
     
-
+    
 }
-/*
- if let text = verificationCodeTextField.text, !text.isEmpty {
-     let code = text
-     AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
-         guard success else {return}
-         DispatchQueue.main.async {
-             let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
-             self?.navigationController?.pushViewController(vc, animated: true)
-             print("Present the new VC + Save the login to the userDefaults")
-         }
-     }
- }else{
-     let alert = UIAlertController(title: "Incorrect Code", message: "Please make sure that the code is correct!", preferredStyle: .alert)
-     self.present(alert, animated: true)
- }
- */
