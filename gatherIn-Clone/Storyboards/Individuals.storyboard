@@ -125,7 +125,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFU-6P-ckV" userLabel="PhoneNumberView">
                                                                 <rect key="frame" x="135" y="0.0" width="239" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="05 123456789" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" placeholder="05 123456789" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-bo-In7" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                                                         <rect key="frame" x="10" y="0.0" width="219" height="60"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>

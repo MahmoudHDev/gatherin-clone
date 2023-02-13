@@ -121,7 +121,9 @@ class CodeVerificationViewController: UIViewController {
     }
     
     @IBAction func checkButton(_ sender: UIButton) {
-        
+        self.checkBtn.isEnabled = false
+        self.checkBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
+
         if let text = verificationCodeTextField.text, !text.isEmpty {
             let code = text
             AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
@@ -129,10 +131,13 @@ class CodeVerificationViewController: UIViewController {
                     DispatchQueue.main.async {
                         let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
                         self?.navigationController?.pushViewController(vc, animated: true)
-                        print("Present the new VC + Save the login to the userDefaults")
                     }
                 }else{
-                    print("Error")
+                    self?.checkBtn.isEnabled = true
+                    self?.checkBtn.backgroundColor = #colorLiteral(red: 0.4309644103, green: 0.3406741023, blue: 0.6719501019, alpha: 1)
+                    let alert = UIAlertController(title: "Invalid Code", message: "Make sure the code is correct", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Back", style: .cancel))
+                    self?.present(alert, animated: true)
                 }
             }
         }
@@ -140,18 +145,16 @@ class CodeVerificationViewController: UIViewController {
     
     @IBAction func resendCodeButton(_ sender: UIButton) {
         
-        AuthManager.shared.startAuth(phoneNumber: phoneNumber) {  (success) in
+        AuthManager.shared.startAuth(phoneNumber: phoneNumber) {  [weak self] (success) in
             if success {
-                self.seconds = 120
-                self.timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.setTimer), userInfo: nil, repeats: true)
-                self.timerLbl.isHidden  = false
-                self.resendCodeBtn.isEnabled = false
+                self?.seconds = 120
+                self?.timer = Timer.scheduledTimer(timeInterval: 60, target: self!, selector: #selector(self?.setTimer), userInfo: nil, repeats: true)
+                self?.timerLbl.isHidden  = false
+                self?.resendCodeBtn.isEnabled = false
             }else {
-                print("Show alert")
+                let alert = UIAlertController(title: "Connection Error", message: "Check your network connection", preferredStyle: .alert)
+                self?.present(alert, animated: true)
             }
         }
-        print("Resened the code, Timer started")
     }
-    
-    
 }
