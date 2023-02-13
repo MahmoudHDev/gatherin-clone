@@ -26,19 +26,16 @@ class AuthManager {
     
     public func verifyCode(smsCode: String, completion: @escaping (Bool)-> Void) {
         // Create a credintial
-        guard let verificationId = verificationId else {
-            completion(false)
-            return
-        }
-        let credential = PhoneAuthProvider.provider().credential(
-            withVerificationID: verificationId,
-            verificationCode: smsCode)
-        auth.signIn(with: credential) { (result, error) in
-            guard result != nil, error == nil else {
-                return
-                
+
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: self.verificationId!,
+                                                                 verificationCode: smsCode)
+        auth.signIn(with: credential) { (authDataResult, error) in
+            if let error = error {
+                print("Error Verifiying SMS Code: \(error)")
+                completion(false)
+            }else {
+                completion(true)
             }
         }
-        completion(true)
     }
 }

@@ -22,6 +22,9 @@
 		BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F65298D84B400FCD3A2 /* AuthManager.swift */; };
 		BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC161F42990F78A00AEB32C /* CodeVerifcation+TextField.swift */; };
 		BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC161F72991020100AEB32C /* ColorExtension.swift */; };
+		BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */; };
+		BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */; };
+		BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */; };
 		BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */; };
 		BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */; };
 		BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */; };
@@ -55,6 +58,9 @@
 		BCB97F65298D84B400FCD3A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BCC161F42990F78A00AEB32C /* CodeVerifcation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeVerifcation+TextField.swift"; sourceTree = "<group>"; };
 		BCC161F72991020100AEB32C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
+		BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicInformation.storyboard; sourceTree = "<group>"; };
+		BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicInformation+TextField.swift"; sourceTree = "<group>"; };
 		BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVC.swift; sourceTree = "<group>"; };
 		BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCVC.xib; sourceTree = "<group>"; };
 		BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsPresenter.swift; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 				BCE4BC75297F0CAA007119C8 /* Main.storyboard */,
 				BCF9CD3D29827A1500AD4091 /* Individuals.storyboard */,
 				BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */,
+				BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 		BCC2C508299785BD00CC3889 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */,
+				BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
@@ -464,6 +474,7 @@
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
+				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
@@ -473,6 +484,7 @@
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
 				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
+				BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
 				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,

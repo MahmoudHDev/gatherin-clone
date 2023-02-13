@@ -7,6 +7,8 @@
 
 import UIKit
 
+@available(iOS 13, *)
+
 class CodeVerificationViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var backBtn                      : UIButton!
@@ -24,7 +26,7 @@ class CodeVerificationViewController: UIViewController {
     let defaults = UserDefaults.standard
     var phoneNumber = ""
     var timer: Timer = Timer()
-    var seconds = 120
+    var seconds = 100
     var isTimerRunning = false
     
     // MARK: - View Life Cycle
@@ -40,6 +42,7 @@ class CodeVerificationViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        self.hideKeyboardWhenTappedAround()
         self.textFieldSetup()
     }
     // MARK: - Methods
@@ -118,16 +121,21 @@ class CodeVerificationViewController: UIViewController {
     }
     
     @IBAction func checkButton(_ sender: UIButton) {
-        guard let sms = verificationCodeTextField.text else {return}
         
-        AuthManager.shared.verifyCode(smsCode: sms) { [weak self] (success) in
-            if success {
-                print("Present the new VC + Save the login to the userDefaults")
-            }else{
-                print("The code is wrong.. please try again!")
+        if let text = verificationCodeTextField.text, !text.isEmpty {
+            let code = text
+            AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
+                if success {
+                    DispatchQueue.main.async {
+                        let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                        print("Present the new VC + Save the login to the userDefaults")
+                    }
+                }else{
+                    print("Error")
+                }
             }
         }
-        // UserDefaults
     }
     
     @IBAction func resendCodeButton(_ sender: UIButton) {
@@ -147,3 +155,19 @@ class CodeVerificationViewController: UIViewController {
     
 
 }
+/*
+ if let text = verificationCodeTextField.text, !text.isEmpty {
+     let code = text
+     AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
+         guard success else {return}
+         DispatchQueue.main.async {
+             let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
+             self?.navigationController?.pushViewController(vc, animated: true)
+             print("Present the new VC + Save the login to the userDefaults")
+         }
+     }
+ }else{
+     let alert = UIAlertController(title: "Incorrect Code", message: "Please make sure that the code is correct!", preferredStyle: .alert)
+     self.present(alert, animated: true)
+ }
+ */
