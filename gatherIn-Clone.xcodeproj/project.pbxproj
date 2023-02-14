@@ -13,6 +13,7 @@
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
+		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
 		BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */; };
 		BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CodeVerification.storyboard; sourceTree = "<group>"; };
 		BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 				BCB2B74A297ABBC70083975C /* Storyboards */,
 				BCB2B745297ABB7D0083975C /* Assets */,
 				BCB2B746297ABB8B0083975C /* Modules */,
+				BCA09AFC299B5E3500819D95 /* Helpers.swift */,
 			);
 			path = "gatherIn-Clone";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
+				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,

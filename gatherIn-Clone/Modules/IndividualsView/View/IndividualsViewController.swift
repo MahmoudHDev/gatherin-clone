@@ -10,7 +10,7 @@ import FirebaseAuth
 import PhoneNumberKit
 import IQKeyboardManagerSwift
 
-class IndividualsViewController: UIViewController, CountryDelegate {
+class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol {
     
     //MARK:- Outlets
     @IBOutlet weak var welcomeLbl               : UILabel!
@@ -35,10 +35,11 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     var selectedCountryCode = "+966"
     var userNumber = ""
     var isLogin: Bool = false
+    
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.styleUI()
+        self.uiStyle()
         
     }
     
@@ -53,7 +54,7 @@ class IndividualsViewController: UIViewController, CountryDelegate {
     }
     
     // MARK:- Methods
-    private func styleUI() {
+    func uiStyle() {
         self.hideKeyboardWhenTappedAround()
         
         self.loginBtn.layer.masksToBounds = false

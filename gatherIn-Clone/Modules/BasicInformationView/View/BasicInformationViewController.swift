@@ -8,7 +8,7 @@
 import UIKit
 @available(iOS 13, *)
 
-class BasicInformationViewController: UIViewController {
+class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     // MARK:- Outlets
     @IBOutlet weak var firsParagraph        : UILabel!
     @IBOutlet weak var nameLbl              : UILabel!
@@ -27,7 +27,7 @@ class BasicInformationViewController: UIViewController {
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIStyle()
+        self.uiStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,11 +39,11 @@ class BasicInformationViewController: UIViewController {
         super.viewDidAppear(true)
         self.textFieldConfig()
         self.hideKeyboardWhenTappedAround()
-
+        
     }
     
     // MARK:- Methods
-    private func UIStyle() {
+    func uiStyle() {
         self.nameContainerView.clipsToBounds = true
         self.nameContainerView.layer.masksToBounds = false
         

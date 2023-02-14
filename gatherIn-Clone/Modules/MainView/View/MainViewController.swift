@@ -8,23 +8,24 @@
 import UIKit
 
 @available(iOS 13.0, *)
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, InterfaceStyleProtocol {
     
     // MARK:- Outlets
     @IBOutlet weak var individualsBtn   :UIButton!
     @IBOutlet weak var businessBtn      :UIButton!
+    
     // MARK:- Properties
     var presenter: MainPresenter?
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = MainPresenter(view: self)
-        self.styleUI()
+        self.uiStyle()
         
     }
     
     // MARK:- Methods
-    private func styleUI() {
+        func uiStyle() {
         self.navigationController?.navigationBar.isHidden = true
         
         self.individualsBtn.layer.cornerRadius = 20

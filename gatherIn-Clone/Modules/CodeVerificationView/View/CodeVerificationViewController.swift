@@ -9,7 +9,7 @@ import UIKit
 
 @available(iOS 13, *)
 
-class CodeVerificationViewController: UIViewController {
+class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     // MARK: - Outlets
     @IBOutlet weak var backBtn                      : UIButton!
     @IBOutlet weak var firstParagraph               : UILabel!
@@ -36,7 +36,7 @@ class CodeVerificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.styleUI()
+        self.uiStyle()
         self.defaultResendButtonStyle()
         self.defaultCheckButtonStyle()
     }
@@ -46,7 +46,7 @@ class CodeVerificationViewController: UIViewController {
         self.textFieldSetup()
     }
     // MARK: - Methods
-    private func styleUI() {
+    func uiStyle() {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         RunLoop.current.add(self.timer, forMode: .common)
@@ -79,7 +79,6 @@ class CodeVerificationViewController: UIViewController {
             timerLbl.isHidden = false
             resendCodeBtn.isEnabled = false
         }
-        
     }
     
     private func timeString(time: TimeInterval) -> String{
