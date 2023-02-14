@@ -9,6 +9,4 @@ target 'gatherIn-Clone' do
 	pod 'IQKeyboardManagerSwift'
 	pod 'PhoneNumberKit'
   pod 'Firebase/Auth'
-  pod 'SwiftLoader'
-
 end
