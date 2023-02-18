@@ -9,7 +9,9 @@ import UIKit
 import FirebaseAuth
 import PhoneNumberKit
 import IQKeyboardManagerSwift
+import NVActivityIndicatorView
 
+@available(iOS 13, *)
 class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol {
     
     //MARK:- Outlets
@@ -28,13 +30,15 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     @IBOutlet weak var loginBtn                 : UIButton!
     @IBOutlet weak var confirmationMessageLbl   : UILabel!
     @IBOutlet weak var noteMessageLbl           : UILabel!
-    
+    @IBOutlet weak var indicatorContainerView: UIView!
+    @IBOutlet weak var indicator                : NVActivityIndicatorView!
     
     // MARK:- Properties
     let phoneNumber = PhoneNumberKit()
     var selectedCountryCode = "+966"
     var userNumber = ""
     var isLogin: Bool = false
+
     
     // MARK:- View life cycle
     override func viewDidLoad() {
@@ -78,6 +82,9 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         
         loginBtn.isEnabled = false
         loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
+        
+        indicatorContainerView.isHidden = true
+
     }
     
     
@@ -103,7 +110,7 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     }
     
     @objc
-    func tappedArrow() {
+    private func tappedArrow() {
         let countries = CountryTableViewController()
         countries.delegate = self
         self.present(UINavigationController(rootViewController: countries), animated: true, completion: nil)
@@ -127,7 +134,6 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     }
     
     // MARK:- Actions
-    @available(iOS 13.0, *)
     @IBAction func loginBtn(_ sender: UIButton) {
         userNumber = ("\(selectedCountryCode)\(phoneNumberTextField.text ?? "Error")")
         
@@ -135,16 +141,19 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
             if userNumber.isEmpty {
                 print("TextField is empty")
             }else{
+                indicator.startAnimating()
+                indicatorContainerView.isHidden = false
+                
                 loginBtn.isEnabled = false
                 loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
-
                 AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
                     guard success else {return}
                     self?.CountryCodeBtn.isEnabled = false
+                    self?.indicator.startAnimating()
 
-                    print("Success")
                     DispatchQueue.main.async {
-                        
+                        self?.indicatorContainerView.isHidden = true
+                        self?.indicator.stopAnimating()
                         let vc = UIStoryboard(name: "CodeVerification", bundle: nil).instantiateViewController(withIdentifier: "CodeVerificationViewController") as! CodeVerificationViewController
                         vc.phoneNumber = self?.userNumber ?? "No Number"
                         self?.navigationController?.pushViewController(vc, animated: true)
@@ -152,8 +161,10 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
                     }
                 }
             }
-            
         }else{
+            indicator.stopAnimating()
+            indicatorContainerView.isHidden = true
+
             let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Cellular", style: .default, handler: { (cellular) in

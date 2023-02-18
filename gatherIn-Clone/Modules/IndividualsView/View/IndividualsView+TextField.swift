@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+@available(iOS 13, *)
 extension IndividualsViewController: UITextFieldDelegate {
     
     func phoneNumberTextStyle() {

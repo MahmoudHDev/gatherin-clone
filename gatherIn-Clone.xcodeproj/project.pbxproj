@@ -139,6 +139,14 @@
 			path = CountryCodeView;
 			sourceTree = "<group>";
 		};
+		BCA09AFF299B616E00819D95 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCA09AFC299B5E3500819D95 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BCAE67B1298E60C300B02EFA /* CodeVerificationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,13 +185,13 @@
 		BCB2B72B297ABA080083975C /* gatherIn-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BCA09AFF299B616E00819D95 /* Helpers */,
 				BC171307298296E500300C29 /* Extensions */,
 				BCB2B744297ABB6D0083975C /* Configuration */,
 				BCB2B743297ABB5D0083975C /* App */,
 				BCB2B74A297ABBC70083975C /* Storyboards */,
 				BCB2B745297ABB7D0083975C /* Assets */,
 				BCB2B746297ABB8B0083975C /* Modules */,
-				BCA09AFC299B5E3500819D95 /* Helpers.swift */,
 			);
 			path = "gatherIn-Clone";
 			sourceTree = "<group>";

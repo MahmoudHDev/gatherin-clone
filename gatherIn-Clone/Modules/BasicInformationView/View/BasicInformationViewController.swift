@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Firebase
+
+
 @available(iOS 13, *)
 
 class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
@@ -23,6 +26,8 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     @IBOutlet weak var lastParagraph        : UILabel!
     
     // MARK:- Properties
+    let defaults = UserDefaults.standard
+    var isRegisterd: Bool = false
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -73,9 +78,11 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     }
     
     // MARK:- Actions
-    
     @IBAction func registerBtn(_ sender: UIButton) {
         // If textfields {}
+        self.isRegisterd = true
+        defaults.set(isRegisterd, forKey: "isRegistered")
+        // send the data to the firebase
         print("Register and view the new viewController")
     }
     

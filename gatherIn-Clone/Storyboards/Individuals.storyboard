@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSn-Hf-JPN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSn-Hf-JPN" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gathern-cover" translatesAutoresizingMaskIntoConstraints="NO" id="Xcd-71-IU1">
@@ -227,6 +227,49 @@
                                     <constraint firstItem="T6u-CQ-0um" firstAttribute="leading" secondItem="LCm-0j-Ozv" secondAttribute="leading" id="nW7-jt-HIW"/>
                                 </constraints>
                             </scrollView>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-NQ-8jF" userLabel="indicatorContainerView">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-o3-OSa" userLabel="indicator" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="15" y="15" width="70" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="KPD-mA-9GN"/>
+                                            <constraint firstAttribute="height" constant="70" id="WhW-EA-H3Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ls3-IQ-5lg"/>
+                                    <constraint firstItem="e1G-o3-OSa" firstAttribute="centerY" secondItem="FxJ-NQ-8jF" secondAttribute="centerY" id="a5o-zb-OVn"/>
+                                    <constraint firstAttribute="height" constant="100" id="ewb-z0-ERo"/>
+                                    <constraint firstItem="e1G-o3-OSa" firstAttribute="centerX" secondItem="FxJ-NQ-8jF" secondAttribute="centerX" id="kSv-E7-r3I"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="43v-wX-fBh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -238,6 +281,8 @@
                             <constraint firstItem="LCm-0j-Ozv" firstAttribute="leading" secondItem="43v-wX-fBh" secondAttribute="leading" id="haX-Fw-rNn"/>
                             <constraint firstItem="43v-wX-fBh" firstAttribute="trailing" secondItem="LCm-0j-Ozv" secondAttribute="trailing" id="hzX-WX-Dly"/>
                             <constraint firstItem="OSn-Hf-JPN" firstAttribute="leading" secondItem="b6e-NL-izR" secondAttribute="leading" id="lkq-cE-tq7"/>
+                            <constraint firstItem="FxJ-NQ-8jF" firstAttribute="centerX" secondItem="b6e-NL-izR" secondAttribute="centerX" id="sVT-1M-vCv"/>
+                            <constraint firstItem="FxJ-NQ-8jF" firstAttribute="centerY" secondItem="b6e-NL-izR" secondAttribute="centerY" id="t9f-CQ-vCh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -247,6 +292,8 @@
                         <outlet property="confirmationMessageLbl" destination="dcg-19-ca5" id="gCn-UM-dgJ"/>
                         <outlet property="countryCodeContainerView" destination="xwm-dw-n9z" id="0NQ-li-KR6"/>
                         <outlet property="errorMessageLbl" destination="UEb-vR-8zz" id="5DF-eb-hhd"/>
+                        <outlet property="indicator" destination="e1G-o3-OSa" id="zIG-Tp-xEl"/>
+                        <outlet property="indicatorContainerView" destination="FxJ-NQ-8jF" id="eK7-pv-Y9Y"/>
                         <outlet property="loginBtn" destination="rBa-rG-SfX" id="bMl-l5-pEB"/>
                         <outlet property="noteMessageLbl" destination="0YS-o6-EAI" id="heg-ak-7EV"/>
                         <outlet property="phoneNumberContainerView" destination="XFU-6P-ckV" id="s9m-K9-Qu8"/>
@@ -257,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rD-Vp-0Qj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.82608695652175" y="121.875"/>
+            <point key="canvasLocation" x="147.82608695652175" y="121.46739130434784"/>
         </scene>
     </scenes>
     <resources>
@@ -265,6 +312,12 @@
         <image name="gathern-cover" width="512" height="250"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
