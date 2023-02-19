@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 @available(iOS 13, *)
 
@@ -21,7 +22,8 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     @IBOutlet weak var fourthParagraph              : UILabel!
     @IBOutlet weak var resendCodeBtn                : UIButton!
     @IBOutlet weak var timerLbl                     : UILabel!
-    
+    @IBOutlet weak var indicator                    : NVActivityIndicatorView!
+    @IBOutlet weak var indicatorContainerView       : UIView!
     // MARK: - Properties
     let defaults = UserDefaults.standard
     var phoneNumber = ""
@@ -52,6 +54,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
         RunLoop.current.add(self.timer, forMode: .common)
         
         self.secondParagraph.text = "We've sent to you the verification code by SMS to ( \(phoneNumber) )"
+            
         
     }
     
@@ -104,7 +107,6 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     
     private func defaultCheckButtonStyle() {
         
-        self.checkBtn.clipsToBounds = true
         self.checkBtn.layer.masksToBounds = false
         self.checkBtn.layer.cornerRadius = 22
         
@@ -124,17 +126,26 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
         self.checkBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
 
         if let text = verificationCodeTextField.text, !text.isEmpty {
+            self.indicatorContainerView.isHidden = false
+            self.indicator.startAnimating()
+            
             let code = text
             AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
                 if success {
                     DispatchQueue.main.async {
+                        self?.indicatorContainerView.isHidden = true
+                        self?.indicator.stopAnimating()
+
                         let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
                         self?.navigationController?.pushViewController(vc, animated: true)
                     }
                 }else{
+                    self?.indicatorContainerView.isHidden = true
+                    self?.indicator.stopAnimating()
+
                     self?.checkBtn.isEnabled = true
                     self?.checkBtn.backgroundColor = #colorLiteral(red: 0.4309644103, green: 0.3406741023, blue: 0.6719501019, alpha: 1)
-                    let alert = UIAlertController(title: "Invalid Code", message: "Make sure the code is correct", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Incorrect Code", message: "Make sure the code is correct", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Back", style: .cancel))
                     self?.present(alert, animated: true)
                 }
@@ -150,7 +161,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
                 self?.timer = Timer.scheduledTimer(timeInterval: 60, target: self!, selector: #selector(self?.setTimer), userInfo: nil, repeats: true)
                 self?.timerLbl.isHidden  = false
                 self?.resendCodeBtn.isEnabled = false
-            }else {
+            }else{
                 let alert = UIAlertController(title: "Connection Error", message: "Check your network connection", preferredStyle: .alert)
                 self?.present(alert, animated: true)
             }

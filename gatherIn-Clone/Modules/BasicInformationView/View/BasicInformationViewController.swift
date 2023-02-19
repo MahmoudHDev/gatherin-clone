@@ -49,13 +49,8 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     
     // MARK:- Methods
     func uiStyle() {
-        self.nameContainerView.clipsToBounds = true
         self.nameContainerView.layer.masksToBounds = false
-        
-        self.emailContainerView.clipsToBounds = true
         self.emailContainerView.layer.masksToBounds = false
-        
-        self.registerButton.clipsToBounds = true
         self.registerButton.layer.masksToBounds = false
     }
     
@@ -74,7 +69,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     
     @objc
     private func privacyAndPolicy() {
-        print("Privacy and policy has been tapped")
+        print("View the Privacy and The Policy")
     }
     
     // MARK:- Actions

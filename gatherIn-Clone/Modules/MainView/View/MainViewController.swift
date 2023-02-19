@@ -30,6 +30,7 @@ class MainViewController: UIViewController, InterfaceStyleProtocol {
         
         self.individualsBtn.layer.cornerRadius = 20
         self.businessBtn.layer.cornerRadius = 20
+            
         self.individualsBtn.layer.masksToBounds = false
         self.businessBtn.layer.masksToBounds = false
     }

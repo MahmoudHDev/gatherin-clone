@@ -15,6 +15,7 @@ import NVActivityIndicatorView
 class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol {
     
     //MARK:- Outlets
+    @IBOutlet weak var scrollView               : UIScrollView!
     @IBOutlet weak var welcomeLbl               : UILabel!
     @IBOutlet weak var PhoneNumberIntroLbl      : UILabel!
     @IBOutlet weak var phoneNumberLbl           : UILabel!
@@ -23,7 +24,6 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     @IBOutlet weak var CountryCodeBtn           : UIButton!
     @IBOutlet weak var chevonorArrowImg         : UIImageView!
     
-    @IBOutlet weak var phoneNumberContainerView : UIView!
     @IBOutlet weak var phoneNumberTextField     : PhoneNumberTextField!
     
     @IBOutlet weak var errorMessageLbl          : UILabel!
@@ -44,7 +44,6 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     override func viewDidLoad() {
         super.viewDidLoad()
         self.uiStyle()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -62,18 +61,10 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         self.hideKeyboardWhenTappedAround()
         
         self.loginBtn.layer.masksToBounds = false
-        self.loginBtn.clipsToBounds = true
         self.loginBtn.layer.cornerRadius = 20
         
         self.countryCodeContainerView.layer.cornerRadius = 22
         self.countryCodeContainerView.layer.masksToBounds = false
-        self.countryCodeContainerView.clipsToBounds = true
-        
-        
-        self.phoneNumberContainerView.layer.cornerRadius = 22
-        self.phoneNumberContainerView.layer.masksToBounds = false
-        self.phoneNumberContainerView.clipsToBounds  = true
-        
         
         let imageGesture = UITapGestureRecognizer(target: self, action: #selector(tappedArrow))
         countryCodeContainerView.isUserInteractionEnabled = true
@@ -82,6 +73,8 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         
         loginBtn.isEnabled = false
         loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
+        
+        indicatorContainerView.layer.masksToBounds = false
         
         indicatorContainerView.isHidden = true
 
@@ -117,7 +110,6 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         
     }
     
-    
     private func checkNetwork() {
         if Reachability.isConnectedToNetwork() {
             print("Device is connected to the network")
@@ -141,13 +133,17 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
             if userNumber.isEmpty {
                 print("TextField is empty")
             }else{
-                indicator.startAnimating()
-                indicatorContainerView.isHidden = false
+                self.scrollView.isScrollEnabled = false
+                self.phoneNumberTextField.isUserInteractionEnabled = false
+
+                self.indicator.startAnimating()
+                self.indicatorContainerView.isHidden = false
                 
                 loginBtn.isEnabled = false
                 loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
                 AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
                     guard success else {return}
+
                     self?.CountryCodeBtn.isEnabled = false
                     self?.indicator.startAnimating()
 
@@ -161,9 +157,13 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
                     }
                 }
             }
+            
         }else{
             indicator.stopAnimating()
             indicatorContainerView.isHidden = true
+
+            self.scrollView.isScrollEnabled = true
+            self.phoneNumberTextField.isUserInteractionEnabled = true
 
             let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
