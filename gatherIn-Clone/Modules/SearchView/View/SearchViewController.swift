@@ -8,9 +8,10 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
+    var username: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Good Morning \(username)"
     }
     
 

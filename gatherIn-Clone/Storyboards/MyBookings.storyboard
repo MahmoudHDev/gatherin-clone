@@ -9,44 +9,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Bookings-->
+        <!--My Bookings View Controller-->
         <scene sceneID="gLy-OZ-XWj">
             <objects>
                 <viewController storyboardIdentifier="MyBookingsViewController" id="UZz-Xc-Wao" customClass="MyBookingsViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAr-2d-UGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evm-8n-Peh">
+                                <rect key="frame" x="50.666666666666657" y="344" width="313" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JC5-Ot-z2m"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Evm-8n-Peh" firstAttribute="centerY" secondItem="fAr-2d-UGB" secondAttribute="centerY" id="Vmm-fq-Wli"/>
+                            <constraint firstItem="Evm-8n-Peh" firstAttribute="centerX" secondItem="fAr-2d-UGB" secondAttribute="centerX" id="y1Z-rt-n8Q"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Bookings" id="wkP-aH-meM"/>
+                    <navigationItem key="navigationItem" id="wkP-aH-meM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SET-Rn-hzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931.88405797101461" y="129.61956521739131"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Liv-Te-hhd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MlV-0m-8to" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XEf-cT-21E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UZz-Xc-Wao" kind="relationship" relationship="rootViewController" id="lc2-cq-Hjl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hDd-nk-znd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="24.637681159420293" y="129.61956521739131"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
