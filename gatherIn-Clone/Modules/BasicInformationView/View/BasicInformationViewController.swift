@@ -26,7 +26,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
     @IBOutlet weak var lastParagraph        : UILabel!
     
     // MARK:- Properties
-    let defaults = UserDefaults.standard
+    let defaults   = UserDefaults.standard
     var isRegisterd: Bool = false
     
     // MARK:- View Life Cycle
@@ -79,6 +79,45 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         defaults.set(isRegisterd, forKey: "isRegistered")
         // send the data to the firebase
         print("Register and view the new viewController")
+        self.dismiss(animated: true)
+        let homeVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        var arrViewControllers = [UIViewController]()
+
+        // First View
+        let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        let searchTab = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass")!, selectedImage: UIImage(systemName: "magnifyingglass")!)
+        searchVC.tabBarItem = searchTab
+        
+        // Second View
+        let myBookingsVC = UIStoryboard(name: "MyBookings", bundle: nil).instantiateViewController(withIdentifier: "MyBookingsViewController") as! MyBookingsViewController
+        let myBookingsTab = UITabBarItem(title: "My Bookings", image: UIImage(systemName: "calendar.circle")!, selectedImage: UIImage(systemName: "calendar.circle")!)
+        myBookingsVC.tabBarItem = myBookingsTab
+        
+        // Third View
+        let favoiriteVC = UIStoryboard(name: "Favorite", bundle: nil).instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
+        let favoiriteTab = UITabBarItem(title: "favorite", image: UIImage(systemName: "message")!, selectedImage: UIImage(systemName: "message")!)
+        favoiriteVC.tabBarItem = favoiriteTab
+        // Forth View
+        let conversationVC = UIStoryboard(name: "Conversations", bundle: nil).instantiateViewController(withIdentifier: "ConversationsViewController") as! ConversationsViewController
+        let conversationTab = UITabBarItem(title: "Conversations", image: UIImage(systemName: "heart")!, selectedImage: UIImage(systemName: "heart")!)
+        conversationVC.tabBarItem = conversationTab
+        // Fivth View
+        let moreVC = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
+        let moreTab = UITabBarItem(title: "More", image: UIImage(systemName: "list.dash")!, selectedImage: UIImage(systemName: "list.dash")!)
+        moreVC.tabBarItem = moreTab
+        
+        
+        arrViewControllers.append(UINavigationController(rootViewController: searchVC))
+        arrViewControllers.append(UINavigationController(rootViewController: myBookingsVC))
+        arrViewControllers.append(UINavigationController(rootViewController: favoiriteVC))
+        arrViewControllers.append(UINavigationController(rootViewController: conversationVC))
+        arrViewControllers.append(UINavigationController(rootViewController: moreVC))
+
+        homeVC.viewControllers = arrViewControllers
+        homeVC.modalPresentationStyle = .fullScreen
+        
+        self.present(homeVC, animated: true)
+        
     }
     
 }

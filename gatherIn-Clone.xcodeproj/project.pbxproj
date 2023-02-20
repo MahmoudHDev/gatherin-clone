@@ -14,6 +14,17 @@
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
+		BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C5129A2A2210063FC78 /* Search.storyboard */; };
+		BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */; };
+		BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C5A29A2A4990063FC78 /* HomeViewController.swift */; };
+		BCAC0C6629A2A70A0063FC78 /* MyBookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6529A2A70A0063FC78 /* MyBookings.storyboard */; };
+		BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */; };
+		BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */; };
+		BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */; };
+		BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */; };
+		BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7529A2A81D0063FC78 /* FavoriteViewController.swift */; };
+		BCAC0C7929A2A82B0063FC78 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */; };
+		BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */; };
 		BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */; };
 		BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */; };
 		BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72C297ABA080083975C /* AppDelegate.swift */; };
@@ -49,6 +60,17 @@
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BCAC0C5129A2A2210063FC78 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BCAC0C5A29A2A4990063FC78 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BCAC0C6529A2A70A0063FC78 /* MyBookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyBookings.storyboard; sourceTree = "<group>"; };
+		BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conversations.storyboard; sourceTree = "<group>"; };
+		BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		BCAC0C7529A2A81D0063FC78 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CodeVerification.storyboard; sourceTree = "<group>"; };
 		BCAE67B2298E60E400B02EFA /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		BCB2B729297ABA080083975C /* gatherIn-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gatherIn-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +169,118 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BCAC0C4D29A2A1E50063FC78 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C5029A2A2010063FC78 /* Model */,
+				BCAC0C4E29A2A1F50063FC78 /* View */,
+				BCAC0C4F29A2A1FB0063FC78 /* Presenter */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		BCAC0C4E29A2A1F50063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0C4F29A2A1FB0063FC78 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BCAC0C5029A2A2010063FC78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCAC0C5829A2A45F0063FC78 /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C5929A2A47B0063FC78 /* View */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		BCAC0C5929A2A47B0063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C5A29A2A4990063FC78 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0C5D29A2A60F0063FC78 /* MyBookingsView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C6129A2A6D40063FC78 /* View */,
+			);
+			path = MyBookingsView;
+			sourceTree = "<group>";
+		};
+		BCAC0C5E29A2A6660063FC78 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C6229A2A6DD0063FC78 /* View */,
+			);
+			path = FavoriteView;
+			sourceTree = "<group>";
+		};
+		BCAC0C5F29A2A6850063FC78 /* ConversationsView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C6329A2A6E00063FC78 /* View */,
+			);
+			path = ConversationsView;
+			sourceTree = "<group>";
+		};
+		BCAC0C6029A2A68D0063FC78 /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C6429A2A6E50063FC78 /* View */,
+			);
+			path = MoreView;
+			sourceTree = "<group>";
+		};
+		BCAC0C6129A2A6D40063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0C6229A2A6DD0063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C7529A2A81D0063FC78 /* FavoriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0C6329A2A6E00063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0C6429A2A6E50063FC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BCAE67B1298E60C300B02EFA /* CodeVerificationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +366,12 @@
 				BC17130B298298E000300C29 /* CountryCodeView */,
 				BCAE67B1298E60C300B02EFA /* CodeVerificationView */,
 				BCC2C507299785A200CC3889 /* BasicInformationView */,
+				BCAC0C5829A2A45F0063FC78 /* HomeTabBarView */,
+				BCAC0C4D29A2A1E50063FC78 /* SearchView */,
+				BCAC0C5D29A2A60F0063FC78 /* MyBookingsView */,
+				BCAC0C5E29A2A6660063FC78 /* FavoriteView */,
+				BCAC0C5F29A2A6850063FC78 /* ConversationsView */,
+				BCAC0C6029A2A68D0063FC78 /* MoreView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -270,6 +410,11 @@
 				BCF9CD3D29827A1500AD4091 /* Individuals.storyboard */,
 				BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */,
 				BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */,
+				BCAC0C5129A2A2210063FC78 /* Search.storyboard */,
+				BCAC0C6529A2A70A0063FC78 /* MyBookings.storyboard */,
+				BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */,
+				BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */,
+				BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -420,10 +565,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
+				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
+				BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */,
+				BCAC0C6629A2A70A0063FC78 /* MyBookings.storyboard in Resources */,
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
+				BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
+				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
 				BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */,
 				BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */,
 				BCF9CD3E29827A1500AD4091 /* Individuals.storyboard in Resources */,
@@ -481,11 +631,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
+				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
+				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
+				BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */,
 				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,
@@ -494,11 +647,14 @@
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
+				BCAC0C7929A2A82B0063FC78 /* ConversationsViewController.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
 				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
 				BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
 				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
+				BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */,
+				BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

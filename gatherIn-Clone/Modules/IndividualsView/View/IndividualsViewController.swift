@@ -12,6 +12,7 @@ import IQKeyboardManagerSwift
 import NVActivityIndicatorView
 
 @available(iOS 13, *)
+
 class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol {
     
     //MARK:- Outlets
@@ -35,7 +36,7 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     
     // MARK:- Properties
     let phoneNumber = PhoneNumberKit()
-    var selectedCountryCode = "+966"
+    var selectedCountryCode = "+20"
     var userNumber = ""
     var isLogin: Bool = false
 
@@ -69,7 +70,7 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         let imageGesture = UITapGestureRecognizer(target: self, action: #selector(tappedArrow))
         countryCodeContainerView.isUserInteractionEnabled = true
         countryCodeContainerView.addGestureRecognizer(imageGesture)
-        CountryCodeBtn.setTitle("\(self.flag(country: "SA")) +966", for: .normal)
+        CountryCodeBtn.setTitle("\(self.flag(country: "EG")) +20", for: .normal)
         
         loginBtn.isEnabled = false
         loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
@@ -143,7 +144,7 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
                 loginBtn.backgroundColor = #colorLiteral(red: 0.2609414458, green: 0.2709193528, blue: 0.4761442542, alpha: 0.5040400257)
                 AuthManager.shared.startAuth(phoneNumber: userNumber) { [weak self] (success) in
                     guard success else {return}
-
+                    
                     self?.CountryCodeBtn.isEnabled = false
                     self?.indicator.startAnimating()
 
@@ -157,7 +158,6 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
                     }
                 }
             }
-            
         }else{
             indicator.stopAnimating()
             indicatorContainerView.isHidden = true
