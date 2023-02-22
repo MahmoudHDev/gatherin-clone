@@ -12,6 +12,15 @@
 		BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */; };
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
+		BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */; };
+		BC4231EC29A691190080A36D /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */; };
+		BC4231ED29A691190080A36D /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */; };
+		BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */; };
+		BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */; };
+		BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */; };
+		BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */; };
+		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
+		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
 		BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C5129A2A2210063FC78 /* Search.storyboard */; };
@@ -58,6 +67,15 @@
 		BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
+		BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+CollectionViews.swift"; sourceTree = "<group>"; };
+		BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BCAC0C5129A2A2210063FC78 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -161,6 +179,21 @@
 			path = CountryCodeView;
 			sourceTree = "<group>";
 		};
+		BC4231E929A690B60080A36D /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */,
+				BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */,
+				BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */,
+				BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */,
+				BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */,
+				BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */,
+				BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */,
+				BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
 		BCA09AFF299B616E00819D95 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */,
+				BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */,
+				BC4231E929A690B60080A36D /* CollectionViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +599,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */,
+				BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */,
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
 				BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */,
@@ -571,7 +608,9 @@
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
 				BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */,
+				BC4231ED29A691190080A36D /* FirstCollectionViewCell.xib in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
+				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
 				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
 				BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */,
@@ -630,15 +669,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */,
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
+				BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */,
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
+				BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */,
+				BC4231EC29A691190080A36D /* FirstCollectionViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */,
+				BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */,
 				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,

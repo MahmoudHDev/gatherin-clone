@@ -13,7 +13,6 @@ class HomeViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.delegate = self
         
     }
@@ -22,7 +21,6 @@ class HomeViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(true)
         
     }
-    
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         print("a specific view has been tapped")

@@ -10,5 +10,5 @@ target 'gatherIn-Clone' do
 	pod 'PhoneNumberKit'
   pod 'Firebase/Auth'
   pod 'NVActivityIndicatorView'
-
+  pod 'DWAnimatedLabel'
 end

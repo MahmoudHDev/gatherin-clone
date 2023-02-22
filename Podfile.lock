@@ -1,4 +1,5 @@
 PODS:
+  - DWAnimatedLabel (1.2)
   - Firebase/Auth (10.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 10.3.0)
@@ -44,6 +45,7 @@ PODS:
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
+  - DWAnimatedLabel
   - Firebase/Auth
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
@@ -51,6 +53,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DWAnimatedLabel
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -63,6 +66,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  DWAnimatedLabel: 2c5742ea5584187592508e5cee0a9b0e8e8c6af0
   Firebase: f92fc551ead69c94168d36c2b26188263860acd9
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
   FirebaseCore: 988754646ab3bd4bdcb740f1bfe26b9f6c0d5f2a
@@ -74,6 +78,6 @@ SPEC CHECKSUMS:
   PhoneNumberKit: 441e8b26ec88d598e3591de9061eff18f5dd12e8
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 893fb12680966eedf038bff1fe56bbe08bf285cd
+PODFILE CHECKSUM: 22e6230ce0b2793ba45e58fb07123b62c2090c96
 
 COCOAPODS: 1.11.3
