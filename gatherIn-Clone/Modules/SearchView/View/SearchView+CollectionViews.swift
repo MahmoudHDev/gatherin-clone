@@ -7,6 +7,8 @@
 
 import UIKit
 
+@available (iOS 13, *)
+
 extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate {
     
     func setupCollectionView() {
@@ -30,7 +32,18 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        switch collectionView {
+        case firstCollectionView:
+            return 1
+        case secondCollectionView:
+            return 2
+        case thirdCollectionView:
+            return 3
+        case fourthCollectionView:
+            return 4
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

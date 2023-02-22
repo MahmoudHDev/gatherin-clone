@@ -8,7 +8,7 @@
 import UIKit
 import DWAnimatedLabel
 
-
+@available (iOS 13, *)
 class SearchViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var greetingLbl              : UILabel!
@@ -41,7 +41,12 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
+        textInLbl.text = "Check out the most beautiful places in KSA"
+        textInLbl.animationType = .fade
+        textInLbl.placeHolderColor = .darkGray
+        textInLbl.startAnimation(duration: 7.0, nil)
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -56,14 +61,15 @@ class SearchViewController: UIViewController {
     }
     // MARK:- Actions
     @IBAction func leftButton(_ sender: UIButton) {
-        
+        print("Left offer")
     }
     
     @IBAction func rightButton(_ sender: UIButton) {
-        
+        print("Right offer")
+
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
-        
+        print("Register Button")
     }
 }

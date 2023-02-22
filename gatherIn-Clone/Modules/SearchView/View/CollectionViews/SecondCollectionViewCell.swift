@@ -7,6 +7,8 @@
 
 import UIKit
 
+@available (iOS 13, *)
+
 class SecondCollectionViewCell: UICollectionViewCell {
 
     static let id = "SecondCollectionViewCell"
