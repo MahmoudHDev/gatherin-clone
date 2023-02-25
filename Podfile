@@ -11,4 +11,5 @@ target 'gatherIn-Clone' do
   pod 'Firebase/Auth'
   pod 'NVActivityIndicatorView'
   pod 'DWAnimatedLabel'
+  pod 'FSPagerView'
 end
