@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import FSPagerView
+
 @available(iOS 13, *)
 
 class OnboardingViewController: UIViewController {
     
     // MARK:- Outlets
-    @IBOutlet weak var collectionView   : UICollectionView!
+    @IBOutlet weak var pageview         : FSPagerView!
+    @IBOutlet weak var pageControl      : FSPageControl!
     @IBOutlet weak var skipBtn          : UIButton!
     @IBOutlet weak var nextBtn          : UIButton!
     
@@ -51,33 +54,30 @@ class OnboardingViewController: UIViewController {
     @IBAction func NextButton(_ sender: UIButton) {
         self.nextBtn.setTitle("Next", for: .normal)
         if currentCell < 2 {
-            let indexPath = IndexPath(item: currentCell + 1, section: 0)
+            let indexPath = FSPagerView.index(ofAccessibilityElement: currentCell + 1)
             currentCell += 1
-            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            self.pageview.scrollToItem(at: indexPath, animated: true)
             if currentCell == 2 {
                 nextBtn.setTitle("Login", for: .normal)
                 saveOnBoardingToDefaults()
                 self.showMainVC()
-
             }
-
         }else{
             currentCell = 0
-            let indexPath = IndexPath(item: 0, section: 0)
-            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            let indexPath = FSPagerView.index(ofAccessibilityElement: 0)
+            self.pageview.scrollToItem(at: indexPath , animated: true)
             
         }
-        
     }
     
     private func saveOnBoardingToDefaults() {
         onboardingSeenByUser = true
         self.defaults.setValue(onboardingSeenByUser, forKey: "HasSeenOnBoarding")
-
+        
     }
     
     private func showMainVC() {
-        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainView") as! MainViewController
+        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! MainViewController
         let navControl = UINavigationController()
         
         navControl.modalPresentationStyle = .fullScreen
@@ -85,48 +85,45 @@ class OnboardingViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
         self.present(navControl, animated: true, completion: nil)
-
+        
     }
-
+    
 }
 
 // MARK:- CollectionView
-@available(iOS 13, *)
-
-extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0.0
-    }
-}
 
 @available(iOS 13, *)
 
-extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    
     
     private func setupCollectionView() {
-        self.collectionView.register(OnboardingCVC.nib(), forCellWithReuseIdentifier: OnboardingCVC.id)
-        self.collectionView.dataSource  = self
-        self.collectionView.delegate    = self
-        self.collectionView.backgroundColor = .systemBlue
+        self.pageview.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+        self.pageview.dataSource  = self
+        self.pageview.delegate    = self
+        self.pageview.transformer = FSPagerViewTransformer(type: .depth)
+        self.pageview.backgroundColor = UIColor(named: "purpleButton")
+        self.pageControl.numberOfPages = arrImgs.count
+        self.pageControl.setFillColor(.systemGray, for: .normal)
+        self.pageControl.setStrokeColor(.systemBlue, for: .selected)
+        self.pageControl.currentPage = 0
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
         return arrImgs.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath.row)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCVC.id, for: indexPath) as! OnboardingCVC
-        cell.contentView.frame = cell.bounds
-        
-        let Imgs = self.arrImgs[indexPath.row]
-        cell.setupCell(img: Imgs)
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = self.arrImgs[index]
         return cell
     }
+    
+    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
+        self.pageControl.currentPage = index
+    }
+    
+    
     
 }

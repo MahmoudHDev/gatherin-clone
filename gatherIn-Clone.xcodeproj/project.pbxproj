@@ -46,8 +46,6 @@
 		BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */; };
 		BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */; };
 		BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */; };
-		BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */; };
-		BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */; };
 		BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */; };
 		BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCF3082298D824700739673 /* GoogleService-Info.plist */; };
 		BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */; };
@@ -103,8 +101,6 @@
 		BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
 		BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicInformation.storyboard; sourceTree = "<group>"; };
 		BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicInformation+TextField.swift"; sourceTree = "<group>"; };
-		BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVC.swift; sourceTree = "<group>"; };
-		BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCVC.xib; sourceTree = "<group>"; };
 		BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsPresenter.swift; sourceTree = "<group>"; };
 		BCCF3082298D824700739673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -424,7 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				BCF8E1EA297D625F00368E18 /* OnboardingViewController.swift */,
-				BCCBA61F297ABFC9008669F4 /* collectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,15 +464,6 @@
 				BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BCCBA61F297ABFC9008669F4 /* collectionView */ = {
-			isa = PBXGroup;
-			children = (
-				BCCBA620297ABFFF008669F4 /* OnboardingCVC.swift */,
-				BCCBA621297ABFFF008669F4 /* OnboardingCVC.xib */,
-			);
-			path = collectionView;
 			sourceTree = "<group>";
 		};
 		BCE4BC6A297F0B3E007119C8 /* MainView */ = {
@@ -613,7 +599,6 @@
 				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
 				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
-				BCCBA623297ABFFF008669F4 /* OnboardingCVC.xib in Resources */,
 				BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */,
 				BCF9CD3E29827A1500AD4091 /* Individuals.storyboard in Resources */,
 				BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */,
@@ -674,7 +659,6 @@
 				BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */,
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
-				BCCBA622297ABFFF008669F4 /* OnboardingCVC.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */,

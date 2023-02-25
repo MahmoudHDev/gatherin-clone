@@ -17,25 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D3M-78-CXX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsN-ZJ-h3a" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q5n-4u-hRx">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="YVg-a3-Fx4" id="s2A-Xc-XaY"/>
-                                    <outlet property="delegate" destination="YVg-a3-Fx4" id="AWP-4H-huk"/>
-                                </connections>
-                            </collectionView>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="Neu-9x-gEi">
                                 <rect key="frame" x="20" y="587" width="335" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-MB-XyQ">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-MB-XyQ">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
@@ -50,10 +39,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-NA-s0N">
-                                        <rect key="frame" x="260" y="0.0" width="75" height="50"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Skip">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="skipButton:" destination="YVg-a3-Fx4" eventType="touchUpInside" id="yYb-MX-6Zl"/>
@@ -64,28 +53,42 @@
                                     <constraint firstAttribute="height" constant="50" id="5GV-Fn-90d"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-yr-4Nc" customClass="FSPageControl" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="308.5" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vau-1s-WzM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dpa-GV-7cw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Neu-9x-gEi" firstAttribute="leading" secondItem="dpa-GV-7cw" secondAttribute="leading" constant="20" id="0qP-vG-2Pr"/>
-                            <constraint firstAttribute="trailing" secondItem="D3M-78-CXX" secondAttribute="trailing" id="Cye-ij-Jp2"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="leading" secondItem="dpa-GV-7cw" secondAttribute="leading" id="6Ch-ge-Ei1"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="bottom" secondItem="dpa-GV-7cw" secondAttribute="bottom" id="7QD-CM-0EU"/>
+                            <constraint firstItem="dpa-GV-7cw" firstAttribute="trailing" secondItem="PTj-yr-4Nc" secondAttribute="trailing" id="Aj4-lD-BhM"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="trailing" secondItem="dpa-GV-7cw" secondAttribute="trailing" id="EW7-B8-RQY"/>
                             <constraint firstItem="dpa-GV-7cw" firstAttribute="bottom" secondItem="Neu-9x-gEi" secondAttribute="bottom" constant="30" id="JlI-jk-Cb1"/>
                             <constraint firstItem="dpa-GV-7cw" firstAttribute="trailing" secondItem="Neu-9x-gEi" secondAttribute="trailing" constant="20" id="Pxc-6W-gv3"/>
-                            <constraint firstItem="D3M-78-CXX" firstAttribute="top" secondItem="txS-5w-aid" secondAttribute="top" id="a8U-lZ-tw3"/>
-                            <constraint firstItem="D3M-78-CXX" firstAttribute="leading" secondItem="txS-5w-aid" secondAttribute="leading" id="bgt-ix-LJP"/>
-                            <constraint firstAttribute="bottom" secondItem="D3M-78-CXX" secondAttribute="bottom" id="kxq-QU-cXB"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="bottom" secondItem="dpa-GV-7cw" secondAttribute="bottom" id="X4L-QY-69v"/>
+                            <constraint firstItem="PTj-yr-4Nc" firstAttribute="centerX" secondItem="txS-5w-aid" secondAttribute="centerX" id="c0l-Sm-NoY"/>
+                            <constraint firstItem="PTj-yr-4Nc" firstAttribute="leading" secondItem="dpa-GV-7cw" secondAttribute="leading" id="cBg-31-Ysa"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="top" secondItem="dpa-GV-7cw" secondAttribute="top" id="cnI-4H-tUZ"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="top" secondItem="txS-5w-aid" secondAttribute="top" id="iRD-1y-9VQ"/>
+                            <constraint firstItem="LsN-ZJ-h3a" firstAttribute="leading" secondItem="dpa-GV-7cw" secondAttribute="leading" id="vaa-OS-Pu3"/>
+                            <constraint firstItem="PTj-yr-4Nc" firstAttribute="centerY" secondItem="txS-5w-aid" secondAttribute="centerY" id="wbL-5W-emO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="D3M-78-CXX" id="13M-bB-yqd"/>
                         <outlet property="nextBtn" destination="Ne4-MB-XyQ" id="Rc7-30-zub"/>
+                        <outlet property="pageControl" destination="PTj-yr-4Nc" id="Cjn-3j-P5T"/>
+                        <outlet property="pageview" destination="LsN-ZJ-h3a" id="y1g-DI-zfk"/>
                         <outlet property="skipBtn" destination="mdA-NA-s0N" id="I5N-li-ID9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXZ-ZN-oFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="98"/>
+            <point key="canvasLocation" x="87.200000000000003" y="97.601199400299862"/>
         </scene>
     </scenes>
     <resources>
