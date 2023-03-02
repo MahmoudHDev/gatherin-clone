@@ -7,13 +7,14 @@
 
 import UIKit
 import DWAnimatedLabel
+import FSPagerView
 
 @available (iOS 13, *)
 class SearchViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
-    @IBOutlet weak var firstCollectionView      : UICollectionView!
+    @IBOutlet weak var firstCollectionView      : FSPagerView!
     @IBOutlet weak var whereToLbl               : UILabel!
     @IBOutlet weak var searchContainerView      : UIView!
     @IBOutlet weak var textInLbl                : DWAnimatedLabel!
@@ -31,31 +32,33 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var licenseLBl               : UILabel!
     @IBOutlet weak var advantagesLbl            : UILabel!
     @IBOutlet weak var fourthCollectionView     : UICollectionView!
-
-    
-    
+        
     // MARK:- Properties
     var username: String = ""
-    
+    var firstArr = [UIImage]()
     // MARK:- View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        textInLbl.text = "Check out the most beautiful places in KSA"
+        textInLbl.text = "Check out the most beautiful places in Egypt"
         textInLbl.animationType = .fade
         textInLbl.placeHolderColor = .darkGray
         textInLbl.startAnimation(duration: 7.0, nil)
 
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
+        
         self.setupCollectionView()
+        self.setupFSpagerView()
+        self.addData()
+        
     }
     
     // MARK:- Methods
     @objc
-    private func showSaudiCities() {
+    private func showEgyptianCities() {
         // Present the cites View
 //    present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
@@ -72,4 +75,5 @@ class SearchViewController: UIViewController {
     @IBAction func registerButton(_ sender: UIButton) {
         print("Register Button")
     }
+    
 }

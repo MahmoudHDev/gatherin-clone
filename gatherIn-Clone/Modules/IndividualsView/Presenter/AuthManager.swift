@@ -19,6 +19,9 @@ class AuthManager {
             guard let verificationId = verificationId, error == nil else {
                 completion(false)
                 return }
+            
+            print("Error has been occured : \(error)")
+            
             self?.verificationId = verificationId
             completion(true)
         }

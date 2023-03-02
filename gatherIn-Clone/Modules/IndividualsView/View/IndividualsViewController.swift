@@ -147,7 +147,7 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
                     
                     self?.CountryCodeBtn.isEnabled = false
                     self?.indicator.startAnimating()
-
+                    print("Success and the view is being proccessed")
                     DispatchQueue.main.async {
                         self?.indicatorContainerView.isHidden = true
                         self?.indicator.stopAnimating()

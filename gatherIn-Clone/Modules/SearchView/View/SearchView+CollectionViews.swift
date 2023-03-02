@@ -6,16 +6,13 @@
 //
 
 import UIKit
+import FSPagerView
 
 @available (iOS 13, *)
 
 extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate {
     
     func setupCollectionView() {
-        firstCollectionView.dataSource = self
-        firstCollectionView.delegate = self
-        firstCollectionView.register(FirstCollectionViewCell.nib(), forCellWithReuseIdentifier: FirstCollectionViewCell.id)
-        
         secondCollectionView.dataSource = self
         secondCollectionView.delegate = self
         secondCollectionView.register(SecondCollectionViewCell.nib(), forCellWithReuseIdentifier: SecondCollectionViewCell.id)
@@ -33,8 +30,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-        case firstCollectionView:
-            return 1
         case secondCollectionView:
             return 2
         case thirdCollectionView:
@@ -48,9 +43,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
-        case firstCollectionView:
-            let cell = firstCollectionView.dequeueReusableCell(withReuseIdentifier: FirstCollectionViewCell.id, for: indexPath) as! FirstCollectionViewCell
-            return cell
         case secondCollectionView:
             let cell = secondCollectionView.dequeueReusableCell(withReuseIdentifier: SecondCollectionViewCell.id, for: indexPath) as! SecondCollectionViewCell
             return cell
@@ -63,6 +55,37 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         default:
             return UICollectionViewCell()
         }
+    }
+}
+
+@available (iOS 13, *)
+
+extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    
+    func setupFSpagerView() {
+        firstCollectionView.dataSource = self
+        firstCollectionView.delegate = self
+        firstCollectionView.transformer = FSPagerViewTransformer(type: .overlap)
+        firstCollectionView.itemSize = CGSize(width: 250, height: 120)
+        firstCollectionView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FirstCollectionView")
+    }
+    
+    func addData() {
+        self.firstArr.append(UIImage(named: "Pyramids")!)
+        self.firstArr.append(UIImage(named: "DownTown")!)
+        self.firstArr.append(UIImage(named: "Sharm El-Sheikh")!)
+    }
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return firstArr.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = firstCollectionView.dequeueReusableCell(withReuseIdentifier: "FirstCollectionView", at: index)
+        let images = firstArr[index]
+        cell.imageView?.image = images
+        return cell
+
     }
     
     
