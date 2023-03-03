@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
-    @IBOutlet weak var firstCollectionView      : FSPagerView!
+    @IBOutlet weak var firstPagerView      : FSPagerView!
     @IBOutlet weak var whereToLbl               : UILabel!
     @IBOutlet weak var searchContainerView      : UIView!
     @IBOutlet weak var textInLbl                : DWAnimatedLabel!

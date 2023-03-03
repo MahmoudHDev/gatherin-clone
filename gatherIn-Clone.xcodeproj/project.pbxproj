@@ -13,8 +13,6 @@
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
 		BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */; };
-		BC4231EC29A691190080A36D /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */; };
-		BC4231ED29A691190080A36D /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */; };
 		BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */; };
 		BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */; };
 		BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */; };
@@ -48,6 +46,8 @@
 		BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */; };
 		BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */; };
 		BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCF3082298D824700739673 /* GoogleService-Info.plist */; };
+		BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */; };
+		BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD17A7129B25B3A0093687C /* FirstFSPagerViewCell.xib */; };
 		BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */; };
 		BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */; };
 		BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE4BC75297F0CAA007119C8 /* Main.storyboard */; };
@@ -66,8 +66,6 @@
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+CollectionViews.swift"; sourceTree = "<group>"; };
-		BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
-		BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicInformation+TextField.swift"; sourceTree = "<group>"; };
 		BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsPresenter.swift; sourceTree = "<group>"; };
 		BCCF3082298D824700739673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFSPagerViewCell.swift; sourceTree = "<group>"; };
+		BCD17A7129B25B3A0093687C /* FirstFSPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstFSPagerViewCell.xib; sourceTree = "<group>"; };
 		BCE4BC6E297F0B7D007119C8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BCE4BC75297F0CAA007119C8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -178,14 +178,14 @@
 		BC4231E929A690B60080A36D /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				BC4231EA29A691190080A36D /* FirstCollectionViewCell.swift */,
-				BC4231EB29A691190080A36D /* FirstCollectionViewCell.xib */,
 				BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */,
 				BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */,
 				BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */,
 				BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */,
 				BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */,
 				BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */,
+				BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */,
+				BCD17A7129B25B3A0093687C /* FirstFSPagerViewCell.xib */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -586,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */,
+				BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */,
 				BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */,
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
@@ -594,7 +595,6 @@
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
 				BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */,
-				BC4231ED29A691190080A36D /* FirstCollectionViewCell.xib in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
 				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
@@ -662,7 +662,7 @@
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */,
-				BC4231EC29A691190080A36D /* FirstCollectionViewCell.swift in Sources */,
+				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */,

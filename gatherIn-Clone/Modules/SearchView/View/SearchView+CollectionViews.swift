@@ -61,32 +61,14 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
 @available (iOS 13, *)
 
 extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
-    /*
-     func setTimer() {
-         let timer = Timer(timeInterval: 3.0, target: self, selector: #selector(timerSlideShow), userInfo: .none, repeats: true)
-         
-     }
-     
-     @objc func timerSlideShow() {
-         firstCounter += 1
-         // Move the index to the second Index
-         
-         let indexPath = FSPagerView.index(ofAccessibilityElement: firstCounter + 1)
-         print("the counter is in \(indexPath)")
-         firstCollectionView.scrollToItem(at: indexPath, animated: true)
-         // increase the counter by 1
-         
-         
-     }
-
-     */
     
     func setupFSpagerView() {
-        firstCollectionView.dataSource = self
-        firstCollectionView.delegate = self
-        firstCollectionView.transformer = FSPagerViewTransformer(type: .overlap)
-        firstCollectionView.itemSize = CGSize(width: 250, height: 120)
-        firstCollectionView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FirstCollectionView")
+        firstPagerView.register(FirstFSPagerViewCell.nib(), forCellWithReuseIdentifier: FirstFSPagerViewCell.id)
+        firstPagerView.dataSource  = self
+        firstPagerView.delegate    = self
+        firstPagerView.transformer = FSPagerViewTransformer(type: .overlap)
+        firstPagerView.itemSize    = CGSize(width: 250, height: 120)
+        firstPagerView.automaticSlidingInterval = 4.0
     }
     
     func addData() {
@@ -100,12 +82,17 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = firstCollectionView.dequeueReusableCell(withReuseIdentifier: "FirstCollectionView", at: index)
+        let cell = firstPagerView.dequeueReusableCell(withReuseIdentifier: FirstFSPagerViewCell.id, at: index) as! FirstFSPagerViewCell
         let images = firstArr[index]
         cell.imageView?.image = images
         return cell
         
     }
     
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        print("the index in the fspagerViewCell is \(index)")
+        self.firstPagerView.scrollToItem(at: index, animated: true)
+        self.firstPagerView.deselectItem(at: index, animated: true)
+    }
     
 }
