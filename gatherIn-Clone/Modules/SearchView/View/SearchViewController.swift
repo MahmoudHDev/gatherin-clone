@@ -35,6 +35,7 @@ class SearchViewController: UIViewController {
         
     // MARK:- Properties
     var username: String = ""
+    var firstCounter = 0
     var firstArr = [UIImage]()
     // MARK:- View Life Cycle
 

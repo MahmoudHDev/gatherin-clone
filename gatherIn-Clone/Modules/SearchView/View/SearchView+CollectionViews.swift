@@ -14,17 +14,17 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     func setupCollectionView() {
         secondCollectionView.dataSource = self
-        secondCollectionView.delegate = self
+        secondCollectionView.delegate   = self
         secondCollectionView.register(SecondCollectionViewCell.nib(), forCellWithReuseIdentifier: SecondCollectionViewCell.id)
-
-        thirdCollectionView.dataSource = self
-        thirdCollectionView.delegate = self
+        
+        thirdCollectionView.dataSource  = self
+        thirdCollectionView.delegate    = self
         thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
-
+        
         fourthCollectionView.dataSource = self
-        fourthCollectionView.delegate = self
+        fourthCollectionView.delegate   = self
         fourthCollectionView.register(FourthCollectionViewCell.nib(), forCellWithReuseIdentifier: FourthCollectionViewCell.id)
-
+        
     }
     
     
@@ -61,6 +61,25 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
 @available (iOS 13, *)
 
 extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    /*
+     func setTimer() {
+         let timer = Timer(timeInterval: 3.0, target: self, selector: #selector(timerSlideShow), userInfo: .none, repeats: true)
+         
+     }
+     
+     @objc func timerSlideShow() {
+         firstCounter += 1
+         // Move the index to the second Index
+         
+         let indexPath = FSPagerView.index(ofAccessibilityElement: firstCounter + 1)
+         print("the counter is in \(indexPath)")
+         firstCollectionView.scrollToItem(at: indexPath, animated: true)
+         // increase the counter by 1
+         
+         
+     }
+
+     */
     
     func setupFSpagerView() {
         firstCollectionView.dataSource = self
@@ -85,7 +104,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         let images = firstArr[index]
         cell.imageView?.image = images
         return cell
-
+        
     }
     
     

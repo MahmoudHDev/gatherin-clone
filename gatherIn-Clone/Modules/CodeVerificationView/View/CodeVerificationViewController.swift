@@ -71,6 +71,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
                 attributes: labelTitle)
             
             timer.invalidate()
+            seconds = 100
             timerLbl.isHidden = true
             resendCodeBtn.isEnabled = true
             resendCodeBtn.setAttributedTitle(atributedString, for: .normal)
@@ -139,6 +140,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
                         let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
                         self?.navigationController?.pushViewController(vc, animated: true)
                     }
+                    
                 }else{
                     self?.indicatorContainerView.isHidden = true
                     self?.indicator.stopAnimating()
