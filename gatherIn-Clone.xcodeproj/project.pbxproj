@@ -13,13 +13,14 @@
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
 		BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */; };
-		BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */; };
-		BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */; };
+		BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F229A6912A0080A36D /* SecondFSPagerViewCell.swift */; };
+		BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F329A6912A0080A36D /* SecondFSPagerViewCell.xib */; };
 		BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */; };
 		BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */; };
 		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
 		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
+		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
 		BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C5129A2A2210063FC78 /* Search.storyboard */; };
 		BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */; };
@@ -66,13 +67,14 @@
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+CollectionViews.swift"; sourceTree = "<group>"; };
-		BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
-		BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC4231F229A6912A0080A36D /* SecondFSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFSPagerViewCell.swift; sourceTree = "<group>"; };
+		BC4231F329A6912A0080A36D /* SecondFSPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFSPagerViewCell.xib; sourceTree = "<group>"; };
 		BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BCAC0C5129A2A2210063FC78 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -178,14 +180,14 @@
 		BC4231E929A690B60080A36D /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				BC4231F229A6912A0080A36D /* SecondCollectionViewCell.swift */,
-				BC4231F329A6912A0080A36D /* SecondCollectionViewCell.xib */,
+				BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */,
+				BCD17A7129B25B3A0093687C /* FirstFSPagerViewCell.xib */,
+				BC4231F229A6912A0080A36D /* SecondFSPagerViewCell.swift */,
+				BC4231F329A6912A0080A36D /* SecondFSPagerViewCell.xib */,
 				BC4231F729A691390080A36D /* ThirdCollectionViewCell.swift */,
 				BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */,
 				BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */,
 				BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */,
-				BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */,
-				BCD17A7129B25B3A0093687C /* FirstFSPagerViewCell.xib */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 		BCAC0C5029A2A2010063FC78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC9D1F5229B3605600F13174 /* PlacesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,7 +590,7 @@
 			files = (
 				BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */,
 				BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */,
-				BC4231F529A6912A0080A36D /* SecondCollectionViewCell.xib in Resources */,
+				BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */,
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
 				BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */,
@@ -656,12 +659,13 @@
 			files = (
 				BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */,
 				BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */,
+				BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */,
 				BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */,
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
-				BC4231F429A6912A0080A36D /* SecondCollectionViewCell.swift in Sources */,
+				BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */,
 				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,

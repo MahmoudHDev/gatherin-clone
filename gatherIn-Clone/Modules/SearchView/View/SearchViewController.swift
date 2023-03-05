@@ -14,13 +14,13 @@ class SearchViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
-    @IBOutlet weak var firstPagerView      : FSPagerView!
+    @IBOutlet weak var firstPagerView           : FSPagerView!
     @IBOutlet weak var whereToLbl               : UILabel!
     @IBOutlet weak var searchContainerView      : UIView!
     @IBOutlet weak var textInLbl                : DWAnimatedLabel!
     @IBOutlet weak var yourSecondHomeLbl        : UILabel!
     @IBOutlet weak var secondHomeParagraphLbl   : UILabel!
-    @IBOutlet weak var secondCollectionView     : UICollectionView!
+    @IBOutlet weak var secondPagerView          : FSPagerView!
     @IBOutlet weak var moreThan35Lbl            : UILabel!
     @IBOutlet weak var moreThan35ParagraphLbl   : UILabel!
     @IBOutlet weak var thirdCollectionView      : UICollectionView!
@@ -37,6 +37,8 @@ class SearchViewController: UIViewController {
     var username: String = ""
     var firstCounter = 0
     var firstArr = [UIImage]()
+    var placesModel = [PlacesModel]()
+    
     // MARK:- View Life Cycle
 
     override func viewDidLoad() {
@@ -52,17 +54,19 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.setupCollectionView()
-        self.setupFSpagerView()
-        self.addData()
-        
+        self.setupFirstFSpagerView()
+        setupSecondFSPagerView()
+        self.addDataToFirstFSPagerView()
+        self.addDataToSecondFSPagerView()
     }
     
-    // MARK:- Methods
-    @objc
-    private func showEgyptianCities() {
-        // Present the cites View
-//    present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        secondPagerView.scrollToItem(at: 1, animated: true)
     }
+    // MARK:- Methods
+    
+    
     // MARK:- Actions
     @IBAction func leftButton(_ sender: UIButton) {
         print("Left offer")
