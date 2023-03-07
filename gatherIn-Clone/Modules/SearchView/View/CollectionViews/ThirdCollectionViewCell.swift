@@ -11,8 +11,8 @@ import UIKit
 
 class ThirdCollectionViewCell: UICollectionViewCell {
     //MARK:- Outlets
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var image                : UIImageView!
+    @IBOutlet weak var title                : UILabel!
 
     //MARK:- Properties
 
@@ -22,7 +22,9 @@ class ThirdCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 22
+        
     }
     //MARK:- Methods
 
@@ -38,3 +40,4 @@ class ThirdCollectionViewCell: UICollectionViewCell {
 
     
 }
+

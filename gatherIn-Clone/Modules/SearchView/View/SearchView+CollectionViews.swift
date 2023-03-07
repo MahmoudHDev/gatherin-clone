@@ -12,12 +12,19 @@ import FSPagerView
 
     // MARK:- UICollectionView DataSource & Delegate
 
-extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate {
+extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func setupCollectionView() {
         thirdCollectionView.dataSource  = self
         thirdCollectionView.delegate    = self
         thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
+
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 20
+        layout.minimumInteritemSpacing = 20
+        layout.scrollDirection = .horizontal
+        thirdCollectionView.collectionViewLayout = layout
+        
         
         fourthCollectionView.dataSource = self
         fourthCollectionView.delegate   = self
@@ -28,7 +35,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case thirdCollectionView:
-            return 3
+            return 10
         case fourthCollectionView:
             return 4
         default:
@@ -40,6 +47,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         switch collectionView {
         case thirdCollectionView:
             let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
+            cell.image.image = UIImage(named: "Pyramids-2")
             return cell
         case fourthCollectionView:
             let cell = fourthCollectionView.dequeueReusableCell(withReuseIdentifier: FourthCollectionViewCell.id, for: indexPath) as! FourthCollectionViewCell
@@ -48,6 +56,20 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             return UICollectionViewCell()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case thirdCollectionView:
+            return CGSize(width: 150 , height: 200)
+        case fourthCollectionView:
+            return CGSize(width: 130, height: 130)
+        default:
+            return CGSize(width: 100, height: 100)
+        }
+    }
+    
+    
+    
 }
 
     // MARK:- FSPagerView   DataSource & Delegate
@@ -69,7 +91,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         secondPagerView.register(SecondFSPagerViewCell.nib(), forCellWithReuseIdentifier: SecondFSPagerViewCell.id)
         secondPagerView.dataSource = self
         secondPagerView.delegate   = self
-        secondPagerView.interitemSpacing = 10
+        secondPagerView.interitemSpacing = 5
         secondPagerView.itemSize = CGSize(width: 150, height: 150)
     }
     
@@ -141,7 +163,6 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
             print("the index in the fspagerViewCell is \(index)")
             self.secondPagerView.scrollToItem(at: index, animated: true)
             self.secondPagerView.deselectItem(at: index, animated: true)
-
         default:
             print("Nothing")
         }
