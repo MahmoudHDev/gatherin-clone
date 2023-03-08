@@ -18,10 +18,12 @@ class ThirdCollectionViewCell: UICollectionViewCell {
 
     static let id = "ThirdCollectionViewCell"
     
+
     //MARK:- Nib
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 22
         

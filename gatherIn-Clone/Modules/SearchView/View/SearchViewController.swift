@@ -38,6 +38,7 @@ class SearchViewController: UIViewController {
     var firstCounter = 0
     var firstArr = [UIImage]()
     var placesModel = [PlacesModel]()
+    var urbansModel = [PlacesModel]()
     
     // MARK:- View Life Cycle
 
@@ -55,9 +56,10 @@ class SearchViewController: UIViewController {
         
         self.setupCollectionView()
         self.setupFirstFSpagerView()
-        setupSecondFSPagerView()
+        self.setupSecondFSPagerView()
         self.addDataToFirstFSPagerView()
         self.addDataToSecondFSPagerView()
+        self.addDataToThirdCollectionView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
