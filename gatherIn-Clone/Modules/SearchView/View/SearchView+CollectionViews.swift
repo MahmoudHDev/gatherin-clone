@@ -113,7 +113,9 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             print("indexPath \(indexPath.row)")
         }
     }
+    
 }
+
 // MARK:- FSPagerView   DataSource & Delegate
 
 @available (iOS 13, *)
@@ -162,6 +164,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        
         switch pagerView {
         case firstPagerView:
             let cell = firstPagerView.dequeueReusableCell(withReuseIdentifier: FirstFSPagerViewCell.id, at: index) as! FirstFSPagerViewCell
@@ -178,6 +181,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             return FSPagerViewCell()
         }
+        
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
@@ -191,5 +195,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             print("Nothing")
         }
+        
     }
+    
 }
