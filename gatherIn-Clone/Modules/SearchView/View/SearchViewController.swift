@@ -12,6 +12,7 @@ import FSPagerView
 @available (iOS 13, *)
 class SearchViewController: UIViewController {
     // MARK:- Outlets
+    @IBOutlet weak var TopTabBarView            : UIView!
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
     @IBOutlet weak var firstPagerView           : FSPagerView!
@@ -41,7 +42,6 @@ class SearchViewController: UIViewController {
     var urbansModel = [PlacesModel]()
     
     // MARK:- View Life Cycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -65,6 +65,7 @@ class SearchViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         secondPagerView.scrollToItem(at: 1, animated: true)
+        
     }
     // MARK:- Methods
     

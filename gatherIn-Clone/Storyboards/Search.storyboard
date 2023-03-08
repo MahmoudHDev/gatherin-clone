@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rM-Cb2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rM-Cb2" userLabel="TopTabBarView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-Mw-dpA">
@@ -58,9 +58,23 @@
                                     <constraint firstAttribute="bottom" secondItem="dqg-Mw-dpA" secondAttribute="bottom" constant="10" id="a0E-Mq-sDy"/>
                                     <constraint firstAttribute="height" constant="70" id="cgO-VI-JU1"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="purpleButton"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-2J-ULz">
-                                <rect key="frame" x="0.0" y="70" width="414" height="1430"/>
+                                <rect key="frame" x="0.0" y="85" width="414" height="1415"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-kc-QSf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1700.3333333333333"/>
@@ -388,7 +402,7 @@
                         <viewLayoutGuide key="safeArea" id="3G9-n4-N7T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8wb-2J-ULz" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="bottom" id="2jV-am-rZm"/>
+                            <constraint firstItem="8wb-2J-ULz" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="bottom" constant="15" id="2jV-am-rZm"/>
                             <constraint firstItem="3G9-n4-N7T" firstAttribute="bottom" secondItem="8wb-2J-ULz" secondAttribute="bottom" id="9d3-QY-vPO"/>
                             <constraint firstItem="gNs-rM-Cb2" firstAttribute="trailing" secondItem="3G9-n4-N7T" secondAttribute="trailing" id="H8X-Yw-6bY"/>
                             <constraint firstItem="gNs-rM-Cb2" firstAttribute="top" secondItem="3G9-n4-N7T" secondAttribute="top" id="SKT-g3-0mz"/>
@@ -400,6 +414,7 @@
                     <navigationItem key="navigationItem" id="wgJ-Ec-N7P"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="TopTabBarView" destination="gNs-rM-Cb2" id="WAd-8V-EUf"/>
                         <outlet property="advantagesLbl" destination="ar4-vy-yWg" id="Ses-hC-dmT"/>
                         <outlet property="firstPagerView" destination="JWl-1c-Q1w" id="6Y8-cn-iVK"/>
                         <outlet property="fourthCollectionView" destination="CdR-R0-uwK" id="pNy-yP-Oqm"/>

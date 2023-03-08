@@ -18,13 +18,12 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         thirdCollectionView.dataSource  = self
         thirdCollectionView.delegate    = self
         thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
-        
+        thirdCollectionView.showsHorizontalScrollIndicator = false
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
         layout.scrollDirection = .horizontal
         thirdCollectionView.collectionViewLayout = layout
-        
         
         fourthCollectionView.dataSource = self
         fourthCollectionView.delegate   = self
@@ -68,7 +67,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 cell.image.image = UIImage(systemName: "ellipsis")!
                 cell.image.tintColor = .darkGray
                 cell.image.contentMode = .scaleAspectFit
-                cell.image.sizeToFit()
                 return cell
                 
             }else{
@@ -77,6 +75,8 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 let imgs    = placesModel[indexPath.row].image
                 cell.title.text = titles
                 cell.image.image = imgs
+                cell.image.contentMode = .scaleAspectFill
+
                 return cell
             }
             
@@ -91,7 +91,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case thirdCollectionView:
-            return CGSize(width: 150 , height: 200)
+            return CGSize(width: 170 , height: 190)
         case fourthCollectionView:
             return CGSize(width: 130, height: 130)
         default:
@@ -114,7 +114,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         }
     }
 }
-
 // MARK:- FSPagerView   DataSource & Delegate
 
 @available (iOS 13, *)
@@ -134,7 +133,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         secondPagerView.register(SecondFSPagerViewCell.nib(), forCellWithReuseIdentifier: SecondFSPagerViewCell.id)
         secondPagerView.dataSource = self
         secondPagerView.delegate   = self
-        secondPagerView.interitemSpacing = 5
+        secondPagerView.interitemSpacing = 10
         secondPagerView.itemSize = CGSize(width: 150, height: 150)
     }
     
@@ -163,7 +162,6 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        
         switch pagerView {
         case firstPagerView:
             let cell = firstPagerView.dequeueReusableCell(withReuseIdentifier: FirstFSPagerViewCell.id, at: index) as! FirstFSPagerViewCell
@@ -180,7 +178,6 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             return FSPagerViewCell()
         }
-        
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
@@ -194,7 +191,5 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             print("Nothing")
         }
-        
     }
-    
 }
