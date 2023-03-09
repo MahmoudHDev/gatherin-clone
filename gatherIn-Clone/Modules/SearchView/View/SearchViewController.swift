@@ -49,7 +49,6 @@ class SearchViewController: UIViewController {
         textInLbl.animationType = .fade
         textInLbl.placeHolderColor = .darkGray
         textInLbl.startAnimation(duration: 7.0, nil)
-
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

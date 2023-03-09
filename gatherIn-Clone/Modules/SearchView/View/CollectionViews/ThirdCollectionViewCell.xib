@@ -118,6 +118,7 @@
             <size key="customSize" width="406" height="392"/>
             <connections>
                 <outlet property="image" destination="faM-Zz-2dY" id="72C-g0-7E1"/>
+                <outlet property="imageContainerView" destination="TN8-iT-pkl" id="D51-x7-PKu"/>
                 <outlet property="title" destination="9sv-Zy-t8I" id="PVQ-ar-03s"/>
             </connections>
             <point key="canvasLocation" x="395.6521739130435" y="165.73660714285714"/>

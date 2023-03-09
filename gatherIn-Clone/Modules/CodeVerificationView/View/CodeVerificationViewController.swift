@@ -30,7 +30,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     var timer: Timer = Timer()
     var seconds = 100
     var isTimerRunning = false
-    
+    var isLogin = false
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,7 +119,6 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     
     @IBAction func backButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        print("Back to the previous UIViewController")
     }
     
     @IBAction func checkButton(_ sender: UIButton) {
@@ -133,10 +132,14 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
             let code = text
             AuthManager.shared.verifyCode(smsCode: code) { [weak self] (success) in
                 if success {
+                    
                     DispatchQueue.main.async {
                         self?.indicatorContainerView.isHidden = true
                         self?.indicator.stopAnimating()
-
+                        // Save login info
+                        
+                        self?.defaults.setValue(true, forKey: "isLogin")
+                        
                         let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
                         self?.navigationController?.pushViewController(vc, animated: true)
                     }

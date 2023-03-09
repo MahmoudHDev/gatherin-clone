@@ -11,6 +11,7 @@ import UIKit
 
 class ThirdCollectionViewCell: UICollectionViewCell {
     //MARK:- Outlets
+    @IBOutlet weak var imageContainerView   : UIView!
     @IBOutlet weak var image                : UIImageView!
     @IBOutlet weak var title                : UILabel!
 

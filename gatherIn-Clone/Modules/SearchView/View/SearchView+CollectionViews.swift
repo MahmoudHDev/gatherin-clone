@@ -40,7 +40,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         self.placesModel.append(PlacesModel(image: UIImage(named: "Hurghada")!, title: "Hurghada"))
         self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!, title: "Siwa Oasis"))
         
-        
     }
     
     @objc func morebuttonTapped(_ sender: Any) {
@@ -64,9 +63,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             if indexPath.row == placesModel.count {
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
                 cell.title.text = "More"
-                cell.image.image = UIImage(systemName: "ellipsis")!
-                cell.image.tintColor = .darkGray
-                cell.image.contentMode = .scaleAspectFit
+                cell.imageContainerView.isHidden = true
                 return cell
                 
             }else{
@@ -76,6 +73,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 cell.title.text = titles
                 cell.image.image = imgs
                 cell.image.contentMode = .scaleAspectFill
+                cell.imageContainerView.isHidden = false
 
                 return cell
             }

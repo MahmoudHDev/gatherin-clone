@@ -72,7 +72,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         print("View the Privacy and The Policy")
     }
     
-    private func presentHomeVC() {
+    func presentHomeVC() -> UIViewController {
         let homeVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
         var arrViewControllers = [UIViewController]()
@@ -106,9 +106,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         homeVC.viewControllers = arrViewControllers
         homeVC.modalPresentationStyle = .fullScreen
         self.dismiss(animated: true)
-
-        self.present(homeVC, animated: true)
-
+        return homeVC
     }
     // MARK:- Actions
     @IBAction func registerBtn(_ sender: UIButton) {
@@ -117,7 +115,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         defaults.set(isRegisterd, forKey: "isRegistered")
         // send the data to the firebase
         print("Register and view the new viewController")
-        self.presentHomeVC()
+        self.present(presentHomeVC(), animated: true)
     }
     
 
