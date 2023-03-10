@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rM-Cb2" userLabel="TopTabBarView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rM-Cb2" userLabel="TopTabBarView" customClass="TopBar" customModule="gatherIn_Clone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-Mw-dpA">
@@ -59,22 +59,16 @@
                                     <constraint firstAttribute="height" constant="70" id="cgO-VI-JU1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" name="purpleButton"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-2J-ULz">
-                                <rect key="frame" x="0.0" y="85" width="414" height="1415"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="1430"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-kc-QSf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1755.3333333333333"/>
@@ -260,7 +254,7 @@
                                                         <rect key="frame" x="222" y="0.0" width="192" height="100"/>
                                                         <color key="backgroundColor" name="purpleButton"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="50% Offers Button " backgroundImage="gradient-1">
+                                                        <state key="normal" title="50% Offer " backgroundImage="gradient-1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -443,9 +437,9 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3G9-n4-N7T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8wb-2J-ULz" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="bottom" constant="15" id="2jV-am-rZm"/>
+                            <constraint firstItem="8wb-2J-ULz" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="bottom" id="2jV-am-rZm"/>
                             <constraint firstItem="3G9-n4-N7T" firstAttribute="bottom" secondItem="8wb-2J-ULz" secondAttribute="bottom" id="9d3-QY-vPO"/>
                             <constraint firstItem="gNs-rM-Cb2" firstAttribute="trailing" secondItem="3G9-n4-N7T" secondAttribute="trailing" id="H8X-Yw-6bY"/>
                             <constraint firstItem="gNs-rM-Cb2" firstAttribute="top" secondItem="3G9-n4-N7T" secondAttribute="top" id="SKT-g3-0mz"/>

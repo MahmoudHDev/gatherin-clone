@@ -101,8 +101,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             return CGSize(width: 170 , height: 190)
         case fourthCollectionView:
             
-            
-            return CGSize(width: 160, height: 200)
+            return CGSize(width: 160, height: 180)
         default:
             return CGSize(width: 100, height: 100)
         }
@@ -137,7 +136,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         firstPagerView.delegate    = self
         firstPagerView.transformer = FSPagerViewTransformer(type: .overlap)
         firstPagerView.itemSize    = CGSize(width: 250, height: 120)
-        firstPagerView.automaticSlidingInterval = 4.0
+        firstPagerView.automaticSlidingInterval = 5.0
     }
     
     func setupSecondFSPagerView() {

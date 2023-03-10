@@ -86,11 +86,11 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         myBookingsVC.tabBarItem = myBookingsTab
         
         let favoiriteVC = UIStoryboard(name: "Favorite", bundle: nil).instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
-        let favoiriteTab = UITabBarItem(title: "favorite", image: UIImage(systemName: "message")!, selectedImage: UIImage(systemName: "message")!)
+        let favoiriteTab = UITabBarItem(title: "favorite", image: UIImage(systemName: "heart")!, selectedImage: UIImage(systemName: "heart")!)
         favoiriteVC.tabBarItem = favoiriteTab
 
         let conversationVC = UIStoryboard(name: "Conversations", bundle: nil).instantiateViewController(withIdentifier: "ConversationsViewController") as! ConversationsViewController
-        let conversationTab = UITabBarItem(title: "Conversations", image: UIImage(systemName: "heart")!, selectedImage: UIImage(systemName: "heart")!)
+        let conversationTab = UITabBarItem(title: "Conversations", image: UIImage(systemName: "message")!, selectedImage: UIImage(systemName: "message")!)
         conversationVC.tabBarItem = conversationTab
 
         let moreVC = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController

@@ -12,7 +12,7 @@ import FSPagerView
 @available (iOS 13, *)
 class SearchViewController: UIViewController {
     // MARK:- Outlets
-    @IBOutlet weak var TopTabBarView            : UIView!
+    @IBOutlet weak var TopTabBarView            : TopBar!
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
     @IBOutlet weak var firstPagerView           : FSPagerView!
@@ -41,15 +41,17 @@ class SearchViewController: UIViewController {
     var placesModel         = [PlacesModel]()
     var urbansModel         = [PlacesModel]()
     var advantagesModel     = [AdvantagesModel]()
-    
+    var counter             : Int = 0
+
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        textInLbl.text = "Check out the most beautiful places in Egypt"
-        textInLbl.animationType = .fade
-        textInLbl.placeHolderColor = .darkGray
-        textInLbl.startAnimation(duration: 7.0, nil)
+
+        
+        self.searchBoxStyle()
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -79,6 +81,41 @@ class SearchViewController: UIViewController {
         
         leftOfferButton.layer.maskedCorners  = [.layerMaxXMinYCorner]
         rightOfferButton.layer.maskedCorners = [.layerMinXMinYCorner]
+    }
+    private func searchBoxStyle() {
+        textInLbl.text = "Search"
+        var timer = Timer()
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(repeatingText), userInfo: nil, repeats: true)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchTextHasBeenTapped))
+        
+        textInLbl.isUserInteractionEnabled = true
+        
+        textInLbl.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func repeatingText() {
+
+        let arrStrings = ["Check out the most beautiful places in Egypt",
+                          "Get the best price in the City",
+                          "Explore places and apartments in Egypt"]
+        if counter != arrStrings.count {
+            textInLbl.text = arrStrings[counter]
+            textInLbl.animationType = .fade
+            textInLbl.placeHolderColor = .darkGray
+            textInLbl.startAnimation(duration: 7.0, nil)
+        }else{
+            counter = 0
+            textInLbl.text = arrStrings[counter]
+            textInLbl.animationType = .fade
+            textInLbl.placeHolderColor = .darkGray
+            textInLbl.startAnimation(duration: 7.0, nil)
+        }
+        counter += 1
+    }
+    @objc private func searchTextHasBeenTapped(){
+        
+        print("Present Cities View")
     }
     
     // MARK:- Actions

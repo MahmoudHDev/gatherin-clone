@@ -22,32 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="243" height="224"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-IV-340">
-                                <rect key="frame" x="51.5" y="20" width="140" height="93.5"/>
+                                <rect key="frame" x="51.5" y="20" width="140" height="88.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zft-R4-FIW">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Booking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-qe-APS">
-                                                <rect key="frame" x="0.0" y="2.5" width="110" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="55"/>
                                                 <color key="tintColor" name="purpleButton"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                 <color key="textColor" name="purpleButton"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9gI-p9-wt5">
-                                                <rect key="frame" x="110" y="19.5" width="30" height="20"/>
+                                                <rect key="frame" x="100" y="17" width="40" height="20"/>
                                                 <color key="tintColor" name="purpleButton"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="zRu-H3-4zJ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="zRu-H3-4zJ"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="I60-lr-GhS"/>
-                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbS-Xz-bxL">
-                                        <rect key="frame" x="0.0" y="70" width="140" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="65" width="140" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="5nJ-f9-TX5"/>
                                         </constraints>
