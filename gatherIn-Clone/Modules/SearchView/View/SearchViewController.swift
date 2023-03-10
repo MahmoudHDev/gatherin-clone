@@ -35,11 +35,12 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var fourthCollectionView     : UICollectionView!
         
     // MARK:- Properties
-    var username: String = ""
-    var firstCounter = 0
-    var firstArr = [UIImage]()
-    var placesModel = [PlacesModel]()
-    var urbansModel = [PlacesModel]()
+    var username            = ""       // For TopTabBar Greeting
+    var firstCounter        = 0
+    var firstArr            = [UIImage]()
+    var placesModel         = [PlacesModel]()
+    var urbansModel         = [PlacesModel]()
+    var advantagesModel     = [AdvantagesModel]()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -59,6 +60,8 @@ class SearchViewController: UIViewController {
         self.addDataToFirstFSPagerView()
         self.addDataToSecondFSPagerView()
         self.addDataToThirdCollectionView()
+        self.addDataToFourthCollectionView()
+        self.buttonStyles()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,7 +70,16 @@ class SearchViewController: UIViewController {
         
     }
     // MARK:- Methods
-    
+    private func buttonStyles() {
+        leftOfferButton .layer.masksToBounds = true
+        rightOfferButton.layer.masksToBounds = true
+        
+        leftOfferButton.clipsToBounds        = true
+        rightOfferButton.clipsToBounds       = true
+        
+        leftOfferButton.layer.maskedCorners  = [.layerMaxXMinYCorner]
+        rightOfferButton.layer.maskedCorners = [.layerMinXMinYCorner]
+    }
     
     // MARK:- Actions
     @IBAction func leftButton(_ sender: UIButton) {

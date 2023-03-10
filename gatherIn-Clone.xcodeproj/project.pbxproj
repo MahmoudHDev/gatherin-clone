@@ -20,6 +20,7 @@
 		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
 		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
+		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
 		BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C5129A2A2210063FC78 /* Search.storyboard */; };
@@ -74,6 +75,7 @@
 		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BCAC0C5129A2A2210063FC78 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9D1F5229B3605600F13174 /* PlacesModel.swift */,
+				BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
 				BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */,
 				BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */,
+				BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

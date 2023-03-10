@@ -32,26 +32,30 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     }
     
     func addDataToThirdCollectionView() {
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Cairo")!, title: "Cairo"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Pyramids-2")!, title: "Giza"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Alexandria")!, title: "Alexandria"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Portsaid")!, title: "Port Said"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Sharm")!, title: "Sharm El-Sheikh"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Hurghada")!, title: "Hurghada"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!, title: "Siwa Oasis"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Cairo")!         , title: "Cairo"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Pyramids-2")!    , title: "Giza"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Alexandria")!    , title: "Alexandria"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Portsaid")!      , title: "Port Said"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Sharm")!         , title: "Sharm El-Sheikh"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Hurghada")!      , title: "Hurghada"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!          , title: "Siwa Oasis"))
         
     }
     
-    @objc func morebuttonTapped(_ sender: Any) {
-        print("Image tapped")
-    }
     
+    func addDataToFourthCollectionView() {
+        advantagesModel.append(AdvantagesModel(title: "Verified", icon: UIImage(systemName: "pencil")!, description: "A platform which verified from the ministry of tourism."))
+        advantagesModel.append(AdvantagesModel(title: "Credibility", icon: UIImage(systemName: "star")!, description: "Verified reviews from real customers."))
+        advantagesModel.append(AdvantagesModel(title: "Instant Booking", icon: UIImage(systemName: "doc")!, description: "Instant and guaranteed booking."))
+        advantagesModel.append(AdvantagesModel(title: "Options", icon: UIImage(systemName: "magnifyingglass")!, description: "the largest variety of prices and spaces."))
+    }
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case thirdCollectionView:
             return placesModel.count + 1
         case fourthCollectionView:
-            return 4
+            return advantagesModel.count
         default:
             return 0
         }
@@ -64,8 +68,8 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
                 cell.title.text = "More"
                 cell.imageContainerView.isHidden = true
+
                 return cell
-                
             }else{
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
                 let titles  = placesModel[indexPath.row].title
@@ -80,6 +84,11 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             
         case fourthCollectionView:
             let cell = fourthCollectionView.dequeueReusableCell(withReuseIdentifier: FourthCollectionViewCell.id, for: indexPath) as! FourthCollectionViewCell
+            let imgs = advantagesModel[indexPath.row].icon
+            let titles = advantagesModel[indexPath.row].title
+            let descs = advantagesModel[indexPath.row].description
+
+            cell.setupCell(title: titles, desc: descs, image: imgs)
             return cell
         default:
             return UICollectionViewCell()
@@ -91,7 +100,9 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         case thirdCollectionView:
             return CGSize(width: 170 , height: 190)
         case fourthCollectionView:
-            return CGSize(width: 130, height: 130)
+            
+            
+            return CGSize(width: 160, height: 200)
         default:
             return CGSize(width: 100, height: 100)
         }

@@ -77,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="85" width="414" height="1415"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-kc-QSf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1755.3333333333333"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34H-1w-6s6">
                                                 <rect key="frame" x="0.0" y="150" width="414" height="110"/>
@@ -225,24 +225,64 @@
                                                     <constraint firstAttribute="height" constant="375" id="2IB-kM-aJC"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LYD-uv-Jwx">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LYD-uv-Jwx">
                                                 <rect key="frame" x="0.0" y="940" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T79-KQ-fLj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="100"/>
                                                         <color key="backgroundColor" name="purpleButton"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Offers Button">
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <state key="normal" title="Offers Button" backgroundImage="gradient-3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="0.0" height="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="purpleButton"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="leftButton:" destination="K1t-yM-Ops" eventType="touchUpInside" id="KdK-ox-zDA"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-Nq-4hx">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="100"/>
+                                                        <rect key="frame" x="222" y="0.0" width="192" height="100"/>
                                                         <color key="backgroundColor" name="purpleButton"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="50% Offers Button ">
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <state key="normal" title="50% Offers Button " backgroundImage="gradient-1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="0.0" height="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="purpleButton"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="rightButton:" destination="K1t-yM-Ops" eventType="touchUpInside" id="hJl-Eb-eKe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -252,8 +292,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-8P-33T">
                                                 <rect key="frame" x="0.0" y="1060" width="414" height="200"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-bD-TnX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hurghada" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-bD-TnX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-oe-oV5">
                                                         <rect key="frame" x="10" y="20" width="207" height="180"/>
@@ -286,6 +326,9 @@
                                                                 <state key="normal" title="سجل">
                                                                     <color key="titleColor" name="purpleButton"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="registerButton:" destination="K1t-yM-Ops" eventType="touchUpInside" id="QAO-bk-GlB"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*مرخصة من وزارة السياحة" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-8j-EOO">
                                                                 <rect key="frame" x="0.0" y="152" width="197" height="18"/>
@@ -310,7 +353,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="n3v-bD-TnX" firstAttribute="width" secondItem="4z1-8P-33T" secondAttribute="width" id="Bdu-J8-fbH"/>
-                                                    <constraint firstItem="n3v-bD-TnX" firstAttribute="height" secondItem="4z1-8P-33T" secondAttribute="height" multiplier="0.85" id="XCe-c3-boS"/>
+                                                    <constraint firstItem="n3v-bD-TnX" firstAttribute="height" secondItem="4z1-8P-33T" secondAttribute="height" multiplier="0.95" id="XCe-c3-boS"/>
                                                     <constraint firstItem="xyU-oe-oV5" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="top" constant="20" id="cEJ-LU-tVb"/>
                                                     <constraint firstAttribute="bottom" secondItem="xyU-oe-oV5" secondAttribute="bottom" id="gfl-wG-4c7"/>
                                                     <constraint firstAttribute="height" constant="200" id="hhs-CE-Lne"/>
@@ -321,13 +364,13 @@
                                                     <constraint firstItem="n3v-bD-TnX" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="top" id="rmQ-Ov-Pgc"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CdR-R0-uwK">
-                                                <rect key="frame" x="0.0" y="1300.3333333333333" width="414" height="300"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CdR-R0-uwK">
+                                                <rect key="frame" x="20" y="1320.3333333333333" width="374" height="425"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="NZs-iS-5B4"/>
+                                                    <constraint firstAttribute="height" constant="425" id="NZs-iS-5B4"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wRS-rJ-QpZ">
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wRS-rJ-QpZ">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -359,7 +402,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Jh6-xY-dvP" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" id="1q8-GI-Kpf"/>
-                                            <constraint firstItem="CdR-R0-uwK" firstAttribute="top" secondItem="ar4-vy-yWg" secondAttribute="bottom" id="2uR-dg-jYI"/>
+                                            <constraint firstItem="CdR-R0-uwK" firstAttribute="top" secondItem="ar4-vy-yWg" secondAttribute="bottom" constant="20" id="2uR-dg-jYI"/>
                                             <constraint firstItem="buP-KP-WDR" firstAttribute="top" secondItem="34H-1w-6s6" secondAttribute="bottom" constant="20" id="3AN-pZ-PAV"/>
                                             <constraint firstItem="JWl-1c-Q1w" firstAttribute="top" secondItem="5rf-kc-QSf" secondAttribute="top" id="4nY-Xv-0qB"/>
                                             <constraint firstItem="ar4-vy-yWg" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="bottom" constant="10" id="5q6-j3-Pzw"/>
@@ -371,13 +414,13 @@
                                             <constraint firstItem="buP-KP-WDR" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" constant="15" id="Rt4-Qg-U6Z"/>
                                             <constraint firstItem="JWl-1c-Q1w" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" id="Tmb-YJ-5pP"/>
                                             <constraint firstItem="4z1-8P-33T" firstAttribute="top" secondItem="LYD-uv-Jwx" secondAttribute="bottom" constant="20" id="Ujx-fE-qiR"/>
-                                            <constraint firstAttribute="trailing" secondItem="CdR-R0-uwK" secondAttribute="trailing" id="V93-bh-Ksp"/>
+                                            <constraint firstAttribute="trailing" secondItem="CdR-R0-uwK" secondAttribute="trailing" constant="20" id="V93-bh-Ksp"/>
                                             <constraint firstItem="LYD-uv-Jwx" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" id="VjP-Si-itm"/>
-                                            <constraint firstItem="CdR-R0-uwK" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" id="Wbj-pv-5x8"/>
+                                            <constraint firstItem="CdR-R0-uwK" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" constant="20" id="Wbj-pv-5x8"/>
                                             <constraint firstAttribute="trailing" secondItem="34H-1w-6s6" secondAttribute="trailing" id="YVb-e2-rYL"/>
                                             <constraint firstAttribute="trailing" secondItem="Jh6-xY-dvP" secondAttribute="trailing" id="ZY1-lR-7jA"/>
                                             <constraint firstItem="34H-1w-6s6" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" id="a81-zB-kD5"/>
-                                            <constraint firstAttribute="bottom" secondItem="CdR-R0-uwK" secondAttribute="bottom" constant="100" id="aRk-DQ-O3c"/>
+                                            <constraint firstAttribute="bottom" secondItem="CdR-R0-uwK" secondAttribute="bottom" constant="10" id="aRk-DQ-O3c"/>
                                             <constraint firstItem="ar4-vy-yWg" firstAttribute="leading" secondItem="5rf-kc-QSf" secondAttribute="leading" constant="10" id="bif-Kl-eQ7"/>
                                             <constraint firstAttribute="trailing" secondItem="JWl-1c-Q1w" secondAttribute="trailing" id="dO7-Bi-nD9"/>
                                             <constraint firstItem="qZ7-bi-3gN" firstAttribute="top" secondItem="Jh6-xY-dvP" secondAttribute="bottom" constant="10" id="hAb-K4-SVh"/>
@@ -460,7 +503,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hurghada" width="550" height="500"/>
         <image name="gathern-cover-Cropped" width="248" height="90"/>
+        <image name="gradient-1" width="375" height="600"/>
+        <image name="gradient-3" width="375" height="600"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="purpleButton">
             <color red="0.3529999852180481" green="0.25099998712539673" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
