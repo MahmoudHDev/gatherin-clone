@@ -34,9 +34,13 @@ class OnboardingViewController: UIViewController {
     
     // MARK:- Methods
     private func addData() {
-        self.arrImgs.append(UIImage(named: "First")!)
-        self.arrImgs.append(UIImage(named: "Second")!)
-        self.arrImgs.append(UIImage(named: "Third")!)
+        self.arrImgs.append(UIImage(named: "DownTown")!)
+        self.arrImgs.append(UIImage(named: "Luxor")!)
+        self.arrImgs.append(UIImage(named: "Siwa")!)
+        
+//        self.arrImgs.append(UIImage(named: "First")!)
+//        self.arrImgs.append(UIImage(named: "Second")!)
+//        self.arrImgs.append(UIImage(named: "Third")!)
     }
     
     private func buttonsStyles() {
@@ -77,13 +81,14 @@ class OnboardingViewController: UIViewController {
     }
     
     private func showMainVC() {
+        self.dismiss(animated: true, completion: nil)
+
         let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! MainViewController
         let navControl = UINavigationController()
         
         navControl.modalPresentationStyle = .fullScreen
         navControl.pushViewController(mainVC, animated: true)
         
-        self.dismiss(animated: true, completion: nil)
         self.present(navControl, animated: true, completion: nil)
         
     }
@@ -102,7 +107,7 @@ extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         self.pageview.dataSource  = self
         self.pageview.delegate    = self
         self.pageview.transformer = FSPagerViewTransformer(type: .depth)
-        self.pageview.backgroundColor = UIColor(named: "purpleButton")
+        self.pageview.backgroundColor = .white
         self.pageControl.numberOfPages = arrImgs.count
         self.pageControl.setFillColor(.systemGray, for: .normal)
         self.pageControl.setStrokeColor(.systemBlue, for: .selected)
@@ -122,8 +127,24 @@ extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         self.pageControl.currentPage = index
+        print(index)
+        if index == arrImgs.count - 1 {
+            self.skipBtn.backgroundColor = .black
+            self.skipBtn.layer.cornerRadius = 22
+            self.skipBtn.layer.masksToBounds = false
+            self.skipBtn.setTitle("Next", for: .normal)
+            self.skipBtn.setTitleColor(.white, for: .normal)
+        }else{
+            self.skipBtn.layer.cornerRadius = 22
+            self.skipBtn.backgroundColor = .white
+            self.skipBtn.setTitleColor(.darkGray, for: .normal)
+            self.skipBtn.setTitle("Skip", for: .normal)
+        }
     }
     
+    func pagerView(_ pagerView: FSPagerView, didHighlightItemAt index: Int) {
+        print(index)
+    }
     
     
 }

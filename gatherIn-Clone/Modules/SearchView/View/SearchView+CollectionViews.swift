@@ -15,19 +15,21 @@ import FSPagerView
 extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func setupCollectionView() {
-        thirdCollectionView.dataSource  = self
-        thirdCollectionView.delegate    = self
-        thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
-        thirdCollectionView.showsHorizontalScrollIndicator = false
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
         layout.scrollDirection = .horizontal
+
+        thirdCollectionView.dataSource  = self
+        thirdCollectionView.delegate    = self
+        thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
+        thirdCollectionView.showsHorizontalScrollIndicator = false
         thirdCollectionView.collectionViewLayout = layout
-        
+
         fourthCollectionView.dataSource = self
         fourthCollectionView.delegate   = self
         fourthCollectionView.register(FourthCollectionViewCell.nib(), forCellWithReuseIdentifier: FourthCollectionViewCell.id)
+
         
     }
     
@@ -44,12 +46,26 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     
     func addDataToFourthCollectionView() {
-        advantagesModel.append(AdvantagesModel(title: "Verified", icon: UIImage(systemName: "pencil")!, description: "A platform which verified from the ministry of tourism."))
-        advantagesModel.append(AdvantagesModel(title: "Credibility", icon: UIImage(systemName: "star")!, description: "Verified reviews from real customers."))
-        advantagesModel.append(AdvantagesModel(title: "Instant Booking", icon: UIImage(systemName: "doc")!, description: "Instant and guaranteed booking."))
-        advantagesModel.append(AdvantagesModel(title: "Options", icon: UIImage(systemName: "magnifyingglass")!, description: "the largest variety of prices and spaces."))
-    }
+        advantagesModel.append(AdvantagesModel(
+                                title: "Verified",
+                                icon: UIImage(systemName: "pencil")!,
+                                description: "A platform which verified from the ministry of tourism."))
         
+        advantagesModel.append(AdvantagesModel(
+                                title: "Credibility", icon: UIImage(systemName: "star")!,
+                                description: "Verified reviews from real customers."))
+        
+        advantagesModel.append(AdvantagesModel(
+                                title: "Instant Booking",
+                                icon: UIImage(systemName: "doc")!,
+                                description: "Instant and guaranteed booking."))
+        
+        advantagesModel.append(AdvantagesModel(
+                                title: "Options",
+                                icon: UIImage(systemName: "magnifyingglass")!,
+                                description: "the largest variety of prices and spaces."))
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case thirdCollectionView:
@@ -122,6 +138,8 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         }
     }
     
+    
+    
 }
 
 // MARK:- FSPagerView   DataSource & Delegate
@@ -143,7 +161,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         secondPagerView.register(SecondFSPagerViewCell.nib(), forCellWithReuseIdentifier: SecondFSPagerViewCell.id)
         secondPagerView.dataSource = self
         secondPagerView.delegate   = self
-        secondPagerView.interitemSpacing = 10
+        secondPagerView.interitemSpacing = 20
         secondPagerView.itemSize = CGSize(width: 150, height: 150)
     }
     
@@ -196,6 +214,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         switch pagerView {
         case firstPagerView:
             self.firstPagerView.scrollToItem(at: index, animated: true)
+            print(index)
             self.firstPagerView.deselectItem(at: index, animated: true)
         case secondPagerView:
             self.secondPagerView.scrollToItem(at: index, animated: true)

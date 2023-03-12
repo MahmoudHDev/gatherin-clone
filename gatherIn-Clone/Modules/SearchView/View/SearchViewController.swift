@@ -12,6 +12,7 @@ import FSPagerView
 @available (iOS 13, *)
 class SearchViewController: UIViewController {
     // MARK:- Outlets
+    @IBOutlet weak var cotainerScrollView       : UIScrollView!
     @IBOutlet weak var TopTabBarView            : TopBar!
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
@@ -33,6 +34,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var licenseLBl               : UILabel!
     @IBOutlet weak var advantagesLbl            : UILabel!
     @IBOutlet weak var fourthCollectionView     : UICollectionView!
+    
         
     // MARK:- Properties
     var username            = ""       // For TopTabBar Greeting
@@ -42,12 +44,15 @@ class SearchViewController: UIViewController {
     var urbansModel         = [PlacesModel]()
     var advantagesModel     = [AdvantagesModel]()
     var counter             : Int = 0
+    var collectionViewTimer : Int = 0
+    var timer = Timer()
+    var lastContentOffset   : CGFloat = 0
 
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-
+        self.cotainerScrollView.delegate = self
         
         self.searchBoxStyle()
         
@@ -132,4 +137,27 @@ class SearchViewController: UIViewController {
         print("Register Button")
     }
     
+}
+
+
+// MARK:- SearchViewController + ScrollViewDelegate
+@available(iOS 13, *)
+
+extension SearchViewController: UIScrollViewDelegate {
+    // to hide a specific View in case user scrolled Down
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > lastContentOffset {
+            // scrolling up
+            print("Scrolling Up")
+
+        } else {
+            // scrolling down
+            print("Scrolling Down")
+
+        }
+        lastContentOffset = scrollView.contentOffset.y
+
+
+    }
 }
