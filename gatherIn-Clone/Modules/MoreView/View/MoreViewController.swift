@@ -9,10 +9,17 @@ import UIKit
 
 class MoreViewController: UIViewController {
 
+    // MARK: Properties
+    
+    // MARK: Outlets
+    @IBOutlet weak var moreTableView: UITableView!
+    
+    // MARK: View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupTableView()
+        
     }
     
+    // MARK: Methods
 }

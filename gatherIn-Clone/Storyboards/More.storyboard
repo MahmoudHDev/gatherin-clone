@@ -17,29 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJD-f0-j7J">
-                                <rect key="frame" x="117" y="344" width="180" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-Lu-fbc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="epq-oI-OfP"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nJD-f0-j7J" firstAttribute="centerX" secondItem="YYB-Z6-B84" secondAttribute="centerX" id="NcE-eJ-pVm"/>
-                            <constraint firstItem="nJD-f0-j7J" firstAttribute="centerY" secondItem="YYB-Z6-B84" secondAttribute="centerY" id="Z7P-sy-LHV"/>
+                            <constraint firstItem="QKU-Lu-fbc" firstAttribute="top" secondItem="epq-oI-OfP" secondAttribute="top" id="5Gc-nx-Zce"/>
+                            <constraint firstItem="QKU-Lu-fbc" firstAttribute="leading" secondItem="epq-oI-OfP" secondAttribute="leading" id="Sf0-qu-TfG"/>
+                            <constraint firstItem="epq-oI-OfP" firstAttribute="trailing" secondItem="QKU-Lu-fbc" secondAttribute="trailing" id="lEP-UU-fjE"/>
+                            <constraint firstItem="epq-oI-OfP" firstAttribute="bottom" secondItem="QKU-Lu-fbc" secondAttribute="bottom" id="pD8-J0-kHs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moreTableView" destination="QKU-Lu-fbc" id="JMb-3G-nBK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aw5-lq-JYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="90"/>
+            <point key="canvasLocation" x="160.86956521739131" y="89.673913043478265"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

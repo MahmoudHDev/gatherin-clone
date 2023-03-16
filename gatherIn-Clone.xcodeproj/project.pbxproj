@@ -19,6 +19,7 @@
 		BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */; };
 		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
 		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
+		BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
@@ -40,12 +41,22 @@
 		BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B72E297ABA080083975C /* SceneDelegate.swift */; };
 		BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B735297ABA0D0083975C /* Assets.xcassets */; };
 		BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B737297ABA0D0083975C /* LaunchScreen.storyboard */; };
+		BCB7E51629C2ECEF00D3B129 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB7E51529C2ECEF00D3B129 /* CitiesViewController.swift */; };
+		BCB7E51929C2ED0D00D3B129 /* Cities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */; };
+		BCB7E51C29C2EF8100D3B129 /* CitiesVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB7E51B29C2EF8100D3B129 /* CitiesVC+TableView.swift */; };
+		BCB7E52129C2F02400D3B129 /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB7E51F29C2F02400D3B129 /* CitiesTableViewCell.swift */; };
+		BCB7E52229C2F02400D3B129 /* CitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB7E52029C2F02400D3B129 /* CitiesTableViewCell.xib */; };
 		BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F65298D84B400FCD3A2 /* AuthManager.swift */; };
 		BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC161F42990F78A00AEB32C /* CodeVerifcation+TextField.swift */; };
 		BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC161F72991020100AEB32C /* ColorExtension.swift */; };
 		BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */; };
 		BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */; };
 		BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */; };
+		BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC7FB2E29C35B93006A1367 /* SecondMoreTableViewCell.swift */; };
+		BCC7FB3129C35B93006A1367 /* SecondMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC7FB2F29C35B93006A1367 /* SecondMoreTableViewCell.xib */; };
+		BCC7FB3729C35E12006A1367 /* FirstMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC7FB3529C35E12006A1367 /* FirstMoreTableViewCell.swift */; };
+		BCC7FB3829C35E12006A1367 /* FirstMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC7FB3629C35E12006A1367 /* FirstMoreTableViewCell.xib */; };
+		BCC7FB3B29C3612D006A1367 /* MoreVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC7FB3A29C3612D006A1367 /* MoreVC+TableView.swift */; };
 		BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */; };
 		BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCF3082298D824700739673 /* GoogleService-Info.plist */; };
 		BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */; };
@@ -75,6 +86,7 @@
 		BC4231F829A691390080A36D /* ThirdCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
@@ -98,12 +110,22 @@
 		BCB2B735297ABA0D0083975C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCB2B738297ABA0D0083975C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCB2B73A297ABA0D0083975C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB7E51529C2ECEF00D3B129 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cities.storyboard; sourceTree = "<group>"; };
+		BCB7E51B29C2EF8100D3B129 /* CitiesVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CitiesVC+TableView.swift"; sourceTree = "<group>"; };
+		BCB7E51F29C2F02400D3B129 /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
+		BCB7E52029C2F02400D3B129 /* CitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTableViewCell.xib; sourceTree = "<group>"; };
 		BCB97F65298D84B400FCD3A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BCC161F42990F78A00AEB32C /* CodeVerifcation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeVerifcation+TextField.swift"; sourceTree = "<group>"; };
 		BCC161F72991020100AEB32C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BCC2C509299785EE00CC3889 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
 		BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicInformation.storyboard; sourceTree = "<group>"; };
 		BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicInformation+TextField.swift"; sourceTree = "<group>"; };
+		BCC7FB2E29C35B93006A1367 /* SecondMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMoreTableViewCell.swift; sourceTree = "<group>"; };
+		BCC7FB2F29C35B93006A1367 /* SecondMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondMoreTableViewCell.xib; sourceTree = "<group>"; };
+		BCC7FB3529C35E12006A1367 /* FirstMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMoreTableViewCell.swift; sourceTree = "<group>"; };
+		BCC7FB3629C35E12006A1367 /* FirstMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstMoreTableViewCell.xib; sourceTree = "<group>"; };
+		BCC7FB3A29C3612D006A1367 /* MoreVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoreVC+TableView.swift"; sourceTree = "<group>"; };
 		BCCF307B298D7EF500739673 /* IndividualsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsPresenter.swift; sourceTree = "<group>"; };
 		BCCF3082298D824700739673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCD17A6E29B25A170093687C /* FirstFSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFSPagerViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +190,7 @@
 				BC1713082982973D00300C29 /* ShadowEffect.swift */,
 				BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */,
 				BCC161F72991020100AEB32C /* ColorExtension.swift */,
+				BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */,
+				BCC7FB2D29C35B7E006A1367 /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +424,7 @@
 		BCB2B746297ABB8B0083975C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BCB7E51329C2EC8200D3B129 /* CitiesView */,
 				BCB2B747297ABB960083975C /* OnboardingView */,
 				BCE4BC6A297F0B3E007119C8 /* MainView */,
 				BCF9CD36298279A500AD4091 /* IndividualsView */,
@@ -454,8 +479,36 @@
 				BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */,
 				BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */,
 				BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */,
+				BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BCB7E51329C2EC8200D3B129 /* CitiesView */ = {
+			isa = PBXGroup;
+			children = (
+				BCB7E51429C2EC9300D3B129 /* View */,
+			);
+			path = CitiesView;
+			sourceTree = "<group>";
+		};
+		BCB7E51429C2EC9300D3B129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCB7E51E29C2F00D00D3B129 /* TableView */,
+				BCB7E51529C2ECEF00D3B129 /* CitiesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCB7E51E29C2F00D00D3B129 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCB7E51B29C2EF8100D3B129 /* CitiesVC+TableView.swift */,
+				BCB7E51F29C2F02400D3B129 /* CitiesTableViewCell.swift */,
+				BCB7E52029C2F02400D3B129 /* CitiesTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		BCC2C507299785A200CC3889 /* BasicInformationView */ = {
@@ -473,6 +526,18 @@
 				BCC2C50F2997E84700CC3889 /* BasicInformation+TextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BCC7FB2D29C35B7E006A1367 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCC7FB3A29C3612D006A1367 /* MoreVC+TableView.swift */,
+				BCC7FB3529C35E12006A1367 /* FirstMoreTableViewCell.swift */,
+				BCC7FB3629C35E12006A1367 /* FirstMoreTableViewCell.xib */,
+				BCC7FB2E29C35B93006A1367 /* SecondMoreTableViewCell.swift */,
+				BCC7FB2F29C35B93006A1367 /* SecondMoreTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		BCE4BC6A297F0B3E007119C8 /* MainView */ = {
@@ -597,8 +662,11 @@
 				BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */,
 				BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */,
 				BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */,
+				BCB7E52229C2F02400D3B129 /* CitiesTableViewCell.xib in Resources */,
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
+				BCB7E51929C2ED0D00D3B129 /* Cities.storyboard in Resources */,
+				BCC7FB3829C35E12006A1367 /* FirstMoreTableViewCell.xib in Resources */,
 				BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */,
 				BCAC0C6629A2A70A0063FC78 /* MyBookings.storyboard in Resources */,
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
@@ -608,6 +676,7 @@
 				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
 				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
+				BCC7FB3129C35B93006A1367 /* SecondMoreTableViewCell.xib in Resources */,
 				BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */,
 				BCF9CD3E29827A1500AD4091 /* Individuals.storyboard in Resources */,
 				BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */,
@@ -669,8 +738,10 @@
 				BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */,
 				BCEC029729BB634400995740 /* TopBar.swift in Sources */,
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
+				BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
+				BCC7FB3729C35E12006A1367 /* FirstMoreTableViewCell.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */,
 				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
@@ -680,14 +751,19 @@
 				BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */,
 				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
+				BCC7FB3B29C3612D006A1367 /* MoreVC+TableView.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,
+				BCB7E52129C2F02400D3B129 /* CitiesTableViewCell.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
+				BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
 				BCAC0C7929A2A82B0063FC78 /* ConversationsViewController.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
+				BCB7E51629C2ECEF00D3B129 /* CitiesViewController.swift in Sources */,
+				BCB7E51C29C2EF8100D3B129 /* CitiesVC+TableView.swift in Sources */,
 				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
 				BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,

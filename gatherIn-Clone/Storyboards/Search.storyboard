@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rM-Cb2" userLabel="TopTabBarView" customClass="TopBar" customModule="gatherIn_Clone" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-Mw-dpA">
-                                        <rect key="frame" x="20" y="20" width="384" height="50"/>
+                                        <rect key="frame" x="20" y="30" width="384" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gathern-cover-Cropped" translatesAutoresizingMaskIntoConstraints="NO" id="OsG-J5-LHJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -52,11 +52,11 @@
                                 </subviews>
                                 <color key="backgroundColor" name="purpleButton"/>
                                 <constraints>
-                                    <constraint firstItem="dqg-Mw-dpA" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="top" constant="20" id="5Dn-wU-Tzt"/>
+                                    <constraint firstItem="dqg-Mw-dpA" firstAttribute="top" secondItem="gNs-rM-Cb2" secondAttribute="top" constant="30" id="5Dn-wU-Tzt"/>
                                     <constraint firstAttribute="trailing" secondItem="dqg-Mw-dpA" secondAttribute="trailing" constant="10" id="Pbv-ra-RZL"/>
                                     <constraint firstItem="dqg-Mw-dpA" firstAttribute="leading" secondItem="gNs-rM-Cb2" secondAttribute="leading" constant="20" id="Tmg-va-d6c"/>
                                     <constraint firstAttribute="bottom" secondItem="dqg-Mw-dpA" secondAttribute="bottom" constant="10" id="a0E-Mq-sDy"/>
-                                    <constraint firstAttribute="height" constant="80" id="cgO-VI-JU1"/>
+                                    <constraint firstAttribute="height" constant="90" id="cgO-VI-JU1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -68,7 +68,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-2J-ULz">
-                                <rect key="frame" x="0.0" y="80" width="414" height="1420"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="1410"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-kc-QSf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1755.3333333333333"/>

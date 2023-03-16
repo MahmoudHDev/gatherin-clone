@@ -121,6 +121,7 @@ extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.image = self.arrImgs[index]
         return cell
     }
@@ -132,19 +133,17 @@ extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
             self.skipBtn.backgroundColor = .black
             self.skipBtn.layer.cornerRadius = 22
             self.skipBtn.layer.masksToBounds = false
-            self.skipBtn.setTitle("Next", for: .normal)
+            self.skipBtn.setTitle("Get started", for: .normal)
             self.skipBtn.setTitleColor(.white, for: .normal)
+            print("Get Started")
         }else{
-            self.skipBtn.layer.cornerRadius = 22
             self.skipBtn.backgroundColor = .white
+            self.skipBtn.layer.cornerRadius = 22
             self.skipBtn.setTitleColor(.darkGray, for: .normal)
             self.skipBtn.setTitle("Skip", for: .normal)
         }
     }
-    
-    func pagerView(_ pagerView: FSPagerView, didHighlightItemAt index: Int) {
-        print(index)
-    }
+
     
     
 }
