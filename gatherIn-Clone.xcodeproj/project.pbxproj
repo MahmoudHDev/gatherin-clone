@@ -20,6 +20,8 @@
 		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
 		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
 		BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */; };
+		BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */; };
+		BC7FE99F29C3CFF500BF7A87 /* SymbolsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
@@ -87,6 +89,8 @@
 		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListModel.swift; sourceTree = "<group>"; };
+		BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsList.swift; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
@@ -219,6 +223,15 @@
 			path = CollectionViews;
 			sourceTree = "<group>";
 		};
+		BC7FE99929C3CEE100BF7A87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */,
+				BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCA09AFF299B616E00819D95 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +320,7 @@
 		BCAC0C6029A2A68D0063FC78 /* MoreView */ = {
 			isa = PBXGroup;
 			children = (
+				BC7FE99929C3CEE100BF7A87 /* Model */,
 				BCAC0C6429A2A6E50063FC78 /* View */,
 			);
 			path = MoreView;
@@ -757,6 +771,7 @@
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
+				BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
@@ -768,6 +783,7 @@
 				BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
 				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
+				BC7FE99F29C3CFF500BF7A87 /* SymbolsList.swift in Sources */,
 				BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */,
 				BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */,
 				BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */,

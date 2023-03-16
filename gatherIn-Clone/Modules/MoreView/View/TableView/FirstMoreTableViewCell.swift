@@ -31,4 +31,8 @@ class FirstMoreTableViewCell: UITableViewCell {
         return UINib(nibName: "FirstMoreTableViewCell", bundle: nil)
     }
     
+    func setupCell(title: String, subTitle: String) {
+        self.title.text = title
+        self.subTitle.text = subTitle
+    }
 }
