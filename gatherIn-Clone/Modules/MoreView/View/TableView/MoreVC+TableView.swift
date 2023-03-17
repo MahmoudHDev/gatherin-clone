@@ -16,7 +16,7 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate {
         self.moreTableView.delegate = self
         self.moreTableView.register(FirstMoreTableViewCell.nib(), forCellReuseIdentifier: FirstMoreTableViewCell.id)
         self.moreTableView.register(SecondMoreTableViewCell.nib(), forCellReuseIdentifier: SecondMoreTableViewCell.id)
-
+        self.moreTableView.separatorStyle = .none
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,16 +36,17 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = moreTableView.dequeueReusableCell(withIdentifier: FirstMoreTableViewCell.id, for: indexPath) as! FirstMoreTableViewCell
             let title = basicTitle[indexPath.row].title
             let subTitle = basicTitle[indexPath.row].subTitle
-            
             cell.setupCell(title: title, subTitle: subTitle)
             return cell
         }else{
             let cell = moreTableView.dequeueReusableCell(withIdentifier: SecondMoreTableViewCell.id, for: indexPath) as! SecondMoreTableViewCell
             let title = optionListModel[indexPath.row].title
-            let img = optionListModel[indexPath.row].img
+            let img = optionListModel[indexPath.row].img.resize(to: CGSize(width: 35, height: 35)).withTintColor(UIColor(named: "purpleButton")!)
+            
             cell.setupCell(img: img, title: title, chevronImg: UIImage(systemName: "chevron.right")!)
             return cell
         }
     }
+    
     
 }

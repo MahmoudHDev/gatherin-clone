@@ -20,6 +20,7 @@ class MoreViewController: UIViewController {
     // MARK: View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "More"
         self.setupTableView()
         self.loadData()
     }
@@ -41,7 +42,7 @@ class MoreViewController: UIViewController {
 
         self.basicTitle.append(BasicTitle(title: "Number of reservations", subTitle: "0"))
         self.basicTitle.append(BasicTitle(title: "Wallet Credit", subTitle: "0 L.E"))
-        self.basicTitle.append(BasicTitle(title: "Rating (from hosters)", subTitle: "10/0.0(0)"))
+        self.basicTitle.append(BasicTitle(title: "Rating (from hosters)", subTitle: "10/0.0 (0)"))
         self.basicTitle.append(BasicTitle(title: "Hosters Blocked you", subTitle: "0"))
 
 

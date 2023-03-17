@@ -78,23 +78,24 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         var arrViewControllers = [UIViewController]()
 
         let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        let searchTab = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass")!, selectedImage: UIImage(systemName: "magnifyingglass")!)
+        
+        let searchTab = UITabBarItem(title: "Search", image: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)))
         searchVC.tabBarItem = searchTab
         
         let myBookingsVC = UIStoryboard(name: "MyBookings", bundle: nil).instantiateViewController(withIdentifier: "MyBookingsViewController") as! MyBookingsViewController
-        let myBookingsTab = UITabBarItem(title: "My Bookings", image: UIImage(systemName: "calendar.circle")!, selectedImage: UIImage(systemName: "calendar.circle")!)
+        let myBookingsTab = UITabBarItem(title: "My Bookings", image: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)))
         myBookingsVC.tabBarItem = myBookingsTab
         
         let favoiriteVC = UIStoryboard(name: "Favorite", bundle: nil).instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
-        let favoiriteTab = UITabBarItem(title: "favorite", image: UIImage(systemName: "heart")!, selectedImage: UIImage(systemName: "heart")!)
+        let favoiriteTab = UITabBarItem(title: "favorite", image: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)))
         favoiriteVC.tabBarItem = favoiriteTab
 
         let conversationVC = UIStoryboard(name: "Conversations", bundle: nil).instantiateViewController(withIdentifier: "ConversationsViewController") as! ConversationsViewController
-        let conversationTab = UITabBarItem(title: "Conversations", image: UIImage(systemName: "message")!, selectedImage: UIImage(systemName: "message")!)
+        let conversationTab = UITabBarItem(title: "Conversations", image: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)))
         conversationVC.tabBarItem = conversationTab
 
         let moreVC = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
-        let moreTab = UITabBarItem(title: "More", image: UIImage(systemName: "list.dash")!, selectedImage: UIImage(systemName: "list.dash")!)
+        let moreTab = UITabBarItem(title: "More", image: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)))
         moreVC.tabBarItem = moreTab
         
         arrViewControllers.append(UINavigationController(rootViewController: searchVC))

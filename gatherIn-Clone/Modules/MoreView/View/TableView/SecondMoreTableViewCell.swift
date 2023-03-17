@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+@available(iOS 13, *)
 class SecondMoreTableViewCell: UITableViewCell {
     // MARK:- Propeties
     static let id = "SecondMoreTableViewCell"
@@ -19,7 +19,7 @@ class SecondMoreTableViewCell: UITableViewCell {
     // MARK:- Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

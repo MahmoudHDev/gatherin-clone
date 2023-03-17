@@ -12,6 +12,7 @@
 		BC07AF6A29857DF000667EE0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */; };
 		BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1713082982973D00300C29 /* ShadowEffect.swift */; };
 		BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */; };
+		BC3E1F4129C45B0300AAB6B6 /* HomeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E1F4029C45B0300AAB6B6 /* HomeIcons.swift */; };
 		BC4231E729A68F810080A36D /* SearchView+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */; };
 		BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231F229A6912A0080A36D /* SecondFSPagerViewCell.swift */; };
 		BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231F329A6912A0080A36D /* SecondFSPagerViewCell.xib */; };
@@ -20,6 +21,7 @@
 		BC4231FE29A691490080A36D /* FourthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */; };
 		BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */; };
 		BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */; };
+		BC6BEE1C29C45FC000242369 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BEE1B29C45FC000242369 /* UIImage+Extensions.swift */; };
 		BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */; };
 		BC7FE99F29C3CFF500BF7A87 /* SymbolsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
@@ -81,6 +83,7 @@
 		BC07AF6929857DF000667EE0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BC1713082982973D00300C29 /* ShadowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowEffect.swift; sourceTree = "<group>"; };
 		BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
+		BC3E1F4029C45B0300AAB6B6 /* HomeIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIcons.swift; sourceTree = "<group>"; };
 		BC4231E629A68F810080A36D /* SearchView+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+CollectionViews.swift"; sourceTree = "<group>"; };
 		BC4231F229A6912A0080A36D /* SecondFSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFSPagerViewCell.swift; sourceTree = "<group>"; };
 		BC4231F329A6912A0080A36D /* SecondFSPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFSPagerViewCell.xib; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		BC4231FC29A691490080A36D /* FourthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4231FD29A691490080A36D /* FourthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BC6BEE1B29C45FC000242369 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListModel.swift; sourceTree = "<group>"; };
 		BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsList.swift; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 				BC31248A298D4AA7008E0392 /* KeyboardExtensions.swift */,
 				BCC161F72991020100AEB32C /* ColorExtension.swift */,
 				BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */,
+				BC6BEE1B29C45FC000242369 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +211,21 @@
 				BC07AF642985761100667EE0 /* Presenter */,
 			);
 			path = CountryCodeView;
+			sourceTree = "<group>";
+		};
+		BC3B7C6E29C45DB000732FE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC3E1F4029C45B0300AAB6B6 /* HomeIcons.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC3E1F3F29C45AF100AAB6B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BC4231E929A690B60080A36D /* CollectionViews */ = {
@@ -280,6 +300,7 @@
 		BCAC0C5829A2A45F0063FC78 /* HomeTabBarView */ = {
 			isa = PBXGroup;
 			children = (
+				BC3E1F3F29C45AF100AAB6B6 /* Model */,
 				BCAC0C5929A2A47B0063FC78 /* View */,
 			);
 			path = HomeTabBarView;
@@ -528,6 +549,7 @@
 		BCC2C507299785A200CC3889 /* BasicInformationView */ = {
 			isa = PBXGroup;
 			children = (
+				BC3B7C6E29C45DB000732FE7 /* Model */,
 				BCC2C508299785BD00CC3889 /* View */,
 			);
 			path = BasicInformationView;
@@ -761,9 +783,11 @@
 				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
+				BC6BEE1C29C45FC000242369 /* UIImage+Extensions.swift in Sources */,
 				BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */,
 				BC4231F929A691390080A36D /* ThirdCollectionViewCell.swift in Sources */,
 				BCC2C5102997E84700CC3889 /* BasicInformation+TextField.swift in Sources */,
+				BC3E1F4129C45B0300AAB6B6 /* HomeIcons.swift in Sources */,
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCC7FB3B29C3612D006A1367 /* MoreVC+TableView.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,
