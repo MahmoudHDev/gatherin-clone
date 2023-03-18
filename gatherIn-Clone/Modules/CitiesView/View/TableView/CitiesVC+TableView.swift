@@ -21,14 +21,24 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrCities.count
+        if !filteredData.isEmpty {
+            return filteredData.count
+        }else{
+            return arrCities.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = citiesTableView.dequeueReusableCell(withIdentifier: CitiesTableViewCell.id, for: indexPath) as! CitiesTableViewCell
-        
-        cell.cityName.text = arrCities[indexPath.row]
-        return cell
+        if !filteredData.isEmpty {
+            let cell = citiesTableView.dequeueReusableCell(withIdentifier: CitiesTableViewCell.id, for: indexPath) as! CitiesTableViewCell
+            
+            cell.cityName.text = filteredData[indexPath.row]
+            return cell
+        }else{
+            let cell = citiesTableView.dequeueReusableCell(withIdentifier: CitiesTableViewCell.id, for: indexPath) as! CitiesTableViewCell
+            cell.cityName.text = arrCities[indexPath.row]
+            return cell
+        }
     }
     
 }

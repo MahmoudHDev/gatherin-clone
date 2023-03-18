@@ -10,9 +10,9 @@ import UIKit
 class CitiesViewController: UIViewController {
 
     // MARK:- Propeties
-    var arrCities       = [String]()
-    var filteredData    = [String]()
-    
+    var arrCities           = [String]()
+    var filteredData        = [String]()
+    var userSerached:Bool   = false
     // MARK:- Outlets
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var citiesTableView: UITableView!
@@ -54,7 +54,11 @@ extension CitiesViewController: UITextFieldDelegate  {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
+        let searchText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        filteredData = arrCities.filter{
+            $0.range(of: searchText, options: [.caseInsensitive,.diacriticInsensitive] ) != nil
+        }
+        citiesTableView.reloadData()
         return true
     }
     
