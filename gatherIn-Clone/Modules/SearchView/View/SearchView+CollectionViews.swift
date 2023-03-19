@@ -19,17 +19,17 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
         layout.scrollDirection = .horizontal
-
+        
         thirdCollectionView.dataSource  = self
         thirdCollectionView.delegate    = self
         thirdCollectionView.register(ThirdCollectionViewCell.nib(), forCellWithReuseIdentifier: ThirdCollectionViewCell.id)
         thirdCollectionView.showsHorizontalScrollIndicator = false
         thirdCollectionView.collectionViewLayout = layout
-
+        
         fourthCollectionView.dataSource = self
         fourthCollectionView.delegate   = self
         fourthCollectionView.register(FourthCollectionViewCell.nib(), forCellWithReuseIdentifier: FourthCollectionViewCell.id)
-
+        
         
     }
     
@@ -84,7 +84,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
                 cell.title.text = "More"
                 cell.imageContainerView.isHidden = true
-
+                
                 return cell
             }else{
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
@@ -94,16 +94,16 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
                 cell.image.image = imgs
                 cell.image.contentMode = .scaleAspectFill
                 cell.imageContainerView.isHidden = false
-
+                
                 return cell
             }
             
         case fourthCollectionView:
-            let cell = fourthCollectionView.dequeueReusableCell(withReuseIdentifier: FourthCollectionViewCell.id, for: indexPath) as! FourthCollectionViewCell
-            let imgs = advantagesModel[indexPath.row].icon
-            let titles = advantagesModel[indexPath.row].title
-            let descs = advantagesModel[indexPath.row].description
-
+            let cell    = fourthCollectionView.dequeueReusableCell(withReuseIdentifier: FourthCollectionViewCell.id, for: indexPath) as! FourthCollectionViewCell
+            let imgs    = advantagesModel[indexPath.row].icon
+            let titles  = advantagesModel[indexPath.row].title
+            let descs   = advantagesModel[indexPath.row].description
+            
             cell.setupCell(title: titles, desc: descs, image: imgs)
             return cell
         default:
@@ -129,6 +129,9 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             if indexPath.row == placesModel.count {
                 print("Do someting with 'more button' and show the all cities view ")
             }else{
+                //                let index = IndexPath(row: indexPath.row, section: 0)
+                //                thirdCollectionView.cellForItem(at: index)?.zoomInAndOut()
+                
                 print("do something with selected index: \(indexPath.row)")
             }
         case fourthCollectionView:
@@ -137,9 +140,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             print("indexPath \(indexPath.row)")
         }
     }
-    
-    
-    
 }
 
 // MARK:- FSPagerView   DataSource & Delegate
@@ -207,7 +207,6 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             return FSPagerViewCell()
         }
-        
     }
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
@@ -222,7 +221,5 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         default:
             print("Nothing")
         }
-        
     }
-    
 }

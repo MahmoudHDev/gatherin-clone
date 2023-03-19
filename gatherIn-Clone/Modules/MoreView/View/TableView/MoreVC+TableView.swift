@@ -35,6 +35,7 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = moreTableView.dequeueReusableCell(withIdentifier: FirstMoreTableViewCell.id, for: indexPath) as! FirstMoreTableViewCell
+            cell.isUserInteractionEnabled = false
             let title = basicTitle[indexPath.row].title
             let subTitle = basicTitle[indexPath.row].subTitle
             
@@ -42,6 +43,7 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             return cell
         }else{
             let cell = moreTableView.dequeueReusableCell(withIdentifier: SecondMoreTableViewCell.id, for: indexPath) as! SecondMoreTableViewCell
+            cell.isUserInteractionEnabled = true
             let title = optionListModel[indexPath.row].title
             let img = optionListModel[indexPath.row].img.resize(to: CGSize(width: 20, height: 20)).withTintColor(UIColor(named: "purpleButton")!)
             
@@ -77,6 +79,7 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
         if indexPath.section == 0 {
             print(basicTitle[indexPath.row])
         }else{
+            
             print(optionListModel[indexPath.row])
         }
     }

@@ -28,6 +28,12 @@
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
+		BCA7464C29C5F132004E3E6B /* VacationRentalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7464B29C5F132004E3E6B /* VacationRentalsModel.swift */; };
+		BCA7465029C5F1C4004E3E6B /* VacationRentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7464F29C5F1C4004E3E6B /* VacationRentalViewController.swift */; };
+		BCA7465529C5F208004E3E6B /* VacationRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA7465429C5F208004E3E6B /* VacationRental.storyboard */; };
+		BCA7465A29C5F3E2004E3E6B /* Vacation+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7465929C5F3E2004E3E6B /* Vacation+UITableView.swift */; };
+		BCA7465F29C5F535004E3E6B /* VacationRentalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7465D29C5F535004E3E6B /* VacationRentalTableViewCell.swift */; };
+		BCA7466029C5F535004E3E6B /* VacationRentalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7465E29C5F535004E3E6B /* VacationRentalTableViewCell.xib */; };
 		BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C5129A2A2210063FC78 /* Search.storyboard */; };
 		BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */; };
 		BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C5A29A2A4990063FC78 /* HomeViewController.swift */; };
@@ -99,6 +105,12 @@
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BCA7464B29C5F132004E3E6B /* VacationRentalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationRentalsModel.swift; sourceTree = "<group>"; };
+		BCA7464F29C5F1C4004E3E6B /* VacationRentalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationRentalViewController.swift; sourceTree = "<group>"; };
+		BCA7465429C5F208004E3E6B /* VacationRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VacationRental.storyboard; sourceTree = "<group>"; };
+		BCA7465929C5F3E2004E3E6B /* Vacation+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vacation+UITableView.swift"; sourceTree = "<group>"; };
+		BCA7465D29C5F535004E3E6B /* VacationRentalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationRentalTableViewCell.swift; sourceTree = "<group>"; };
+		BCA7465E29C5F535004E3E6B /* VacationRentalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationRentalTableViewCell.xib; sourceTree = "<group>"; };
 		BCAC0C5129A2A2210063FC78 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		BCAC0C5429A2A2590063FC78 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BCAC0C5A29A2A4990063FC78 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +270,42 @@
 				BCA09AFC299B5E3500819D95 /* Helpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BCA7464829C5F0ED004E3E6B /* VacationRentals */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7464A29C5F112004E3E6B /* Model */,
+				BCA7464929C5F109004E3E6B /* View */,
+			);
+			path = VacationRentals;
+			sourceTree = "<group>";
+		};
+		BCA7464929C5F109004E3E6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7464F29C5F1C4004E3E6B /* VacationRentalViewController.swift */,
+				BCA7465829C5F3D3004E3E6B /* TableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCA7464A29C5F112004E3E6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7464B29C5F132004E3E6B /* VacationRentalsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCA7465829C5F3D3004E3E6B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7465929C5F3E2004E3E6B /* Vacation+UITableView.swift */,
+				BCA7465D29C5F535004E3E6B /* VacationRentalTableViewCell.swift */,
+				BCA7465E29C5F535004E3E6B /* VacationRentalTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		BCAC0C4D29A2A1E50063FC78 /* SearchView */ = {
@@ -472,6 +520,7 @@
 				BCAC0C5E29A2A6660063FC78 /* FavoriteView */,
 				BCAC0C5F29A2A6850063FC78 /* ConversationsView */,
 				BCAC0C6029A2A68D0063FC78 /* MoreView */,
+				BCA7464829C5F0ED004E3E6B /* VacationRentals */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -515,6 +564,7 @@
 				BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */,
 				BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */,
 				BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */,
+				BCA7465429C5F208004E3E6B /* VacationRental.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -695,6 +745,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA7466029C5F535004E3E6B /* VacationRentalTableViewCell.xib in Resources */,
 				BC4231FF29A691490080A36D /* FourthCollectionViewCell.xib in Resources */,
 				BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */,
 				BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */,
@@ -710,6 +761,7 @@
 				BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
 				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
+				BCA7465529C5F208004E3E6B /* VacationRental.storyboard in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
 				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
 				BCC7FB3129C35B93006A1367 /* SecondMoreTableViewCell.xib in Resources */,
@@ -782,6 +834,8 @@
 				BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */,
 				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
+				BCA7464C29C5F132004E3E6B /* VacationRentalsModel.swift in Sources */,
+				BCA7465029C5F1C4004E3E6B /* VacationRentalViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BC6BEE1C29C45FC000242369 /* UIImage+Extensions.swift in Sources */,
 				BCAC0C5B29A2A4990063FC78 /* HomeViewController.swift in Sources */,
@@ -795,6 +849,8 @@
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
 				BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
+				BCA7465A29C5F3E2004E3E6B /* Vacation+UITableView.swift in Sources */,
+				BCA7465F29C5F535004E3E6B /* VacationRentalTableViewCell.swift in Sources */,
 				BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */,
