@@ -25,6 +25,13 @@
 		BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */; };
 		BC7FE99F29C3CFF500BF7A87 /* SymbolsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */; };
 		BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC861EED298E64AA006BBF7D /* Rechability.swift */; };
+		BC8939EF29C733E80068F09B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939EE29C733E80068F09B /* Profile.storyboard */; };
+		BC8939F629C7359D0068F09B /* WalletLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939F529C7359D0068F09B /* WalletLog.storyboard */; };
+		BC8939F929C735E40068F09B /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939F829C735E40068F09B /* PaymentMethods.storyboard */; };
+		BC8939FC29C735F50068F09B /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939FB29C735F50068F09B /* ContactUs.storyboard */; };
+		BC8939FF29C7360B0068F09B /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939FE29C7360B0068F09B /* TermsOfUse.storyboard */; };
+		BC893A0229C7361D0068F09B /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC893A0129C7361D0068F09B /* PrivacyPolicy.storyboard */; };
+		BC893A0529C7362A0068F09B /* ChangeLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC893A0429C7362A0068F09B /* ChangeLanguage.storyboard */; };
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
@@ -102,6 +109,13 @@
 		BC7FE99A29C3CEF400BF7A87 /* OptionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListModel.swift; sourceTree = "<group>"; };
 		BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsList.swift; sourceTree = "<group>"; };
 		BC861EED298E64AA006BBF7D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		BC8939EE29C733E80068F09B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		BC8939F529C7359D0068F09B /* WalletLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletLog.storyboard; sourceTree = "<group>"; };
+		BC8939F829C735E40068F09B /* PaymentMethods.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
+		BC8939FB29C735F50068F09B /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
+		BC8939FE29C7360B0068F09B /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
+		BC893A0129C7361D0068F09B /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
+		BC893A0429C7362A0068F09B /* ChangeLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeLanguage.storyboard; sourceTree = "<group>"; };
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -262,6 +276,54 @@
 				BC7FE99E29C3CFF500BF7A87 /* SymbolsList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BC8939F129C733FA0068F09B /* StartViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCB2B737297ABA0D0083975C /* LaunchScreen.storyboard */,
+				BCF8E1ED297D628300368E18 /* Onboarding.storyboard */,
+				BCE4BC75297F0CAA007119C8 /* Main.storyboard */,
+				BCF9CD3D29827A1500AD4091 /* Individuals.storyboard */,
+				BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */,
+				BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */,
+			);
+			path = StartViews;
+			sourceTree = "<group>";
+		};
+		BC8939F229C734140068F09B /* TabBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0C5129A2A2210063FC78 /* Search.storyboard */,
+				BCAC0C6529A2A70A0063FC78 /* MyBookings.storyboard */,
+				BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */,
+				BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */,
+				BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */,
+			);
+			path = TabBarViews;
+			sourceTree = "<group>";
+		};
+		BC8939F329C734530068F09B /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */,
+				BCA7465429C5F208004E3E6B /* VacationRental.storyboard */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		BC8939F429C7346C0068F09B /* MoreViews */ = {
+			isa = PBXGroup;
+			children = (
+				BC8939EE29C733E80068F09B /* Profile.storyboard */,
+				BC8939F529C7359D0068F09B /* WalletLog.storyboard */,
+				BC8939F829C735E40068F09B /* PaymentMethods.storyboard */,
+				BC8939FB29C735F50068F09B /* ContactUs.storyboard */,
+				BC8939FE29C7360B0068F09B /* TermsOfUse.storyboard */,
+				BC893A0129C7361D0068F09B /* PrivacyPolicy.storyboard */,
+				BC893A0429C7362A0068F09B /* ChangeLanguage.storyboard */,
+			);
+			path = MoreViews;
 			sourceTree = "<group>";
 		};
 		BCA09AFF299B616E00819D95 /* Helpers */ = {
@@ -552,19 +614,10 @@
 		BCB2B74A297ABBC70083975C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				BCB2B737297ABA0D0083975C /* LaunchScreen.storyboard */,
-				BCF8E1ED297D628300368E18 /* Onboarding.storyboard */,
-				BCE4BC75297F0CAA007119C8 /* Main.storyboard */,
-				BCF9CD3D29827A1500AD4091 /* Individuals.storyboard */,
-				BCAE67AE298E57DF00B02EFA /* CodeVerification.storyboard */,
-				BCC2C50C2997863000CC3889 /* BasicInformation.storyboard */,
-				BCAC0C5129A2A2210063FC78 /* Search.storyboard */,
-				BCAC0C6529A2A70A0063FC78 /* MyBookings.storyboard */,
-				BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */,
-				BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */,
-				BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */,
-				BCB7E51829C2ED0D00D3B129 /* Cities.storyboard */,
-				BCA7465429C5F208004E3E6B /* VacationRental.storyboard */,
+				BC8939F229C734140068F09B /* TabBarViews */,
+				BC8939F129C733FA0068F09B /* StartViews */,
+				BC8939F329C734530068F09B /* SubViews */,
+				BC8939F429C7346C0068F09B /* MoreViews */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -750,22 +803,29 @@
 				BCD17A7229B25B3A0093687C /* FirstFSPagerViewCell.xib in Resources */,
 				BC4231F529A6912A0080A36D /* SecondFSPagerViewCell.xib in Resources */,
 				BCB7E52229C2F02400D3B129 /* CitiesTableViewCell.xib in Resources */,
+				BC8939FF29C7360B0068F09B /* TermsOfUse.storyboard in Resources */,
 				BCC2C50D2997863000CC3889 /* BasicInformation.storyboard in Resources */,
 				BCAC0C5229A2A2210063FC78 /* Search.storyboard in Resources */,
 				BCB7E51929C2ED0D00D3B129 /* Cities.storyboard in Resources */,
 				BCC7FB3829C35E12006A1367 /* FirstMoreTableViewCell.xib in Resources */,
 				BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */,
 				BCAC0C6629A2A70A0063FC78 /* MyBookings.storyboard in Resources */,
+				BC893A0229C7361D0068F09B /* PrivacyPolicy.storyboard in Resources */,
 				BCAE67AF298E57DF00B02EFA /* CodeVerification.storyboard in Resources */,
 				BCB2B739297ABA0D0083975C /* LaunchScreen.storyboard in Resources */,
 				BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */,
 				BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */,
 				BC4231FA29A691390080A36D /* ThirdCollectionViewCell.xib in Resources */,
+				BC8939F929C735E40068F09B /* PaymentMethods.storyboard in Resources */,
 				BCA7465529C5F208004E3E6B /* VacationRental.storyboard in Resources */,
 				BCB2B736297ABA0D0083975C /* Assets.xcassets in Resources */,
+				BC8939EF29C733E80068F09B /* Profile.storyboard in Resources */,
+				BC893A0529C7362A0068F09B /* ChangeLanguage.storyboard in Resources */,
 				BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */,
 				BCC7FB3129C35B93006A1367 /* SecondMoreTableViewCell.xib in Resources */,
+				BC8939FC29C735F50068F09B /* ContactUs.storyboard in Resources */,
 				BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */,
+				BC8939F629C7359D0068F09B /* WalletLog.storyboard in Resources */,
 				BCF9CD3E29827A1500AD4091 /* Individuals.storyboard in Resources */,
 				BCCF3083298D824700739673 /* GoogleService-Info.plist in Resources */,
 			);
