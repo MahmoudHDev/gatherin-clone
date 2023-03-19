@@ -32,6 +32,13 @@
 		BC8939FF29C7360B0068F09B /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8939FE29C7360B0068F09B /* TermsOfUse.storyboard */; };
 		BC893A0229C7361D0068F09B /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC893A0129C7361D0068F09B /* PrivacyPolicy.storyboard */; };
 		BC893A0529C7362A0068F09B /* ChangeLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC893A0429C7362A0068F09B /* ChangeLanguage.storyboard */; };
+		BC893A0E29C7375D0068F09B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A0D29C7375D0068F09B /* ProfileViewController.swift */; };
+		BC893A1129C7378A0068F09B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A1029C7378A0068F09B /* PrivacyPolicyViewController.swift */; };
+		BC893A1429C7379B0068F09B /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A1329C7379B0068F09B /* TermsOfUseViewController.swift */; };
+		BC893A1729C737AA0068F09B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A1629C737AA0068F09B /* ContactUsViewController.swift */; };
+		BC893A1A29C737C50068F09B /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A1929C737C50068F09B /* PaymentMethodsViewController.swift */; };
+		BC893A2529C738240068F09B /* WalletLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A2429C738240068F09B /* WalletLogViewController.swift */; };
+		BC893A2D29C7399C0068F09B /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC893A2C29C7399C0068F09B /* ChangeLanguageViewController.swift */; };
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
@@ -116,6 +123,13 @@
 		BC8939FE29C7360B0068F09B /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
 		BC893A0129C7361D0068F09B /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
 		BC893A0429C7362A0068F09B /* ChangeLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeLanguage.storyboard; sourceTree = "<group>"; };
+		BC893A0D29C7375D0068F09B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BC893A1029C7378A0068F09B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		BC893A1329C7379B0068F09B /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		BC893A1629C737AA0068F09B /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		BC893A1929C737C50068F09B /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
+		BC893A2429C738240068F09B /* WalletLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletLogViewController.swift; sourceTree = "<group>"; };
+		BC893A2C29C7399C0068F09B /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -326,6 +340,118 @@
 			path = MoreViews;
 			sourceTree = "<group>";
 		};
+		BC893A0729C736CC0068F09B /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1C29C737CE0068F09B /* View */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		BC893A0829C736DE0068F09B /* WalletLogView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2729C738290068F09B /* View */,
+			);
+			path = WalletLogView;
+			sourceTree = "<group>";
+		};
+		BC893A0929C736E90068F09B /* PaymentMethodsView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2329C738030068F09B /* View */,
+			);
+			path = PaymentMethodsView;
+			sourceTree = "<group>";
+		};
+		BC893A0A29C7370D0068F09B /* ContactUsView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2129C737EF0068F09B /* View */,
+			);
+			path = ContactUsView;
+			sourceTree = "<group>";
+		};
+		BC893A0B29C7371E0068F09B /* TermsOfUseView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1E29C737E10068F09B /* View */,
+			);
+			path = TermsOfUseView;
+			sourceTree = "<group>";
+		};
+		BC893A0C29C737270068F09B /* PrivacyPolicyView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1D29C737D80068F09B /* View */,
+			);
+			path = PrivacyPolicyView;
+			sourceTree = "<group>";
+		};
+		BC893A1C29C737CE0068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A0D29C7375D0068F09B /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A1D29C737D80068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1029C7378A0068F09B /* PrivacyPolicyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A1E29C737E10068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1329C7379B0068F09B /* TermsOfUseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A2129C737EF0068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1629C737AA0068F09B /* ContactUsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A2329C738030068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A1929C737C50068F09B /* PaymentMethodsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A2729C738290068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2429C738240068F09B /* WalletLogViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC893A2A29C739820068F09B /* ChangeLanguageView */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2B29C7398F0068F09B /* View */,
+			);
+			path = ChangeLanguageView;
+			sourceTree = "<group>";
+		};
+		BC893A2B29C7398F0068F09B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC893A2C29C7399C0068F09B /* ChangeLanguageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BCA09AFF299B616E00819D95 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,7 +611,14 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */,
-				BCC7FB2D29C35B7E006A1367 /* TableView */,
+				BCC7FB2D29C35B7E006A1367 /* UITableView */,
+				BC893A0729C736CC0068F09B /* ProfileView */,
+				BC893A0C29C737270068F09B /* PrivacyPolicyView */,
+				BC893A0B29C7371E0068F09B /* TermsOfUseView */,
+				BC893A0A29C7370D0068F09B /* ContactUsView */,
+				BC893A0929C736E90068F09B /* PaymentMethodsView */,
+				BC893A0829C736DE0068F09B /* WalletLogView */,
+				BC893A2A29C739820068F09B /* ChangeLanguageView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,7 +800,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BCC7FB2D29C35B7E006A1367 /* TableView */ = {
+		BCC7FB2D29C35B7E006A1367 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
 				BCC7FB3A29C3612D006A1367 /* MoreVC+TableView.swift */,
@@ -676,7 +809,7 @@
 				BCC7FB2E29C35B93006A1367 /* SecondMoreTableViewCell.swift */,
 				BCC7FB2F29C35B93006A1367 /* SecondMoreTableViewCell.xib */,
 			);
-			path = TableView;
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		BCE4BC6A297F0B3E007119C8 /* MainView */ = {
@@ -887,14 +1020,17 @@
 				BCEC029729BB634400995740 /* TopBar.swift in Sources */,
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */,
+				BC893A1729C737AA0068F09B /* ContactUsViewController.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
+				BC893A2D29C7399C0068F09B /* ChangeLanguageViewController.swift in Sources */,
 				BCC7FB3729C35E12006A1367 /* FirstMoreTableViewCell.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */,
 				BCD17A6F29B25A170093687C /* FirstFSPagerViewCell.swift in Sources */,
 				BCAC0C5529A2A2590063FC78 /* SearchViewController.swift in Sources */,
 				BCA7464C29C5F132004E3E6B /* VacationRentalsModel.swift in Sources */,
+				BC893A1429C7379B0068F09B /* TermsOfUseViewController.swift in Sources */,
 				BCA7465029C5F1C4004E3E6B /* VacationRentalViewController.swift in Sources */,
 				BCB97F66298D84B400FCD3A2 /* AuthManager.swift in Sources */,
 				BC6BEE1C29C45FC000242369 /* UIImage+Extensions.swift in Sources */,
@@ -905,13 +1041,17 @@
 				BC31248B298D4AA7008E0392 /* KeyboardExtensions.swift in Sources */,
 				BCC7FB3B29C3612D006A1367 /* MoreVC+TableView.swift in Sources */,
 				BCC161F82991020100AEB32C /* ColorExtension.swift in Sources */,
+				BC893A1A29C737C50068F09B /* PaymentMethodsViewController.swift in Sources */,
+				BC893A2529C738240068F09B /* WalletLogViewController.swift in Sources */,
 				BCB7E52129C2F02400D3B129 /* CitiesTableViewCell.swift in Sources */,
 				BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */,
+				BC893A1129C7378A0068F09B /* PrivacyPolicyViewController.swift in Sources */,
 				BC861EEE298E64AA006BBF7D /* Rechability.swift in Sources */,
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BCA7465A29C5F3E2004E3E6B /* Vacation+UITableView.swift in Sources */,
 				BCA7465F29C5F535004E3E6B /* VacationRentalTableViewCell.swift in Sources */,
 				BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */,
+				BC893A0E29C7375D0068F09B /* ProfileViewController.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
