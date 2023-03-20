@@ -76,12 +76,40 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            print(basicTitle[indexPath.row])
-        }else{
-            
-            print(optionListModel[indexPath.row])
+        switch indexPath.row {
+        case 0:
+            let profileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        case 1:
+            let walletLogVC = UIStoryboard(name: "WalletLog", bundle: nil).instantiateViewController(withIdentifier: "WalletLog") as! WalletLogViewController
+            self.navigationController?.pushViewController(walletLogVC, animated: true)
+        case 2:
+            print("Rate Us!")
+        case 3:
+            print("Host With Us")
+        case 4:
+            let paymentMethods = UIStoryboard(name: "PaymentMethods", bundle: nil).instantiateViewController(withIdentifier: "PaymentMethods") as! PaymentMethodsViewController
+            self.navigationController?.pushViewController(paymentMethods, animated: true)
+        case 5:
+            let contactUsView = UIStoryboard(name: "ContactUs", bundle: nil).instantiateViewController(withIdentifier: "ContactUs") as! ContactUsViewController
+            self.navigationController?.pushViewController(contactUsView, animated: true)
+        case 6:
+            print("Invite a friend")
+        case 7:
+            print("Repeated Questions")
+        case 8:
+            let termsOfUse = UIStoryboard(name: "TermsOfUse", bundle: nil).instantiateViewController(withIdentifier: "TermsOfUse") as! TermsOfUseViewController
+            self.navigationController?.pushViewController(termsOfUse, animated: true)
+        case 9:
+            let privacyPolicyView = UIStoryboard(name: "PrivacyPolicy", bundle: nil).instantiateViewController(withIdentifier: "PrivacyPolicy") as! PrivacyPolicyViewController
+            self.navigationController?.pushViewController(privacyPolicyView, animated: true)
+            print("")
+        case 10:
+            let changeLanguageView = UIStoryboard(name: "ChangeLanguage", bundle: nil).instantiateViewController(withIdentifier: "ChangeLanguage") as! ChangeLanguageViewController
+            self.navigationController?.pushViewController(changeLanguageView, animated: true)
+        default:
+            print("Logout")
         }
+        moreTableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }

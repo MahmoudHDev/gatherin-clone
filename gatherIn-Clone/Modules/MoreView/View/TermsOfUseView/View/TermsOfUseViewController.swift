@@ -11,7 +11,7 @@ class TermsOfUseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Terms of Use"
         // Do any additional setup after loading the view.
     }
     

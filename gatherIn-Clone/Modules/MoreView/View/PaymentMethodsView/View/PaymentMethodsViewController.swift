@@ -11,7 +11,7 @@ class PaymentMethodsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Payment Options"
         // Do any additional setup after loading the view.
     }
     

@@ -11,7 +11,7 @@ class PrivacyPolicyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Privacy & Policy"
         // Do any additional setup after loading the view.
     }
     

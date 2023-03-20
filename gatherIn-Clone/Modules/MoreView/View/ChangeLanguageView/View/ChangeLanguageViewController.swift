@@ -11,7 +11,7 @@ class ChangeLanguageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Change Lagnuage"
         // Do any additional setup after loading the view.
     }
     

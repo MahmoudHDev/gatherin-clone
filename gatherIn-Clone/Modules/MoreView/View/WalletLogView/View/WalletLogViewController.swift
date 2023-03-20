@@ -11,7 +11,7 @@ class WalletLogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Wallet Log"
         // Do any additional setup after loading the view.
     }
     
