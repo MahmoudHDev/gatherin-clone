@@ -13,6 +13,7 @@ class CitiesViewController: UIViewController {
     var arrCities           = [String]()
     var filteredData        = [String]()
     var userSerached:Bool   = false
+    
     // MARK:- Outlets
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var citiesTableView: UITableView!

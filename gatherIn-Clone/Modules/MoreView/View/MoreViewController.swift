@@ -20,12 +20,24 @@ class MoreViewController: UIViewController {
     // MARK: View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "More"
+        self.navigationControllerStyle()
         self.setupTableView()
         self.loadData()
     }
     
     // MARK: Methods
+    
+    private func navigationControllerStyle() {
+        self.title = "More"
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        backButton.style = .plain
+        backButton.tintColor = .white
+        self.navigationItem.backBarButtonItem = backButton
+    }
+    
     private func loadData() {
         self.optionListModel.append(OptionListModel(img: SymbolsList.profile!, title: "Profile"))
         self.optionListModel.append(OptionListModel(img: SymbolsList.walletLog!, title: "Wallet Log"))
@@ -45,6 +57,7 @@ class MoreViewController: UIViewController {
         self.basicTitle.append(BasicTitle(title: "Rating (from hosters)", subTitle: "10/0.0 (0)"))
         self.basicTitle.append(BasicTitle(title: "Hosters Blocked you", subTitle: "0"))
 
-
     }
+    
+    
 }

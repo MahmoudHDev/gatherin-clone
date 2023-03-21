@@ -82,7 +82,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         let searchTab = UITabBarItem(title: "Search", image: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)))
         searchVC.tabBarItem = searchTab
         
-        let myBookingsVC = UIStoryboard(name: "MyBookings", bundle: nil).instantiateViewController(withIdentifier: "MyBookingsViewController") as! MyBookingsViewController
+        let myBookingsVC = UIStoryboard(name: "MyBookings", bundle: nil).instantiateViewController(withIdentifier: "MyBookingsViewController") as! ReservationsViewController
         let myBookingsTab = UITabBarItem(title: "My Bookings", image: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)))
         myBookingsVC.tabBarItem = myBookingsTab
         

@@ -11,5 +11,8 @@ import Foundation
 protocol InterfaceStyleProtocol {
     
     func uiStyle()
-    
+}
+
+protocol NavigationControllerStyle {
+    func backgroundColor()
 }

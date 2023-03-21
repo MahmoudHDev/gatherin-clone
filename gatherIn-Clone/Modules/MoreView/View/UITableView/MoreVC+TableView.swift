@@ -8,9 +8,9 @@
 import UIKit
 
 @available(iOS 13, *)
+
 extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
-    
-    
+
     func setupTableView() {
         self.moreTableView.dataSource   = self
         self.moreTableView.delegate     = self
@@ -59,14 +59,14 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             return CGFloat(50)
         }
     }
-        
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 0.5))
         
         footerView.backgroundColor = .gray
         return footerView
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0

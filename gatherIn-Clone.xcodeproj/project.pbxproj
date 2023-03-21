@@ -42,6 +42,10 @@
 		BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */; };
 		BC9D1F5329B3605600F13174 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D1F5229B3605600F13174 /* PlacesModel.swift */; };
 		BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA09AFC299B5E3500819D95 /* Helpers.swift */; };
+		BCA1EC4129C9D8CE0063DD22 /* Conversation+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1EC4029C9D8CE0063DD22 /* Conversation+TableView.swift */; };
+		BCA1EC4529C9D99D0063DD22 /* RecentMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1EC4429C9D99D0063DD22 /* RecentMessagesModel.swift */; };
+		BCA1EC4829C9DB590063DD22 /* Conversation+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1EC4729C9DB590063DD22 /* Conversation+UITextField.swift */; };
+		BCA1EC4C29C9DEC40063DD22 /* Reservations+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1EC4B29C9DEC40063DD22 /* Reservations+UITableView.swift */; };
 		BCA7464C29C5F132004E3E6B /* VacationRentalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7464B29C5F132004E3E6B /* VacationRentalsModel.swift */; };
 		BCA7465029C5F1C4004E3E6B /* VacationRentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7464F29C5F1C4004E3E6B /* VacationRentalViewController.swift */; };
 		BCA7465529C5F208004E3E6B /* VacationRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA7465429C5F208004E3E6B /* VacationRental.storyboard */; };
@@ -55,7 +59,7 @@
 		BCAC0C6929A2A74A0063FC78 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */; };
 		BCAC0C6D29A2A7A80063FC78 /* Conversations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */; };
 		BCAC0C7029A2A7CA0063FC78 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */; };
-		BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */; };
+		BCAC0C7329A2A8070063FC78 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7229A2A8070063FC78 /* ReservationsViewController.swift */; };
 		BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7529A2A81D0063FC78 /* FavoriteViewController.swift */; };
 		BCAC0C7929A2A82B0063FC78 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */; };
 		BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */; };
@@ -133,6 +137,10 @@
 		BC9A4D7F29B9F8A600496AB3 /* AdvantagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvantagesModel.swift; sourceTree = "<group>"; };
 		BC9D1F5229B3605600F13174 /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		BCA09AFC299B5E3500819D95 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BCA1EC4029C9D8CE0063DD22 /* Conversation+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversation+TableView.swift"; sourceTree = "<group>"; };
+		BCA1EC4429C9D99D0063DD22 /* RecentMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessagesModel.swift; sourceTree = "<group>"; };
+		BCA1EC4729C9DB590063DD22 /* Conversation+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversation+UITextField.swift"; sourceTree = "<group>"; };
+		BCA1EC4B29C9DEC40063DD22 /* Reservations+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservations+UITableView.swift"; sourceTree = "<group>"; };
 		BCA7464B29C5F132004E3E6B /* VacationRentalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationRentalsModel.swift; sourceTree = "<group>"; };
 		BCA7464F29C5F1C4004E3E6B /* VacationRentalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationRentalViewController.swift; sourceTree = "<group>"; };
 		BCA7465429C5F208004E3E6B /* VacationRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VacationRental.storyboard; sourceTree = "<group>"; };
@@ -146,7 +154,7 @@
 		BCAC0C6829A2A74A0063FC78 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		BCAC0C6C29A2A7A80063FC78 /* Conversations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conversations.storyboard; sourceTree = "<group>"; };
 		BCAC0C6F29A2A7CA0063FC78 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
-		BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		BCAC0C7229A2A8070063FC78 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		BCAC0C7529A2A81D0063FC78 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		BCAC0C7B29A2A8390063FC78 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -460,6 +468,30 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BCA1EC3F29C9D8A30063DD22 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1EC4029C9D8CE0063DD22 /* Conversation+TableView.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		BCA1EC4329C9D9700063DD22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1EC4429C9D99D0063DD22 /* RecentMessagesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCA1EC4A29C9DEA00063DD22 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1EC4B29C9DEC40063DD22 /* Reservations+UITableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		BCA7464829C5F0ED004E3E6B /* VacationRentals */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0C6129A2A6D40063FC78 /* View */,
+				BCA1EC4A29C9DEA00063DD22 /* TableView */,
 			);
 			path = MyBookingsView;
 			sourceTree = "<group>";
@@ -569,6 +602,7 @@
 		BCAC0C5F29A2A6850063FC78 /* ConversationsView */ = {
 			isa = PBXGroup;
 			children = (
+				BCA1EC4329C9D9700063DD22 /* Model */,
 				BCAC0C6329A2A6E00063FC78 /* View */,
 			);
 			path = ConversationsView;
@@ -586,7 +620,7 @@
 		BCAC0C6129A2A6D40063FC78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BCAC0C7229A2A8070063FC78 /* MyBookingsViewController.swift */,
+				BCAC0C7229A2A8070063FC78 /* ReservationsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -603,6 +637,8 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0C7829A2A82B0063FC78 /* ConversationsViewController.swift */,
+				BCA1EC3F29C9D8A30063DD22 /* UITableView */,
+				BCA1EC4729C9DB590063DD22 /* Conversation+UITextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,9 +783,9 @@
 		BCB2B74A297ABBC70083975C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				BC8939F229C734140068F09B /* TabBarViews */,
 				BC8939F129C733FA0068F09B /* StartViews */,
 				BC8939F329C734530068F09B /* SubViews */,
+				BC8939F229C734140068F09B /* TabBarViews */,
 				BC8939F429C7346C0068F09B /* MoreViews */,
 			);
 			path = Storyboards;
@@ -1021,6 +1057,7 @@
 				BCAC0C7C29A2A8390063FC78 /* MoreViewController.swift in Sources */,
 				BC51212B29C1DBF3009C60CC /* UIView+Extensions.swift in Sources */,
 				BC893A1729C737AA0068F09B /* ContactUsViewController.swift in Sources */,
+				BCA1EC4129C9D8CE0063DD22 /* Conversation+TableView.swift in Sources */,
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BC893A2D29C7399C0068F09B /* ChangeLanguageViewController.swift in Sources */,
@@ -1050,21 +1087,24 @@
 				BCB2B72D297ABA080083975C /* AppDelegate.swift in Sources */,
 				BCA7465A29C5F3E2004E3E6B /* Vacation+UITableView.swift in Sources */,
 				BCA7465F29C5F535004E3E6B /* VacationRentalTableViewCell.swift in Sources */,
+				BCA1EC4529C9D99D0063DD22 /* RecentMessagesModel.swift in Sources */,
 				BC7FE99B29C3CEF400BF7A87 /* OptionListModel.swift in Sources */,
 				BC893A0E29C7375D0068F09B /* ProfileViewController.swift in Sources */,
 				BC07AF672985791000667EE0 /* IndividualsView+TextField.swift in Sources */,
 				BCC7FB3029C35B93006A1367 /* SecondMoreTableViewCell.swift in Sources */,
 				BCB2B72F297ABA080083975C /* SceneDelegate.swift in Sources */,
+				BCA1EC4829C9DB590063DD22 /* Conversation+UITextField.swift in Sources */,
 				BCAC0C7929A2A82B0063FC78 /* ConversationsViewController.swift in Sources */,
 				BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */,
 				BCB7E51629C2ECEF00D3B129 /* CitiesViewController.swift in Sources */,
+				BCA1EC4C29C9DEC40063DD22 /* Reservations+UITableView.swift in Sources */,
 				BCB7E51C29C2EF8100D3B129 /* CitiesVC+TableView.swift in Sources */,
 				BCCF307C298D7EF500739673 /* IndividualsPresenter.swift in Sources */,
 				BCC2C50A299785EE00CC3889 /* BasicInformationViewController.swift in Sources */,
 				BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */,
 				BCAE67B3298E60E400B02EFA /* CodeVerificationViewController.swift in Sources */,
 				BC7FE99F29C3CFF500BF7A87 /* SymbolsList.swift in Sources */,
-				BCAC0C7329A2A8070063FC78 /* MyBookingsViewController.swift in Sources */,
+				BCAC0C7329A2A8070063FC78 /* ReservationsViewController.swift in Sources */,
 				BCAC0C7629A2A81D0063FC78 /* FavoriteViewController.swift in Sources */,
 				BC9A4D8029B9F8A600496AB3 /* AdvantagesModel.swift in Sources */,
 				BCE4BC6F297F0B7D007119C8 /* MainViewController.swift in Sources */,

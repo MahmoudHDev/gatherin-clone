@@ -11,9 +11,13 @@ class FavoriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Favorites"
+        self.navigationControllerStyle()
     }
-    
+    private func navigationControllerStyle() {
+        title = "Favorite"
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
 
 
 }

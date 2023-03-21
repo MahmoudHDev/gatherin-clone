@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,38 +9,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Bookings View Controller-->
+        <!--Reservations View Controller-->
         <scene sceneID="gLy-OZ-XWj">
             <objects>
-                <viewController storyboardIdentifier="MyBookingsViewController" id="UZz-Xc-Wao" customClass="MyBookingsViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyBookingsViewController" id="UZz-Xc-Wao" customClass="ReservationsViewController" customModule="gatherIn_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAr-2d-UGB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evm-8n-Peh">
-                                <rect key="frame" x="50.666666666666657" y="344" width="313" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monitoring" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-rH-5gI">
+                                <rect key="frame" x="62" y="274" width="290" height="358"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No recent reservations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0h-s5-vqa">
+                                <rect key="frame" x="62" y="632" width="290" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRG-jx-2RJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JC5-Ot-z2m"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Evm-8n-Peh" firstAttribute="centerY" secondItem="fAr-2d-UGB" secondAttribute="centerY" id="Vmm-fq-Wli"/>
-                            <constraint firstItem="Evm-8n-Peh" firstAttribute="centerX" secondItem="fAr-2d-UGB" secondAttribute="centerX" id="y1Z-rt-n8Q"/>
+                            <constraint firstItem="JRG-jx-2RJ" firstAttribute="bottom" secondItem="JC5-Ot-z2m" secondAttribute="bottom" id="EYP-Nu-BZo"/>
+                            <constraint firstItem="JRG-jx-2RJ" firstAttribute="leading" secondItem="JC5-Ot-z2m" secondAttribute="leading" id="J26-ts-7nV"/>
+                            <constraint firstItem="JRG-jx-2RJ" firstAttribute="top" secondItem="JC5-Ot-z2m" secondAttribute="top" id="R8R-Ra-fg9"/>
+                            <constraint firstItem="JRG-jx-2RJ" firstAttribute="trailing" secondItem="JC5-Ot-z2m" secondAttribute="trailing" id="Tys-dF-PpT"/>
+                            <constraint firstItem="ibW-rH-5gI" firstAttribute="centerX" secondItem="JC5-Ot-z2m" secondAttribute="centerX" id="Uff-IF-Omt"/>
+                            <constraint firstItem="S0h-s5-vqa" firstAttribute="top" secondItem="ibW-rH-5gI" secondAttribute="bottom" id="YhU-bB-ix4"/>
+                            <constraint firstItem="S0h-s5-vqa" firstAttribute="leading" secondItem="ibW-rH-5gI" secondAttribute="leading" id="dNy-kw-bbh"/>
+                            <constraint firstItem="ibW-rH-5gI" firstAttribute="width" secondItem="fAr-2d-UGB" secondAttribute="width" multiplier="0.7" id="kKH-Bo-miO"/>
+                            <constraint firstItem="S0h-s5-vqa" firstAttribute="trailing" secondItem="ibW-rH-5gI" secondAttribute="trailing" id="rGK-DQ-Hkb"/>
+                            <constraint firstItem="ibW-rH-5gI" firstAttribute="height" secondItem="fAr-2d-UGB" secondAttribute="height" multiplier="0.4" id="tf0-kE-0WT"/>
+                            <constraint firstItem="ibW-rH-5gI" firstAttribute="centerY" secondItem="JC5-Ot-z2m" secondAttribute="centerY" id="yxh-XS-f4T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wkP-aH-meM"/>
+                    <connections>
+                        <outlet property="reservationsTableView" destination="JRG-jx-2RJ" id="6Vh-GD-SUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SET-Rn-hzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.88405797101461" y="129.61956521739131"/>
+            <point key="canvasLocation" x="931.88405797101461" y="129.24107142857142"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="monitoring" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

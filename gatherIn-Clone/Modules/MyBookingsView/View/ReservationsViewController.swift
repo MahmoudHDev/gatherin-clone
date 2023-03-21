@@ -1,5 +1,5 @@
 //
-//  ConversationsViewController.swift
+//  ReservationsViewController.swift
 //  gatherIn-Clone
 //
 //  Created by Mahmoud Hashim on 2/19/23.
@@ -7,31 +7,32 @@
 
 import UIKit
 
-class ConversationsViewController: UIViewController {
+class ReservationsViewController: UIViewController {
     // MARK:- Properties
-    var arrRecentChat = [RecentMessagesModel]()
+
     
     // MARK:- Outlets
-    @IBOutlet weak var noChatImg: UIImageView!
-    @IBOutlet weak var noChatLbl: UILabel!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var conversationTableView: UITableView!
+    @IBOutlet weak var reservationsTableView: UITableView!
+    
+    // MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationControllerStyle()
+        self.reservationsTableView.isHidden = true
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.setupTableView()
-        self.setupTextField()
+        self.setupReservationTableView()
     }
-    
-    
+    // MARK:- Methods
     private func navigationControllerStyle() {
-        title = "Conversations"
+        title = "Reservations"
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
     }
+    
+    // MARK:- Actions
+
 }
