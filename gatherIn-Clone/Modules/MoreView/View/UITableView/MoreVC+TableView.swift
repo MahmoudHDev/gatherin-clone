@@ -105,8 +105,13 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             self.navigationController?.pushViewController(privacyPolicyView, animated: true)
             print("")
         case 10:
-            let changeLanguageView = UIStoryboard(name: "ChangeLanguage", bundle: nil).instantiateViewController(withIdentifier: "ChangeLanguage") as! ChangeLanguageViewController
-            self.navigationController?.pushViewController(changeLanguageView, animated: true)
+            let currentLanauage = Locale.current.languageCode
+            print("Current Language\(currentLanauage ?? "")")
+            let newLanguage = currentLanauage == "en" ? "ar" : "en"
+            UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
+            exit(0)
+//            let changeLanguageView = UIStoryboard(name: "ChangeLanguage", bundle: nil).instantiateViewController(withIdentifier: "ChangeLanguage") as! ChangeLanguageViewController
+//            self.navigationController?.pushViewController(changeLanguageView, animated: true)
         default:
             print("Logout")
         }

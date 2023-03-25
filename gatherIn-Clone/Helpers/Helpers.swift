@@ -16,3 +16,8 @@ protocol InterfaceStyleProtocol {
 protocol NavigationControllerStyle {
     func backgroundColor()
 }
+
+protocol LocalizationProtocol {
+    func localizationForButtons()
+    func localizationForLabels()
+}

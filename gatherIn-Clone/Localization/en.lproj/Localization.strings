@@ -1,0 +1,55 @@
+// English;
+
+// OnBoarding View
+"Next"                  = "Next";
+"Skip"                  = "Skip";
+"GettingStarted"        = "Getting Started";
+
+// Main View
+"IWantToUseGatherIn"    = "I want to use Gather-in";
+"ForIndividuals"        = "For Individuals";
+"ForBusiness"           = "For Business";
+
+// ForIndividuals View;
+"Welcome"               = "Welcome!";
+"PleaseEnterPhoneNo"    = "Please enter your phone number to sign in or sign up";
+"PhoneNumber"           = "Phone Number";
+"Sendcode"              = "Send code";
+"MessageYouShortly"     = "We will message you with the shortly to the number that you have entered.";
+"phoneNumberIsCorrect"  = "Please make sure that your phone number is correct.";
+
+// CountryCode View
+"CountryCode"           = "Country code";
+
+// Navigation bar Buttons
+"Done"                  = "Done";
+"Back"                  = "Back";
+
+// Code verification
+"PleaseCodeContinue"                    = "Please enter the code to continue";
+"SentYouVerificationCodeBySMS"          = "We've sent to you the verification code by SMS to ";
+"VerificationCode"                      = "Verification Code";
+"Check"                                 = "Check";
+"DidnNotRecieveTheCode"                 = "Didn't recieve the code yet?";
+"ResendVerificationCode"                = "Resend the verification code again";
+"IncorrectCode"                         = "Incorrect Code";
+"AlertMakeSureCodeIsCorrect"            = "Make sure the code is correct";
+
+// BasicInformation View
+"EnterYourName&Email"                   = "Enter your name and Email: ";
+"Name"                                  = "Name";
+"NamePlaceHolder"                       = "Example: Ahmed";
+"Email"                                 = "Email";
+"EmailPlaceHolder"                      = "name@Domain.com";
+"Register"                              = "Register";
+"PrivacyAndPolicyMsg"                   = "When you create an account on gatherin. you accept our Privacy & Policy and the Terms & Conditions";
+
+// HomeTabBar
+"Search"            = "Search";
+"MyReservations"    = "My Reservations";
+"Favorites"         = "Favorites";
+"Conversations"     = "Conversations";
+"More"              = "More";
+
+// MoreView
+"ChangeLanguage" = "Change Language";

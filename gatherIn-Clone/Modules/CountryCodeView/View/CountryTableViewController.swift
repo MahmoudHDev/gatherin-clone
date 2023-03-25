@@ -22,7 +22,7 @@ class CountryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-        title = "Country code"
+        title = NSLocalizedString("CountryCode", comment: "")
         let done = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(backButton))
         navigationItem.setLeftBarButton(done, animated: true)
         

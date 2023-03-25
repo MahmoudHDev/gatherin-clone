@@ -11,7 +11,9 @@ import Firebase
 
 @available(iOS 13, *)
 
-class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
+class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, LocalizationProtocol {
+
+    
     // MARK:- Outlets
     @IBOutlet weak var firsParagraph        : UILabel!
     @IBOutlet weak var nameLbl              : UILabel!
@@ -54,8 +56,23 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         self.registerButton.layer.masksToBounds = false
     }
     
+    func localizationForButtons() {
+        registerButton.setTitle("Register", for: .normal)
+    }
+    
+    func localizationForLabels() {
+        firsParagraph.text = NSLocalizedString("EnterYourName&Email", comment: "")
+        nameLbl.text = NSLocalizedString("Name", comment: "")
+        nameTextField.placeholder = NSLocalizedString("NamePlaceHolder", comment: "TextField PlaceHolder")
+        emailLbl.text = NSLocalizedString("Email", comment: "")
+        emailTextField.placeholder = NSLocalizedString("EmailPlaceHolder", comment: "")
+        
+    }
+    
     private func textHyperLink() {
-        let atributedString = NSMutableAttributedString(string: "When you create an account on gathern. You accept our Privacy & Policy and the Terms & Conditions.")
+        
+        let atributedString = NSMutableAttributedString(string:NSLocalizedString("", comment: "PrivacyAndPolicyMsg"))
+        
         let firstRange = (atributedString.string as NSString).range(of: "Privacy & Policy")
         let secondRange = (atributedString.string as NSString).range(of: "Terms & Conditions")
         
@@ -63,8 +80,11 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol {
         atributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemBlue, range: secondRange)
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(privacyAndPolicy))
+        tapRecognizer.numberOfTapsRequired = 1
         lastParagraph.attributedText = atributedString
+        lastParagraph.isUserInteractionEnabled = true
         lastParagraph.addGestureRecognizer(tapRecognizer)
+        
     }
     
     @objc

@@ -10,7 +10,8 @@ import NVActivityIndicatorView
 
 @available(iOS 13, *)
 
-class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
+class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol,LocalizationProtocol {
+
     // MARK: - Outlets
     @IBOutlet weak var backBtn                      : UIButton!
     @IBOutlet weak var firstParagraph               : UILabel!
@@ -24,13 +25,15 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
     @IBOutlet weak var timerLbl                     : UILabel!
     @IBOutlet weak var indicator                    : NVActivityIndicatorView!
     @IBOutlet weak var indicatorContainerView       : UIView!
+    
     // MARK: - Properties
-    let defaults = UserDefaults.standard
-    var phoneNumber = ""
-    var timer: Timer = Timer()
-    var seconds = 100
-    var isTimerRunning = false
-    var isLogin = false
+    let defaults        = UserDefaults.standard
+    var phoneNumber     = ""
+    var timer: Timer    = Timer()
+    var seconds         = 100
+    var isTimerRunning  = false
+    var isLogin         = false
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +56,19 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         RunLoop.current.add(self.timer, forMode: .common)
         
-        self.secondParagraph.text = "We've sent to you the verification code by SMS to ( \(phoneNumber) )"
-            
-        
     }
     
+    func localizationForButtons() {
+        checkBtn.setTitle(NSLocalizedString("Check", comment: ""), for: .normal)
+        resendCodeBtn.setTitle(NSLocalizedString("ResendVerificationCode", comment: ""), for: .normal)
+    }
+    
+    func localizationForLabels() {
+        firstParagraph .text = NSLocalizedString("PleaseCodeContinue", comment: "")
+        secondParagraph.text = NSLocalizedString("SentYouVerificationCodeBySMS", comment: "") + "\(phoneNumber)"
+        thirdParagraph .text = NSLocalizedString("VerificationCode", comment: "")
+        fourthParagraph.text = NSLocalizedString("DidnNotRecieveTheCode", comment: "")
+    }
     @objc private func setTimer() {
         if seconds == 0 {
             let labelTitle: [NSAttributedString.Key: Any] = [
@@ -67,7 +78,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
             ]
             
             let atributedString = NSMutableAttributedString(
-                string: "resend the verficiation code again.",
+                string: NSLocalizedString("ResendVerificationCode", comment: "After"),
                 attributes: labelTitle)
             
             timer.invalidate()
@@ -85,7 +96,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
         }
     }
     
-    private func timeString(time: TimeInterval) -> String{
+    private func timeString(time: TimeInterval) -> String {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format: "%02i:%02i", minutes, seconds)
@@ -150,8 +161,8 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol {
 
                     self?.checkBtn.isEnabled = true
                     self?.checkBtn.backgroundColor = #colorLiteral(red: 0.4309644103, green: 0.3406741023, blue: 0.6719501019, alpha: 1)
-                    let alert = UIAlertController(title: "Incorrect Code", message: "Make sure the code is correct", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Back", style: .cancel))
+                    let alert = UIAlertController(title: NSLocalizedString("ResendVerificationCode", comment: "Title"), message: NSLocalizedString("AlertMakeSureCodeIsCorrect", comment: "Message"), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("Back", comment: ""), style: .cancel))
                     self?.present(alert, animated: true)
                 }
             }

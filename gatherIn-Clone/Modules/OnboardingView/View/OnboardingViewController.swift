@@ -10,8 +10,8 @@ import FSPagerView
 
 @available(iOS 13, *)
 
-class OnboardingViewController: UIViewController {
-    
+class OnboardingViewController: UIViewController, LocalizationProtocol {
+
     // MARK:- Outlets
     @IBOutlet weak var pageview         : FSPagerView!
     @IBOutlet weak var pageControl      : FSPageControl!
@@ -30,17 +30,22 @@ class OnboardingViewController: UIViewController {
         self.setupCollectionView()
         self.addData()
         self.buttonsStyles()
+        self.localizationForButtons()
     }
     
     // MARK:- Methods
+    func localizationForButtons() {
+        skipBtn.setTitle(NSLocalizedString("Skip", comment: "SkipAndNextBttns"), for: .normal)
+    }
+    
+    func localizationForLabels() {
+        print("NoLabels")
+    }
+    
     private func addData() {
         self.arrImgs.append(UIImage(named: "DownTown")!)
         self.arrImgs.append(UIImage(named: "Luxor")!)
         self.arrImgs.append(UIImage(named: "Siwa")!)
-        
-//        self.arrImgs.append(UIImage(named: "First")!)
-//        self.arrImgs.append(UIImage(named: "Second")!)
-//        self.arrImgs.append(UIImage(named: "Third")!)
     }
     
     private func buttonsStyles() {
@@ -56,22 +61,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func NextButton(_ sender: UIButton) {
-        self.nextBtn.setTitle("Next", for: .normal)
-        if currentCell < 2 {
-            let indexPath = FSPagerView.index(ofAccessibilityElement: currentCell + 1)
-            currentCell += 1
-            self.pageview.scrollToItem(at: indexPath, animated: true)
-            if currentCell == 2 {
-                nextBtn.setTitle("Login", for: .normal)
-                saveOnBoardingToDefaults()
-                self.showMainVC()
-            }
-        }else{
-            currentCell = 0
-            let indexPath = FSPagerView.index(ofAccessibilityElement: 0)
-            self.pageview.scrollToItem(at: indexPath , animated: true)
-            
-        }
+        print("Next")
     }
     
     private func saveOnBoardingToDefaults() {
@@ -133,17 +123,14 @@ extension OnboardingViewController: FSPagerViewDataSource, FSPagerViewDelegate {
             self.skipBtn.backgroundColor = .black
             self.skipBtn.layer.cornerRadius = 22
             self.skipBtn.layer.masksToBounds = false
-            self.skipBtn.setTitle("Get started", for: .normal)
+            self.skipBtn.setTitle(NSLocalizedString("GettingStarted", comment: "SkipAndNextBttns"), for: .normal)
             self.skipBtn.setTitleColor(.white, for: .normal)
             print("Get Started")
         }else{
             self.skipBtn.backgroundColor = .white
             self.skipBtn.layer.cornerRadius = 22
             self.skipBtn.setTitleColor(.darkGray, for: .normal)
-            self.skipBtn.setTitle("Skip", for: .normal)
+            self.skipBtn.setTitle(NSLocalizedString("Skip", comment: "SkipAndNextBttns"), for: .normal)
         }
     }
-
-    
-    
 }

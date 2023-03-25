@@ -13,7 +13,8 @@ import NVActivityIndicatorView
 
 @available(iOS 13, *)
 
-class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol {
+class IndividualsViewController: UIViewController, CountryDelegate, InterfaceStyleProtocol, LocalizationProtocol {
+
     
     //MARK:- Outlets
     @IBOutlet weak var scrollView               : UIScrollView!
@@ -31,20 +32,22 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
     @IBOutlet weak var loginBtn                 : UIButton!
     @IBOutlet weak var confirmationMessageLbl   : UILabel!
     @IBOutlet weak var noteMessageLbl           : UILabel!
-    @IBOutlet weak var indicatorContainerView: UIView!
+    @IBOutlet weak var indicatorContainerView   : UIView!
     @IBOutlet weak var indicator                : NVActivityIndicatorView!
     
     // MARK:- Properties
-    let phoneNumber = PhoneNumberKit()
+    let phoneNumber         = PhoneNumberKit()
     var selectedCountryCode = "+20"
-    var userNumber = ""
-    var isLogin: Bool = false
+    var userNumber          = ""
+    var isLogin: Bool       = false
 
     
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.uiStyle()
+        self.localizationForButtons()
+        self.localizationForLabels()
     }
     
     override func viewDidLayoutSubviews() {
@@ -79,6 +82,20 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         
         indicatorContainerView.isHidden = true
 
+    }
+    
+    func localizationForButtons() {
+        self.loginBtn.setTitle(NSLocalizedString("Sendcode", comment: "Login Button"), for: .normal)
+    }
+    
+    func localizationForLabels() {
+        welcomeLbl.text          = NSLocalizedString("", comment: "Welcome")
+        PhoneNumberIntroLbl.text = NSLocalizedString("PleaseEnterPhoneNo", comment: "")
+        phoneNumberLbl.text  = NSLocalizedString("PhoneNumber", comment: "")
+        
+        confirmationMessageLbl.text = NSLocalizedString("MessageYouShortly", comment: "")
+        noteMessageLbl.text = NSLocalizedString("phoneNumberIsCorrect", comment: "")
+        
     }
     
     

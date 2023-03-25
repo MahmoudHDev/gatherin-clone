@@ -49,7 +49,7 @@ class MoreViewController: UIViewController {
         self.optionListModel.append(OptionListModel(img: SymbolsList.repeatedInquiry!, title: "Repeated questions"))
         self.optionListModel.append(OptionListModel(img: SymbolsList.termsOfUse!, title: "Terms of use"))
         self.optionListModel.append(OptionListModel(img: SymbolsList.privacyPolicy!, title: "Privacy Policy"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.language!, title: "Language"))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.language!, title: NSLocalizedString("ChangeLanguage", comment: "")))
         self.optionListModel.append(OptionListModel(img: SymbolsList.logout!, title: "logout"))
 
         self.basicTitle.append(BasicTitle(title: "Number of reservations", subTitle: "0"))
