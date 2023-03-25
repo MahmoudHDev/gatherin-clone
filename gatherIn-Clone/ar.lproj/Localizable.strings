@@ -1,0 +1,56 @@
+// Arabic
+
+// OnBoarding
+"Next"                  = "التالي";
+"Skip"                  = "تخطي";
+"GettingStarted"        = "البدء";
+
+// Main View
+"IWantToUseGatherIn"    = "اريد استخدام جاذران ل";
+"ForIndividuals"        = "للأفراد";
+"ForBusiness"           = "للمضيفين";
+
+// ForIndividuals View
+"Welcome"               = "مرحبا";
+"PleaseEnterPhoneNo"    = "لتسجيل الدخول او لتسجيل مستخدم جديد يرجى ادخال رقم الهاتف";
+"PhoneNumber"           = "رقم الهاتف";
+"Sendcode"              = "ارسل الكود";
+"MessageYouShortly"     = "سوف نرسل اليك رسالة قصيرة تحتوي على كود التفعيل بالرقم المدخل.";
+"phoneNumberIsCorrect"  = "الرجاء التأكد ان رقم الهاتف صحيح.";
+
+// CountryCode View
+"CountryCode"           = "كود الدولة";
+
+// Navigation bar Buttons
+"Done"                  = "تم";
+"Back"                  = "عودة";
+
+// Code verification
+"PleaseCodeContinue"                    = "الرجاء ادخال الكود للمتابعة";
+"SentYouVerificationCodeBySMS"          = "لقد ارسلنا لك كود التفعيل برسالة نصية الى الرقم :";
+"VerificationCode"                      = "كود التفعيل";
+"Check"                                 = "تحقق";
+"DidnNotRecieveTheCode"                 = "لم تصلك الرسالة بعد?";
+"ResendVerificationCode"           = "ارسل لي الكود التفعيل مجدداً";
+"IncorrectCode"                         = "الكود خاطئ";
+"AlertMakeSureCodeIsCorrect"            = "تأكد بإنك ادخلت الكود صحيحاً";
+
+// BasicInformation View
+"EnterYourName&Email"                   = "ادخل الاسم والبريد الالكتروني";
+"Name"                                  = "الاسم";
+"NamePlaceHolder"                       = "مثال: احمد";
+"Email"                                 = "البريد الألكتروني";
+"EmailPlaceHolder"                      = "مثال: name@Domain.com";
+"Register"                              = "التسجيل";
+"PrivacyAndPolicyMsg"                   = "عندما تنشئ حساباً فهذا يعني انك توافق على سياسة الخصوصية ،الشروط والأحكام";
+
+// HomeTabBar
+"Search"            = "البحث";
+"MyReservations"    = "حجوزاتي";
+"Favorites"         = "المفضلة";
+"Conversations"     = "محادثات";
+"More"              = "المزيد";
+
+// More view
+"ChangeLanguage" = "تغيير اللغة";
+
