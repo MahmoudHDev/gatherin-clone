@@ -50,7 +50,7 @@
                                                         <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number to sign in or sign up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wc-GP-2Zz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number to sign in or sign up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wc-GP-2Zz">
                                                         <rect key="frame" x="0.0" y="47.333333333333343" width="374" height="49.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,8 +129,8 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-iM-uwe" userLabel="PhoneNumberContainer">
                                                                 <rect key="frame" x="130" y="0.0" width="244" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" placeholder="05 123456789" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1n-Js-fQP" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                                                        <rect key="frame" x="5" y="5" width="234" height="50"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" placeholder="05 123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1n-Js-fQP" userLabel="PhoneNumberTextField" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                                                        <rect key="frame" x="15" y="5" width="214" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -143,8 +143,8 @@
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="M1n-Js-fQP" secondAttribute="bottom" constant="5" id="66O-kZ-6F6"/>
-                                                                    <constraint firstItem="M1n-Js-fQP" firstAttribute="leading" secondItem="R7O-iM-uwe" secondAttribute="leading" constant="5" id="DYg-hZ-ysK"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="M1n-Js-fQP" secondAttribute="trailing" constant="5" id="WRb-0m-TQm"/>
+                                                                    <constraint firstItem="M1n-Js-fQP" firstAttribute="leading" secondItem="R7O-iM-uwe" secondAttribute="leading" constant="15" id="DYg-hZ-ysK"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="M1n-Js-fQP" secondAttribute="trailing" constant="15" id="WRb-0m-TQm"/>
                                                                     <constraint firstItem="M1n-Js-fQP" firstAttribute="top" secondItem="R7O-iM-uwe" secondAttribute="top" constant="5" id="kED-Wh-AgJ"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>

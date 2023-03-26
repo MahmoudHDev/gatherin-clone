@@ -40,6 +40,8 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.textHyperLink()
+        self.localizationForButtons()
+        self.localizationForLabels()
     }
     
     override func viewDidAppear(_ animated: Bool) {

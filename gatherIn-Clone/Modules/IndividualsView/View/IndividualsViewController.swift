@@ -132,15 +132,15 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
         if Reachability.isConnectedToNetwork() {
             print("Device is connected to the network")
         }else {
-            let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cellular", style: .default, handler: { (cellular) in
-                UIApplication.shared.openURL(URL(string: "App-prefs:root=MOBILEDATA")!)
+            let alert = UIAlertController(title: NSLocalizedString("NetworkError", comment: "Err"), message: NSLocalizedString("NetworkErrorMessage", comment: "error details message"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "okay button"), style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cellular", comment: "Settings Date"), style: .default, handler: { (cellular) in
+                guard let url = URL(string: UIApplication.openSettingsURLString + Bundle.main.bundleIdentifier!) else {return}
+                UIApplication.shared.open(url)
             }))
             
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
     // MARK:- Actions
@@ -182,10 +182,11 @@ class IndividualsViewController: UIViewController, CountryDelegate, InterfaceSty
             self.scrollView.isScrollEnabled = true
             self.phoneNumberTextField.isUserInteractionEnabled = true
 
-            let alert = UIAlertController(title: "Network Error", message: "Your Device is not connected to the network", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cellular", style: .default, handler: { (cellular) in
-                UIApplication.shared.openURL(URL(string: "App-prefs:root=MOBILEDATA")!)
+            let alert = UIAlertController(title: NSLocalizedString("NetworkError", comment: "Err"), message: NSLocalizedString("NetworkErrorMessage", comment: "error details message"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "okay button"), style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cellular", comment: "Settings Date"), style: .default, handler: { (cellular) in
+                guard let url = URL(string: UIApplication.openSettingsURLString + Bundle.main.bundleIdentifier!) else {return}
+                UIApplication.shared.open(url)
             }))
             self.present(alert, animated: true, completion: nil)
         }

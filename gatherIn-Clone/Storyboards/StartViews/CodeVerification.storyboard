@@ -72,30 +72,31 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cs0-m1-VIl">
-                                                <rect key="frame" x="20" y="163" width="148.66666666666666" height="82.666666666666686"/>
+                                                <rect key="frame" x="20" y="163" width="130" height="82.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjT-cS-umK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="24.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="24.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-jC-M2P">
-                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="148.66666666666666" height="50"/>
+                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="130" height="50"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123456" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axe-ol-Bss">
-                                                                <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="50"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axe-ol-Bss">
+                                                                <rect key="frame" x="15" y="0.0" width="100" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="axe-ol-Bss" firstAttribute="leading" secondItem="ibf-jC-M2P" secondAttribute="leading" id="3jz-4p-kkv"/>
+                                                            <constraint firstItem="axe-ol-Bss" firstAttribute="leading" secondItem="ibf-jC-M2P" secondAttribute="leading" constant="15" id="3jz-4p-kkv"/>
                                                             <constraint firstAttribute="height" constant="50" id="A5U-8w-CNa"/>
                                                             <constraint firstAttribute="bottom" secondItem="axe-ol-Bss" secondAttribute="bottom" id="UJr-gR-A8Y"/>
                                                             <constraint firstItem="axe-ol-Bss" firstAttribute="top" secondItem="ibf-jC-M2P" secondAttribute="top" id="b4G-Dz-bj4"/>
-                                                            <constraint firstAttribute="trailing" secondItem="axe-ol-Bss" secondAttribute="trailing" id="d4f-oA-pqO"/>
+                                                            <constraint firstAttribute="trailing" secondItem="axe-ol-Bss" secondAttribute="trailing" constant="15" id="d4f-oA-pqO"/>
+                                                            <constraint firstAttribute="width" constant="130" id="vBl-Th-3jw"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

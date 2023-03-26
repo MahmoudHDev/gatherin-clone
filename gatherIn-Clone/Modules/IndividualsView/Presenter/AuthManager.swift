@@ -15,15 +15,20 @@ class AuthManager {
     private var verificationId : String?
     
     public func startAuth(phoneNumber: String, completion: @escaping (Bool)-> Void) {
+        print("Start AuthenticationO")
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self] (verificationId, error) in
-            guard let verificationId = verificationId, error == nil else {
+            if let err = error {
+                print("Error Has Been Occured \(err.localizedDescription)")
                 completion(false)
-                return }
-            
-            print("Error has been occured : \(error)")
-            
-            self?.verificationId = verificationId
-            completion(true)
+            }else {
+                guard let verificationId = verificationId, error == nil else {
+                    completion(false)
+                    return }
+                
+                self?.verificationId = verificationId
+
+                completion(true)
+            }            
         }
     }
     

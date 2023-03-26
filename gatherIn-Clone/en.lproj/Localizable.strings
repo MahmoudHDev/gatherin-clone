@@ -7,8 +7,13 @@
 
 // Main View
 "IWantToUseGatherIn"    = "I want to use Gather-in";
-"ForIndividuals"        = "For Individuals";
-"ForBusiness"           = "For Business";
+"ForIndividuals"        = "For Individuals 👨‍👩‍👦‍👦";
+"ForBusiness"           = "For Business 🏚";
+"NetworkError"          = "Network Error";
+"NetworkErrorMessage"   = "Your device is not connected to the network، Please try again!";
+"Cellular"              = "Cellular";
+"Ok"                    = "Ok";
+
 
 // ForIndividuals View;
 "Welcome"               = "Welcome!";
@@ -40,7 +45,7 @@
 "Name"                                  = "Name";
 "NamePlaceHolder"                       = "Example: Ahmed";
 "Email"                                 = "Email";
-"EmailPlaceHolder"                      = "name@Domain.com";
+"EmailPlaceHolder"                      = "name@domain.com";
 "Register"                              = "Register";
 "PrivacyAndPolicyMsg"                   = "When you create an account on gatherin. you accept our Privacy & Policy and the Terms & Conditions";
 

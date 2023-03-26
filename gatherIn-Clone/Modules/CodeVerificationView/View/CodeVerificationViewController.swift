@@ -10,7 +10,7 @@ import NVActivityIndicatorView
 
 @available(iOS 13, *)
 
-class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol,LocalizationProtocol {
+class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol, LocalizationProtocol {
 
     // MARK: - Outlets
     @IBOutlet weak var backBtn                      : UIButton!
@@ -44,6 +44,8 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol,L
         self.uiStyle()
         self.defaultResendButtonStyle()
         self.defaultCheckButtonStyle()
+        self.localizationForButtons()
+        self.localizationForLabels()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
