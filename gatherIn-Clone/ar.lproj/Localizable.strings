@@ -54,9 +54,26 @@
 "Search"            = "البحث";
 "MyReservations"    = "حجوزاتي";
 "Favorites"         = "المفضلة";
-"Conversations"     = "محادثات";
+"Conversations"     = "المحادثات";
 "More"              = "المزيد";
 
 // More view
-"ChangeLanguage" = "تغيير اللغة";
+"NoOfReservations"  = "عدد الحجوزات";
+"WalletCredit"      = "رصيد المحفظة";
+"RatingFromHosters" = "التقييم (من المضيفين)";
+"HostersBlockedYou" = "المضيفين الذين حذر";
+
+
+"Profile"           = "الملف الشخصي";
+"WalletLog"         = "سجل المحفظة";
+"RateUs"            = "قيمنا";
+"HostWith"          = "استضف معنا";
+"PaymentOptions"    = "طرق الدفع";
+"ContactUs"         = "تواصل معنا";
+"InviteAFriend"     = "ادعو صديق";
+"RepeatedQuestions" = "الأسئلة المكررة";
+"TermsOfUse"        = "شروط الإستخدام";
+"PrivacyPolicy"     = "سياسة الخصوصية";
+"ChangeLanguage"    = "تغيير اللغة";
+"Logout"            = "تسجيل الخروج";
 

@@ -28,7 +28,8 @@ class ReservationsViewController: UIViewController {
     }
     // MARK:- Methods
     private func navigationControllerStyle() {
-        title = "Reservations"
+        title = NSLocalizedString("MyReservations", comment: "")
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }

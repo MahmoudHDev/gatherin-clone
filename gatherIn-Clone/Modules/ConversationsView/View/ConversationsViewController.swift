@@ -29,7 +29,7 @@ class ConversationsViewController: UIViewController {
     
     
     private func navigationControllerStyle() {
-        title = "Conversations"
+        title = NSLocalizedString("Conversations", comment: "")
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 

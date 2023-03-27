@@ -57,5 +57,21 @@
 "More"              = "More";
 
 // MoreView
-"ChangeLanguage" = "Change Language";
+"NoOfReservations"  = "Number of reservations";
+"WalletCredit"      = "Wallet Credit";
+"RatingFromHosters" = "Rating (from hosters)";
+"HostersBlockedYou" = "Hosters Blocked you";
+
+"Profile"           = "Profile";
+"WalletLog"         = "Wallet log";
+"RateUs"            = "Rate us";
+"HostWith"          = "Host with us";
+"PaymentOptions"    = "Payment options";
+"ContactUs"         = "Contact us";
+"InviteAFriend"     = "Invite a friend";
+"RepeatedQuestions" = "Repeated questions";
+"TermsOfUse"        = "Terms of use";
+"PrivacyPolicy"     = "Privacy Policy";
+"ChangeLanguage"    = "Change language";
+"Logout"            = "Logout";
 

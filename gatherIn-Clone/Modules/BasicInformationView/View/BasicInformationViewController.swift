@@ -28,8 +28,8 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
     @IBOutlet weak var lastParagraph        : UILabel!
     
     // MARK:- Properties
-    let defaults   = UserDefaults.standard
-    var isRegisterd: Bool = false
+    let defaults            = UserDefaults.standard
+    var isRegisterd: Bool   = false
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -101,23 +101,23 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
 
         let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
-        let searchTab = UITabBarItem(title: "Search", image: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)))
+        let searchTab = UITabBarItem(title: NSLocalizedString("Search", comment: "Search"), image: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)))
         searchVC.tabBarItem = searchTab
         
         let myBookingsVC = UIStoryboard(name: "MyBookings", bundle: nil).instantiateViewController(withIdentifier: "MyBookingsViewController") as! ReservationsViewController
-        let myBookingsTab = UITabBarItem(title: "My Bookings", image: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)))
+        let myBookingsTab = UITabBarItem(title: NSLocalizedString("MyReservations", comment: ""), image: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.reservations!.resize(to: CGSize(width: 25, height: 25)))
         myBookingsVC.tabBarItem = myBookingsTab
         
         let favoiriteVC = UIStoryboard(name: "Favorite", bundle: nil).instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
-        let favoiriteTab = UITabBarItem(title: "favorite", image: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)))
+        let favoiriteTab = UITabBarItem(title: NSLocalizedString("Favorites", comment: ""), image: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.favorite!.resize(to: CGSize(width: 25, height: 25)))
         favoiriteVC.tabBarItem = favoiriteTab
 
         let conversationVC = UIStoryboard(name: "Conversations", bundle: nil).instantiateViewController(withIdentifier: "ConversationsViewController") as! ConversationsViewController
-        let conversationTab = UITabBarItem(title: "Conversations", image: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)))
+        let conversationTab = UITabBarItem(title: NSLocalizedString("Conversations", comment: ""), image: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.conversation!.resize(to: CGSize(width: 25, height: 25)))
         conversationVC.tabBarItem = conversationTab
 
         let moreVC = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
-        let moreTab = UITabBarItem(title: "More", image: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)))
+        let moreTab = UITabBarItem(title: NSLocalizedString("More", comment: ""), image: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.more!.resize(to: CGSize(width: 25, height: 25)))
         moreVC.tabBarItem = moreTab
         
         arrViewControllers.append(UINavigationController(rootViewController: searchVC))

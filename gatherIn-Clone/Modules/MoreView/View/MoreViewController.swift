@@ -28,34 +28,34 @@ class MoreViewController: UIViewController {
     // MARK: Methods
     
     private func navigationControllerStyle() {
-        self.title = "More"
+        self.title = NSLocalizedString("More", comment: "")
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let backButton = UIBarButtonItem()
-        backButton.title = "Back"
+        backButton.title = NSLocalizedString("Back", comment: "")
         backButton.style = .plain
         backButton.tintColor = .white
         self.navigationItem.backBarButtonItem = backButton
     }
     
     private func loadData() {
-        self.optionListModel.append(OptionListModel(img: SymbolsList.profile!, title: "Profile"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.walletLog!, title: "Wallet Log"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.rateUs!, title: "Rate Us"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.hostWithUs!, title: "Host with us"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.paymentOptions!, title: "Payment Options"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.contactUs!, title: "Contact us"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.inviteAFriend!, title: "Invite a friend"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.repeatedInquiry!, title: "Repeated questions"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.termsOfUse!, title: "Terms of use"))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.privacyPolicy!, title: "Privacy Policy"))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.profile!, title: NSLocalizedString("Profile", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.walletLog!, title: NSLocalizedString("WalletLog", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.rateUs!, title: NSLocalizedString("RateUs", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.hostWithUs!, title: NSLocalizedString("HostWith", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.paymentOptions!, title: NSLocalizedString("PaymentOptions", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.contactUs!, title: NSLocalizedString("ContactUs", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.inviteAFriend!, title: NSLocalizedString("InviteAFriend", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.repeatedInquiry!, title: NSLocalizedString("RepeatedQuestions", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.termsOfUse!, title: NSLocalizedString("TermsOfUse", comment: "")))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.privacyPolicy!, title: NSLocalizedString("PrivacyPolicy", comment: "")))
         self.optionListModel.append(OptionListModel(img: SymbolsList.language!, title: NSLocalizedString("ChangeLanguage", comment: "")))
-        self.optionListModel.append(OptionListModel(img: SymbolsList.logout!, title: "logout"))
+        self.optionListModel.append(OptionListModel(img: SymbolsList.logout!, title: NSLocalizedString("Logout", comment: "")))
 
-        self.basicTitle.append(BasicTitle(title: "Number of reservations", subTitle: "0"))
-        self.basicTitle.append(BasicTitle(title: "Wallet Credit", subTitle: "0 L.E"))
-        self.basicTitle.append(BasicTitle(title: "Rating (from hosters)", subTitle: "10/0.0 (0)"))
-        self.basicTitle.append(BasicTitle(title: "Hosters Blocked you", subTitle: "0"))
+        self.basicTitle.append(BasicTitle(title: NSLocalizedString("NoOfReservations", comment: ""), subTitle: "0"))
+        self.basicTitle.append(BasicTitle(title: NSLocalizedString("WalletCredit", comment: ""), subTitle: "0 L.E"))
+        self.basicTitle.append(BasicTitle(title: NSLocalizedString("RatingFromHosters", comment: ""), subTitle: "10/0.0 (0)"))
+        self.basicTitle.append(BasicTitle(title: NSLocalizedString("HostersBlockedYou", comment: ""), subTitle: "0"))
 
     }
     
