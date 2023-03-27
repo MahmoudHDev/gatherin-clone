@@ -33,13 +33,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0or-Cn-mZP">
                                                 <rect key="frame" x="62" y="0.0" width="322" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning Mahmoud!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHQ-eG-K4t">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning Mahmoud!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHQ-eG-K4t">
                                                         <rect key="frame" x="0.0" y="0.0" width="322" height="25"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wish you a happy day" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-l7-a0E">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wish you a happy day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-l7-a0E">
                                                         <rect key="frame" x="0.0" y="25" width="322" height="25"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,14 +92,14 @@
                                                                         <rect key="frame" x="0.0" y="30" width="394" height="50"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XjG-KJ-mnW">
-                                                                                <rect key="frame" x="10" y="6.3333333333333321" width="25" height="37.666666666666671"/>
+                                                                                <rect key="frame" x="20" y="6.3333333333333321" width="25" height="37.666666666666671"/>
                                                                                 <color key="tintColor" name="purpleButton"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="25" id="ALW-a5-I9F"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DWPods" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-rg-Pap" customClass="DWAnimatedLabel" customModule="DWAnimatedLabel">
-                                                                                <rect key="frame" x="45" y="10" width="339" height="30"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DWPods" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-rg-Pap" customClass="DWAnimatedLabel" customModule="DWAnimatedLabel">
+                                                                                <rect key="frame" x="55" y="10" width="329" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                                                                         <constraints>
                                                                             <constraint firstItem="P0R-rg-Pap" firstAttribute="leading" secondItem="XjG-KJ-mnW" secondAttribute="trailing" constant="10" id="9xe-WG-pAv"/>
                                                                             <constraint firstAttribute="height" constant="50" id="CnT-Pp-vGI"/>
-                                                                            <constraint firstItem="XjG-KJ-mnW" firstAttribute="leading" secondItem="Upk-R0-rbV" secondAttribute="leading" constant="10" id="OuQ-jo-pgb"/>
+                                                                            <constraint firstItem="XjG-KJ-mnW" firstAttribute="leading" secondItem="Upk-R0-rbV" secondAttribute="leading" constant="20" id="OuQ-jo-pgb"/>
                                                                             <constraint firstAttribute="bottom" secondItem="P0R-rg-Pap" secondAttribute="bottom" constant="10" id="PwL-kk-JYa"/>
                                                                             <constraint firstAttribute="trailing" secondItem="P0R-rg-Pap" secondAttribute="trailing" constant="10" id="Z1E-dc-hTz"/>
                                                                             <constraint firstAttribute="bottom" secondItem="XjG-KJ-mnW" secondAttribute="bottom" constant="5" id="ckp-YT-RaK"/>
@@ -324,7 +324,7 @@
                                                                     <action selector="registerButton:" destination="K1t-yM-Ops" eventType="touchUpInside" id="QAO-bk-GlB"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*مرخصة من وزارة السياحة" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-8j-EOO">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*مرخصة من وزارة السياحة" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-8j-EOO">
                                                                 <rect key="frame" x="0.0" y="152" width="197" height="18"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

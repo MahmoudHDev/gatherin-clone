@@ -10,7 +10,8 @@ import DWAnimatedLabel
 import FSPagerView
 
 @available (iOS 13, *)
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, LocalizationProtocol {
+    
     // MARK:- Outlets
     @IBOutlet weak var cotainerScrollView       : UIScrollView!
     @IBOutlet weak var TopTabBarView            : TopBar!
@@ -68,7 +69,10 @@ class SearchViewController: UIViewController {
         self.addDataToSecondFSPagerView()
         self.addDataToThirdCollectionView()
         self.addDataToFourthCollectionView()
+        self.localizationForLabels()
+        self.localizationForButtons()
         self.buttonStyles()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +91,27 @@ class SearchViewController: UIViewController {
         leftOfferButton.layer.maskedCorners  = [.layerMaxXMinYCorner]
         rightOfferButton.layer.maskedCorners = [.layerMinXMinYCorner]
     }
+    
+    func localizationForButtons() {
+        registerHostingBtn.setTitle(NSLocalizedString("Register", comment: ""), for: .normal)
+    }
+    
+    func localizationForLabels() {
+        greetingLbl.text = NSLocalizedString("GoodMorning", comment: "")
+        quotesLbl  .text = NSLocalizedString("WishUHappyDay", comment: "")
+        whereToLbl.text = NSLocalizedString("WhereTo", comment: "")
+        yourSecondHomeLbl     .text = NSLocalizedString("UrSecondHome", comment: "")
+        secondHomeParagraphLbl.text = NSLocalizedString("WhereverYourDest", comment: "")
+        
+        moreThan35Lbl         .text = NSLocalizedString("MoreThanHouses", comment: "")
+        moreThan35ParagraphLbl.text = NSLocalizedString("MoreThanHouseDesc", comment: "")
+        hostingLbl         .text    = NSLocalizedString("HostWithUs", comment: "")
+        hostingParagraphLbl.text    = NSLocalizedString("HostWithUsDesc", comment: "")
+        licenseLBl.text = NSLocalizedString("Licence", comment: "")
+        advantagesLbl.text = NSLocalizedString("OurAdv", comment: "")
+    }
+
+    
     private func searchBoxStyle() {
         textInLbl.text = "Search"
         var timer = Timer()

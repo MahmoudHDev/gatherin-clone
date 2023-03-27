@@ -34,36 +34,36 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     }
     
     func addDataToThirdCollectionView() {
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Cairo")!         , title: "Cairo"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Pyramids-2")!    , title: "Giza"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Alexandria")!    , title: "Alexandria"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Portsaid")!      , title: "Port Said"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Sharm")!         , title: "Sharm El-Sheikh"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Hurghada")!      , title: "Hurghada"))
-        self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!          , title: "Siwa Oasis"))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Cairo")!         , title: NSLocalizedString("Cairo", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Pyramids-2")!    , title: NSLocalizedString("Giza", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Alexandria")!    , title: NSLocalizedString("Alexandria", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Portsaid")!      , title: NSLocalizedString("PortSaid", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Sharm")!         , title: NSLocalizedString("Sharm", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Hurghada")!      , title: NSLocalizedString("Hurghada", comment: "")))
+        self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!          , title: NSLocalizedString("Siwa Oasis", comment: "")))
         
     }
     
     
     func addDataToFourthCollectionView() {
         advantagesModel.append(AdvantagesModel(
-                                title: "Verified",
+                                title: NSLocalizedString("Verified", comment: ""),
                                 icon: UIImage(systemName: "pencil")!,
-                                description: "A platform which verified from the ministry of tourism."))
+                                description: NSLocalizedString("VerifiedDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
-                                title: "Credibility", icon: UIImage(systemName: "star")!,
-                                description: "Verified reviews from real customers."))
+                                title: NSLocalizedString("Credibility", comment: ""), icon: UIImage(systemName: "star")!,
+                                description: NSLocalizedString("CredibilityDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
-                                title: "Instant Booking",
+                                title: NSLocalizedString("InstantBooking", comment: ""),
                                 icon: UIImage(systemName: "doc")!,
-                                description: "Instant and guaranteed booking."))
+                                description: NSLocalizedString("InstantBookingDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
-                                title: "Options",
+                                title: NSLocalizedString("Options", comment: ""),
                                 icon: UIImage(systemName: "magnifyingglass")!,
-                                description: "the largest variety of prices and spaces."))
+                                description:NSLocalizedString("OptionsDesc", comment: "")))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,7 +82,7 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         case thirdCollectionView:
             if indexPath.row == placesModel.count {
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
-                cell.title.text = "More"
+                cell.title.text = NSLocalizedString("More", comment: "")
                 cell.imageContainerView.isHidden = true
                 
                 return cell
@@ -172,10 +172,10 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
     
     func addDataToSecondFSPagerView() {
-        self.urbansModel.append(PlacesModel(image: UIImage(named: "House")!, title: "House"))
-        self.urbansModel.append(PlacesModel(image: UIImage(named: "Villa")!, title: "Villa"))
-        self.urbansModel.append(PlacesModel(image: UIImage(named: "Chaleet")!, title: "Chaleet"))
-        self.urbansModel.append(PlacesModel(image: UIImage(named: "Villages")!, title: "Villages"))
+        self.urbansModel.append(PlacesModel(image: UIImage(named: "House")!, title: NSLocalizedString("House", comment: "")))
+        self.urbansModel.append(PlacesModel(image: UIImage(named: "Villa")!, title: NSLocalizedString("Villa", comment: "")))
+        self.urbansModel.append(PlacesModel(image: UIImage(named: "Chaleet")!, title: NSLocalizedString("Chaleet", comment: "")))
+        self.urbansModel.append(PlacesModel(image: UIImage(named: "Villages")!, title: NSLocalizedString("Village", comment: "")))
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {

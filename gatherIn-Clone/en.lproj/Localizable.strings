@@ -56,6 +56,46 @@
 "Conversations"     = "Conversations";
 "More"              = "More";
 
+// Search View
+
+"GoodMorning"       = "Good morning";
+"WishUHappyDay"     = "We Wish You a happy day!";
+"WhereTo"           = "Where to?";
+"UrSecondHome"      = "Your Second Home";
+"WhereverYourDest"  = "Wherever your destination was, you'll find your home in each city in Egypt";
+
+"House"             = "House";
+"Villa"             = "Villa";
+"Chaleet"           = "Chaleet";
+"Village"           = "Village";
+
+"MoreThanHouses"    = "More than 35 thousands holiday houses in 180 city in Egypt";
+"MoreThanHouseDesc" = "Discovery the beauty and the magical places in Egypt with organic experince of residence, with the Egyptian generous that we're proud of.";
+
+"Cairo"                 = "Cairo";
+"Giza"                  = "Giza";
+"Alexandria"            = "Alexandria";
+"PortSaid"              = "PortSaid";
+"Sharm"                 = "Sharm";
+"Hurghada"              = "Hurghada";
+"Siwa Oasis"            = "Siwa Oasis";
+
+
+"HostWithUs"            = "Host with us";
+"HostWithUsDesc"        = "Apartment, Chaleet, Villa, Village, Caravans, Yacht, Camp or room. You can register your property and get an extra income";
+"Licence"               = "Licence by the ministry of tourism";
+    
+"OurAdv"                = "Our Advantages";
+"Credibility"           = "Credibility";
+"CredibilityDesc"       = "Verified reviews from real customers";
+"Verified"              = "Verified";
+"VerifiedDesc"          = "A platform which verified from the ministry of the tourism";
+"Options"               = "Options";
+"OptionsDesc"           = "The largest varitey of prices and spaces";
+"InstantBooking"        = "InstantBooking";
+"InstantBookingDesc"    = "Instant and guranteed booking";
+
+
 // MoreView
 "NoOfReservations"  = "Number of reservations";
 "WalletCredit"      = "Wallet Credit";
