@@ -97,18 +97,17 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     }
     
     func localizationForLabels() {
-        greetingLbl.text = NSLocalizedString("GoodMorning", comment: "")
-        quotesLbl  .text = NSLocalizedString("WishUHappyDay", comment: "")
-        whereToLbl.text = NSLocalizedString("WhereTo", comment: "")
-        yourSecondHomeLbl     .text = NSLocalizedString("UrSecondHome", comment: "")
+        greetingLbl.text            = NSLocalizedString("GoodMorning", comment: "")
+        quotesLbl  .text            = NSLocalizedString("WishUHappyDay", comment: "")
+        whereToLbl.text             = NSLocalizedString("WhereTo", comment: "")
+        yourSecondHomeLbl.text      = NSLocalizedString("UrSecondHome", comment: "")
         secondHomeParagraphLbl.text = NSLocalizedString("WhereverYourDest", comment: "")
-        
-        moreThan35Lbl         .text = NSLocalizedString("MoreThanHouses", comment: "")
+        moreThan35Lbl.text          = NSLocalizedString("MoreThanHouses", comment: "")
         moreThan35ParagraphLbl.text = NSLocalizedString("MoreThanHouseDesc", comment: "")
-        hostingLbl         .text    = NSLocalizedString("HostWithUs", comment: "")
+        hostingLbl.text             = NSLocalizedString("HostWithUs", comment: "")
         hostingParagraphLbl.text    = NSLocalizedString("HostWithUsDesc", comment: "")
-        licenseLBl.text = NSLocalizedString("Licence", comment: "")
-        advantagesLbl.text = NSLocalizedString("OurAdv", comment: "")
+        licenseLBl.text             = NSLocalizedString("Licence", comment: "")
+        advantagesLbl.text          = NSLocalizedString("OurAdv", comment: "")
     }
 
     

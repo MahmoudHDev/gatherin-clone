@@ -95,6 +95,13 @@
 "InstantBooking"        = "InstantBooking";
 "InstantBookingDesc"    = "Instant and guranteed booking";
 
+// Reservations View
+"NoReservations" = "No recent reservations";
+
+
+// Conversations View
+"NoRecentChats" = "No Recent Chats";
+
 
 // MoreView
 "NoOfReservations"  = "Number of reservations";

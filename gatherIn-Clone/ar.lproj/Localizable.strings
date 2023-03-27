@@ -93,6 +93,13 @@
 "InstantBooking"        = "حجز فوري";
 "InstantBookingDesc"    = "حجز فوري ومضمون";
 
+// Reservations View
+"NoReservations"        = "لا يوجد حجوزات حديثة";
+
+
+
+// Conversations View
+"NoRecentChats"         = "لا يوجد محادثات حديثة ";
 
 
 

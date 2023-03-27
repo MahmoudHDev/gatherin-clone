@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ConversationsViewController: UIViewController {
+class ConversationsViewController: UIViewController,LocalizationProtocol {
+    
     // MARK:- Properties
     var arrRecentChat = [RecentMessagesModel]()
     
@@ -25,6 +26,8 @@ class ConversationsViewController: UIViewController {
         super.viewWillAppear(true)
         self.setupTableView()
         self.setupTextField()
+        self.localizationForButtons()
+        self.localizationForLabels()
     }
     
     
@@ -34,4 +37,14 @@ class ConversationsViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
     }
+    
+    func localizationForButtons() {
+        
+    }
+    
+    func localizationForLabels() {
+        noChatLbl.text = NSLocalizedString("NoRecentChats", comment: "")
+        searchTextField.placeholder = NSLocalizedString("Search", comment: "")
+    }
+
 }

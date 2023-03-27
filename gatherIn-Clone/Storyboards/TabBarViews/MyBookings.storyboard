@@ -49,6 +49,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wkP-aH-meM"/>
                     <connections>
+                        <outlet property="NoDataImg" destination="ibW-rH-5gI" id="do5-FI-Fhf"/>
+                        <outlet property="noDataLbl" destination="S0h-s5-vqa" id="B9d-9R-TD4"/>
                         <outlet property="reservationsTableView" destination="JRG-jx-2RJ" id="6Vh-GD-SUd"/>
                     </connections>
                 </viewController>
