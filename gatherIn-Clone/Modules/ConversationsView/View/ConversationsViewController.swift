@@ -7,16 +7,16 @@
 
 import UIKit
 
-class ConversationsViewController: UIViewController,LocalizationProtocol {
+class ConversationsViewController: UIViewController, LocalizationProtocol {
     
     // MARK:- Properties
     var arrRecentChat = [RecentMessagesModel]()
     
     // MARK:- Outlets
-    @IBOutlet weak var noChatImg: UIImageView!
-    @IBOutlet weak var noChatLbl: UILabel!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var conversationTableView: UITableView!
+    @IBOutlet weak var noChatImg             : UIImageView!
+    @IBOutlet weak var noChatLbl             : UILabel!
+    @IBOutlet weak var searchTextField       : UITextField!
+    @IBOutlet weak var conversationTableView : UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,10 @@ class ConversationsViewController: UIViewController,LocalizationProtocol {
         self.localizationForLabels()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.hideKeyboardWhenTappedAround()
+    }
     
     private func navigationControllerStyle() {
         title = NSLocalizedString("Conversations", comment: "")

@@ -97,7 +97,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     }
     
     func localizationForLabels() {
-        greetingLbl.text            = NSLocalizedString("GoodMorning", comment: "")
+        greetingLbl.text            = NSLocalizedString("GoodMorning", comment: "") + " Username"
         quotesLbl  .text            = NSLocalizedString("WishUHappyDay", comment: "")
         whereToLbl.text             = NSLocalizedString("WhereTo", comment: "")
         yourSecondHomeLbl.text      = NSLocalizedString("UrSecondHome", comment: "")
