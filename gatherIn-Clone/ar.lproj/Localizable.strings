@@ -20,26 +20,26 @@
 "Welcome"               = "مرحباً";
 "PleaseEnterPhoneNo"    = "لتسجيل الدخول او لتسجيل مستخدم جديد يرجى ادخال رقم الهاتف";
 "PhoneNumber"           = "رقم الهاتف";
-"Sendcode"              = "ارسل الكود";
-"MessageYouShortly"     = "سوف نرسل اليك رسالة قصيرة تحتوي على كود التفعيل بالرقم المدخل.";
+"Sendcode"              = "ارسل رقم التفعيل";
+"MessageYouShortly"     = "سوف نرسل اليك رسالة قصيرة تحتوي على رقم التفعيل بالرقم المدخل.";
 "phoneNumberIsCorrect"  = "الرجاء التأكد ان رقم الهاتف صحيح.";
 
 // CountryCode View
-"CountryCode"           = "كود الدولة";
+"CountryCode"           = "رمز الدولة";
 
 // Navigation bar Buttons
 "Done"                  = "تم";
 "Back"                  = "عودة";
 
 // Code verification
-"PleaseCodeContinue"                    = "الرجاء ادخال الكود للمتابعة";
-"SentYouVerificationCodeBySMS"          = "لقد ارسلنا لك كود التفعيل برسالة نصية الى الرقم :";
-"VerificationCode"                      = "كود التفعيل";
+"PleaseCodeContinue"                    = "الرجاء ادخال رقم التفعيل للمتابعة";
+"SentYouVerificationCodeBySMS"          = "لقد ارسلنا لك رقم التفعيل برسالة نصية الى الرقم :";
+"VerificationCode"                      = "رقم التفعيل";
 "Check"                                 = "تحقق";
 "DidnNotRecieveTheCode"                 = "لم تصلك الرسالة بعد?";
-"ResendVerificationCode"                = "ارسل لي الكود التفعيل مجدداً";
-"IncorrectCode"                         = "الكود خاطئ";
-"AlertMakeSureCodeIsCorrect"            = "تأكد بإنك ادخلت الكود صحيحاً";
+"ResendVerificationCode"                = "ارسل لي رقم التفعيل مجدداً";
+"IncorrectCode"                         = "رقم التفعيل خاطئ";
+"AlertMakeSureCodeIsCorrect"            = "تأكد بإنك ادخلت الرقم صحيحاً";
 
 // BasicInformation View
 "EnterYourName&Email"                   = "ادخل الاسم والبريد الالكتروني";

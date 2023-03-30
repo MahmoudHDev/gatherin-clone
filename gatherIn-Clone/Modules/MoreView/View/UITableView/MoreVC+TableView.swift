@@ -105,8 +105,10 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             self.navigationController?.pushViewController(privacyPolicyView, animated: true)
             print("")
         case 10:
+            // Show an alert to inform user that the application will restart
+            
+            
             let currentLanauage = Locale.current.languageCode
-            print("Current Language\(currentLanauage ?? "")")
             let newLanguage = currentLanauage == "en" ? "ar" : "en"
             UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
             exit(0)

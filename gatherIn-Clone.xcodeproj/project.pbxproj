@@ -94,6 +94,7 @@
 		BCE4BC73297F0B8F007119C8 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */; };
 		BCE4BC76297F0CAA007119C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE4BC75297F0CAA007119C8 /* Main.storyboard */; };
 		BCEC029729BB634400995740 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC029629BB634400995740 /* TopBar.swift */; };
+		BCF6C24F29D5751A00C59677 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6C24E29D5751A00C59677 /* StringExtensions.swift */; };
 		BCF8E1EB297D625F00368E18 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8E1EA297D625F00368E18 /* OnboardingViewController.swift */; };
 		BCF8E1EE297D628300368E18 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF8E1ED297D628300368E18 /* Onboarding.storyboard */; };
 		BCF9CD3A298279FA00AD4091 /* IndividualsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9CD39298279FA00AD4091 /* IndividualsViewController.swift */; };
@@ -193,6 +194,7 @@
 		BCE4BC72297F0B8E007119C8 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BCE4BC75297F0CAA007119C8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BCEC029629BB634400995740 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		BCF6C24E29D5751A00C59677 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		BCF8E1EA297D625F00368E18 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BCF8E1ED297D628300368E18 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BCF9CD39298279FA00AD4091 /* IndividualsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				BCC161F72991020100AEB32C /* ColorExtension.swift */,
 				BC51212A29C1DBF3009C60CC /* UIView+Extensions.swift */,
 				BC6BEE1B29C45FC000242369 /* UIImage+Extensions.swift */,
+				BCF6C24E29D5751A00C59677 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -924,6 +927,7 @@
 				BCB2B726297ABA080083975C /* Frameworks */,
 				BCB2B727297ABA080083975C /* Resources */,
 				A9400CF149FC7BBB71D97420 /* [CP] Embed Pods Frameworks */,
+				AB319E8FD4FEA72F01EF9F78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1048,6 +1052,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB319E8FD4FEA72F01EF9F78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1067,6 +1088,7 @@
 				BC1713092982973D00300C29 /* ShadowEffect.swift in Sources */,
 				BCA09AFD299B5E3500819D95 /* Helpers.swift in Sources */,
 				BC893A2D29C7399C0068F09B /* ChangeLanguageViewController.swift in Sources */,
+				BCF6C24F29D5751A00C59677 /* StringExtensions.swift in Sources */,
 				BCC7FB3729C35E12006A1367 /* FirstMoreTableViewCell.swift in Sources */,
 				BCC161F52990F78A00AEB32C /* CodeVerifcation+TextField.swift in Sources */,
 				BC4231F429A6912A0080A36D /* SecondFSPagerViewCell.swift in Sources */,

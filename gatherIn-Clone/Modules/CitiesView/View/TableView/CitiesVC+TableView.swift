@@ -17,7 +17,16 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func loadData() {
-        self.arrCities = ["Cairo", "Alexandria", "Port Said", "Sharm El-Shiekh", "Hurghada", "Luxor", "Aswan", "Matrouh", "Dakahlia", "Sharqia"]
+        self.arrCities = [NSLocalizedString("Cairo"     , comment: "Governorate"),
+                          NSLocalizedString("Alexandria", comment: "Governorate"),
+                          NSLocalizedString("Port Said" , comment: "Governorate"),
+                          NSLocalizedString("Sharm El-Shiekh", comment: "Governorate"),
+                          NSLocalizedString("Hurghada"  , comment: "Governorate"),
+                          NSLocalizedString("Luxor"     , comment: "Governorate"),
+                          NSLocalizedString("Aswan"     , comment: "Governorate"),
+                          NSLocalizedString("Matrouh"   , comment: "Governorate"),
+                          NSLocalizedString("Dakahlia"  , comment: "Governorate"),
+                          NSLocalizedString("Sharqia"   , comment: "Governorate")]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

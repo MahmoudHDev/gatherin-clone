@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import FirebaseCore
+import GoogleMaps
 
 @available(iOS 13.0, *)
 @main
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let defaults = UserDefaults.standard
+    let googleApiKey = "AIzaSyBkvctfs9kwSFTRfuU9F57T7hCeT76N284"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let onBoardinghasSeenByUser = defaults.bool(forKey: "HasSeenOnBoarding")
-        
+        GMSServices.provideAPIKey(googleApiKey)
+
         if onBoardinghasSeenByUser {
             let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! MainViewController
             window?.rootViewController = UINavigationController(rootViewController: mainVC)

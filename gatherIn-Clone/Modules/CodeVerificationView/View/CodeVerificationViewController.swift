@@ -114,7 +114,7 @@ class CodeVerificationViewController: UIViewController, InterfaceStyleProtocol, 
         ]
         
         let atributedString = NSMutableAttributedString(
-            string: "resend the verficiation code again.",
+            string: NSLocalizedString("ResendVerificationCode", comment: "After"),
             attributes: labelTitle)
         resendCodeBtn.setAttributedTitle(atributedString, for: .normal)
     }
