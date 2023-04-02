@@ -94,7 +94,8 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
         print("View the Privacy and The Policy")
     }
     
-    func presentHomeVC() -> UIViewController {
+    static func presentHomeVC() -> UIViewController {
+        // TabBarViewController
         let homeVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
         var arrViewControllers = [UIViewController]()
@@ -128,7 +129,6 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
 
         homeVC.viewControllers = arrViewControllers
         homeVC.modalPresentationStyle = .fullScreen
-        self.dismiss(animated: true)
         return homeVC
     }
     // MARK:- Actions
@@ -136,9 +136,12 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
         // If textfields {}
         self.isRegisterd = true
         defaults.set(isRegisterd, forKey: "isRegistered")
+        
         // send the data to the firebase
+        
         print("Register and view the new viewController")
-        self.present(presentHomeVC(), animated: true)
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.present(BasicInformationViewController.presentHomeVC(), animated: true)
     }
     
 

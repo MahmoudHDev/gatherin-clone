@@ -23,7 +23,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     @IBOutlet weak var textInLbl                : DWAnimatedLabel!
     @IBOutlet weak var yourSecondHomeLbl        : UILabel!
     @IBOutlet weak var secondHomeParagraphLbl   : UILabel!
-    @IBOutlet weak var secondPagerView          : FSPagerView!
+    @IBOutlet weak var secondCollectionView     : UICollectionView!
     @IBOutlet weak var moreThan35Lbl            : UILabel!
     @IBOutlet weak var moreThan35ParagraphLbl   : UILabel!
     @IBOutlet weak var thirdCollectionView      : UICollectionView!
@@ -64,9 +64,8 @@ class SearchViewController: UIViewController, LocalizationProtocol {
         
         self.setupCollectionView()
         self.setupFirstFSpagerView()
-        self.setupSecondFSPagerView()
         self.addDataToFirstFSPagerView()
-        self.addDataToSecondFSPagerView()
+        self.addDataToSecondCollectionView()
         self.addDataToThirdCollectionView()
         self.addDataToFourthCollectionView()
         self.localizationForLabels()
@@ -77,7 +76,6 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        secondPagerView.scrollToItem(at: 1, animated: true)
         
     }
     // MARK:- Methods
@@ -112,7 +110,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
 
     
     private func searchBoxStyle() {
-        textInLbl.text = "Search"
+        textInLbl.text = NSLocalizedString("Search", comment: "")
         var timer = Timer()
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(repeatingText), userInfo: nil, repeats: true)
@@ -124,10 +122,11 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     }
     
     @objc private func repeatingText() {
-
-        let arrStrings = ["Check out the most beautiful places in Egypt",
-                          "Get the best price in the City",
-                          "Explore places and apartments in Egypt"]
+        
+        let arrStrings = [NSLocalizedString("CHECKOUT-PLACES", comment: ""),
+                          NSLocalizedString("GET-BEST-PRICE", comment: ""),
+                          NSLocalizedString("EXPLORE-EGYPT", comment: "")]
+        
         if counter != arrStrings.count {
             textInLbl.text = arrStrings[counter]
             textInLbl.animationType = .fade

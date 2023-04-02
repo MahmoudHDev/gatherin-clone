@@ -23,9 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if onBoardinghasSeenByUser {
             let isLoginSuccessfully = defaults.bool(forKey: "isLogin")
             if isLoginSuccessfully {
-                let vc = UIStoryboard(name: "BasicInformation", bundle: nil).instantiateViewController(withIdentifier: "BasicInformationViewController") as! BasicInformationViewController
-
-                window.rootViewController = vc.presentHomeVC()
+                window.rootViewController = BasicInformationViewController.presentHomeVC()
             }else{
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainView") as! MainViewController
                 window.rootViewController = UINavigationController(rootViewController: mainVC)

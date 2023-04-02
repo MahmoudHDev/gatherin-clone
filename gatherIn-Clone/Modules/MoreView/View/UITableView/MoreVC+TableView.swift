@@ -4,20 +4,20 @@
 //
 //  Created by Mahmoud Hashim on 3/16/23.
 //
- 
+
 import UIKit
 
 @available(iOS 13, *)
 
 extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
-
+    
     func setupTableView() {
-        self.moreTableView.dataSource   = self
-        self.moreTableView.delegate     = self
+        self.moreTableView.dataSource       = self
+        self.moreTableView.delegate         = self
         self.moreTableView.register(FirstMoreTableViewCell.nib(), forCellReuseIdentifier: FirstMoreTableViewCell.id)
         self.moreTableView.register(SecondMoreTableViewCell.nib(), forCellReuseIdentifier: SecondMoreTableViewCell.id)
-        self.moreTableView.separatorStyle = .none
-        self.moreTableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        self.moreTableView.separatorStyle   = .none
+        self.moreTableView.separatorInset   = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -105,18 +105,15 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             self.navigationController?.pushViewController(privacyPolicyView, animated: true)
             print("")
         case 10:
-            // Show an alert to inform user that the application will restart
-            
-            
             let currentLanauage = Locale.current.languageCode
             let newLanguage = currentLanauage == "en" ? "ar" : "en"
             UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
             exit(0)
-//            let changeLanguageView = UIStoryboard(name: "ChangeLanguage", bundle: nil).instantiateViewController(withIdentifier: "ChangeLanguage") as! ChangeLanguageViewController
-//            self.navigationController?.pushViewController(changeLanguageView, animated: true)
         default:
             print("Logout")
         }
         moreTableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
 }

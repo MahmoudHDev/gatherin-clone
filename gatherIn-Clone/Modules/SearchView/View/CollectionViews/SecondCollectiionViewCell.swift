@@ -10,14 +10,14 @@ import FSPagerView
 
 @available (iOS 13, *)
 
-class SecondFSPagerViewCell: FSPagerViewCell {
+class SecondCollectiionViewCell: UICollectionViewCell {
     //MARK:- Outlets
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var title: UILabel!
     
     //MARK:- Properties
 
-    static let id = "SecondFSPagerViewCell"
+    static let id = "SecondCollectiionViewCell"
     //MARK:- Nib
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,7 @@ class SecondFSPagerViewCell: FSPagerViewCell {
     
     //MARK:- Methods
     static func nib() -> UINib {
-        return UINib(nibName: "SecondFSPagerViewCell", bundle: nil)
+        return UINib(nibName: "SecondCollectiionViewCell", bundle: nil)
     }
 
     func setupCell(image: UIImage, title: String) {

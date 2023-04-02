@@ -12,6 +12,5 @@ target 'gatherIn-Clone' do
   pod 'NVActivityIndicatorView'
   pod 'DWAnimatedLabel'
   pod 'FSPagerView'
-  pod 'GoogleMaps', '6.0.1'
   
 end
