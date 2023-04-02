@@ -290,58 +290,93 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-oe-oV5">
-                                                        <rect key="frame" x="10" y="20" width="207" height="180"/>
+                                                        <rect key="frame" x="10" y="20" width="230" height="180"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-ru-MTY">
-                                                                <rect key="frame" x="0.0" y="10" width="207" height="99.666666666666671"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-ru-MTY">
+                                                                <rect key="frame" x="10" y="10" width="210" height="112"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="استضيف معنا" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6I-10-mfU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="Chd-YU-4O8"/>
+                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شقة، شاليه، فيلا، مزرعة، كرفان، يخت، مخيم أو غرفه. تقدر تسجله مجاناً وتحصل على دخل اضافي" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCu-qh-3qN">
-                                                                        <rect key="frame" x="0.0" y="34.000000000000007" width="207" height="65.666666666666686"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شقة، شاليه، فيلا، مزرعة، كرفان، يخت، مخيم أو غرفه. تقدر تسجله مجاناً وتحصل على دخل اضافي" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gCu-qh-3qN">
+                                                                        <rect key="frame" x="0.0" y="25" width="210" height="87"/>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*مرخصة من وزارة السياحة" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-8j-EOO">
+                                                                <rect key="frame" x="10" y="162" width="220" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="tcD-Ej-Tp7"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk3-r0-Wpc">
-                                                                <rect key="frame" x="63.666666666666671" y="112" width="80.000000000000014" height="30"/>
+                                                                <rect key="frame" x="60" y="127" width="110" height="30"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="7hd-pG-j9E"/>
-                                                                    <constraint firstAttribute="width" constant="80" id="UOK-7V-yX1"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="aLL-pv-iDz"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                                 <state key="normal" title="سجل">
                                                                     <color key="titleColor" name="purpleButton"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="registerButton:" destination="K1t-yM-Ops" eventType="touchUpInside" id="QAO-bk-GlB"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*مرخصة من وزارة السياحة" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-8j-EOO">
-                                                                <rect key="frame" x="0.0" y="152" width="197" height="18"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" name="purpleButton"/>
                                                         <constraints>
-                                                            <constraint firstItem="9yh-8j-EOO" firstAttribute="leading" secondItem="xyU-oe-oV5" secondAttribute="leading" id="2zu-ux-1AB"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ezc-ru-MTY" secondAttribute="trailing" id="5j2-RJ-P7N"/>
-                                                            <constraint firstItem="ezc-ru-MTY" firstAttribute="top" secondItem="xyU-oe-oV5" secondAttribute="top" constant="10" id="BRm-aQ-sMm"/>
-                                                            <constraint firstItem="9yh-8j-EOO" firstAttribute="top" secondItem="vk3-r0-Wpc" secondAttribute="bottom" constant="10" id="VDX-j7-iNX"/>
-                                                            <constraint firstItem="vk3-r0-Wpc" firstAttribute="centerX" secondItem="xyU-oe-oV5" secondAttribute="centerX" id="g9W-GJ-93k"/>
-                                                            <constraint firstItem="ezc-ru-MTY" firstAttribute="leading" secondItem="xyU-oe-oV5" secondAttribute="leading" id="gIL-b9-YHR"/>
-                                                            <constraint firstAttribute="bottom" secondItem="9yh-8j-EOO" secondAttribute="bottom" constant="10" id="mmB-dA-HUC"/>
-                                                            <constraint firstAttribute="trailing" secondItem="9yh-8j-EOO" secondAttribute="trailing" constant="10" id="vDh-7P-bAJ"/>
+                                                            <constraint firstItem="vk3-r0-Wpc" firstAttribute="leading" secondItem="xyU-oe-oV5" secondAttribute="leading" constant="60" id="1I6-7m-cnP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ezc-ru-MTY" secondAttribute="trailing" constant="10" id="DOy-rG-z3n"/>
+                                                            <constraint firstItem="ezc-ru-MTY" firstAttribute="top" secondItem="xyU-oe-oV5" secondAttribute="top" constant="10" id="EXY-Mv-S50"/>
+                                                            <constraint firstItem="ezc-ru-MTY" firstAttribute="leading" secondItem="xyU-oe-oV5" secondAttribute="leading" constant="10" id="Ovn-ag-IYz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9yh-8j-EOO" secondAttribute="trailing" id="TRy-MM-Fii"/>
+                                                            <constraint firstItem="9yh-8j-EOO" firstAttribute="top" secondItem="vk3-r0-Wpc" secondAttribute="bottom" constant="5" id="VLv-rc-CzT"/>
+                                                            <constraint firstAttribute="width" constant="230" id="Yx5-hz-t2S"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vk3-r0-Wpc" secondAttribute="trailing" constant="60" id="fVL-eA-R8e"/>
+                                                            <constraint firstAttribute="bottom" secondItem="9yh-8j-EOO" secondAttribute="bottom" constant="8" id="say-EF-Dk9"/>
+                                                            <constraint firstItem="9yh-8j-EOO" firstAttribute="leading" secondItem="xyU-oe-oV5" secondAttribute="leading" constant="10" id="tKM-uZ-z74"/>
+                                                            <constraint firstItem="vk3-r0-Wpc" firstAttribute="top" secondItem="ezc-ru-MTY" secondAttribute="bottom" constant="5" id="wm2-8S-wT8"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="purpleButton"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="0.0" height="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -353,7 +388,6 @@
                                                     <constraint firstAttribute="height" constant="200" id="hhs-CE-Lne"/>
                                                     <constraint firstItem="n3v-bD-TnX" firstAttribute="leading" secondItem="4z1-8P-33T" secondAttribute="leading" id="jPE-Ep-sJ0"/>
                                                     <constraint firstAttribute="trailing" secondItem="n3v-bD-TnX" secondAttribute="trailing" id="maf-eA-P1e"/>
-                                                    <constraint firstItem="xyU-oe-oV5" firstAttribute="width" secondItem="4z1-8P-33T" secondAttribute="width" multiplier="0.5" id="nYb-cd-m2J"/>
                                                     <constraint firstItem="xyU-oe-oV5" firstAttribute="leading" secondItem="4z1-8P-33T" secondAttribute="leading" constant="10" id="npa-9v-jBR"/>
                                                     <constraint firstItem="n3v-bD-TnX" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="top" id="rmQ-Ov-Pgc"/>
                                                 </constraints>
