@@ -127,3 +127,6 @@
 "ChangeLanguage"    = "Change language";
 "Logout"            = "Logout";
 
+// ChooseCityViewController
+
+"CHOOSE-CITY" = "Choose City";

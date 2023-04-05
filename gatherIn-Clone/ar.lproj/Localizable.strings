@@ -36,7 +36,7 @@
 "SentYouVerificationCodeBySMS"          = "لقد ارسلنا لك رقم التفعيل برسالة نصية الى الرقم :";
 "VerificationCode"                      = "رقم التفعيل";
 "Check"                                 = "تحقق";
-"DidnNotRecieveTheCode"                 = "لم تصلك الرسالة بعد?";
+"DidnNotRecieveTheCode"                 = "لم تصلك الرسالة بعد؟";
 "ResendVerificationCode"                = "ارسل لي رقم التفعيل مجدداً";
 "IncorrectCode"                         = "رقم التفعيل خاطئ";
 "AlertMakeSureCodeIsCorrect"            = "تأكد بإنك ادخلت الرقم صحيحاً";
@@ -122,9 +122,12 @@
 "PaymentOptions"    = "طرق الدفع";
 "ContactUs"         = "تواصل معنا";
 "InviteAFriend"     = "ادعو صديق";
-"RepeatedQuestions" = "الأسئلة المكررة";
+"RepeatedQuestions" = "الأسئلة المتكررة";
 "TermsOfUse"        = "شروط الإستخدام";
 "PrivacyPolicy"     = "سياسة الخصوصية";
 "ChangeLanguage"    = "تغيير اللغة";
 "Logout"            = "تسجيل الخروج";
 
+// ChooseCityViewController
+
+"CHOOSE-CITY" = "اختر المدينة";

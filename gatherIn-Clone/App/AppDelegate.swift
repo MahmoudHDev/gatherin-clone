@@ -28,17 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(googleApiKey)
 
         if onBoardinghasSeenByUser {
-            let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! MainViewController
-            window?.rootViewController = UINavigationController(rootViewController: mainVC)
+            let isLoginSuccessfully = defaults.bool(forKey: "isLogin")
+            if isLoginSuccessfully {
+                window?.rootViewController = BasicInformationViewController.presentHomeVC()
+            }else{
+                let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! MainViewController
+                window?.rootViewController = UINavigationController(rootViewController: mainVC)
+            }
 
-            print("ShowMain")
         }else{
             let initVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "onboarding") as! OnboardingViewController
             window?.rootViewController = initVC
 
             print("Show Onboarding")
         }
-        
+
         self.window?.makeKeyAndVisible()
         
         return true

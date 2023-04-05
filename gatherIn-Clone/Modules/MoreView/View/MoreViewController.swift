@@ -13,7 +13,7 @@ class MoreViewController: UIViewController {
     // MARK: Properties
     var optionListModel = [OptionListModel]()
     var basicTitle      = [BasicTitle]()
-    
+    let systemVersion   = UIDevice.current.systemVersion
     // MARK: Outlets
     @IBOutlet weak var moreTableView: UITableView!
     

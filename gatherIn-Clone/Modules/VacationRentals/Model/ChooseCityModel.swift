@@ -7,8 +7,6 @@
 import Foundation
 import UIKit.UIImage
 
-struct VacationRentalsModel {
-    let img: UIImage
+struct ChooseCityModel {
     let title: String
-    let isSelected: Bool = false
 }

@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="90" width="414" height="1410"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-kc-QSf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1815.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1825.3333333333333"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34H-1w-6s6">
                                                 <rect key="frame" x="0.0" y="150" width="414" height="110"/>
@@ -338,7 +338,7 @@
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="18"/>
+                                                                        <real key="value" value="8"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
@@ -393,7 +393,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CdR-R0-uwK">
-                                                <rect key="frame" x="20" y="1380.3333333333333" width="374" height="425"/>
+                                                <rect key="frame" x="20" y="1390.3333333333333" width="374" height="425"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="425" id="NZs-iS-5B4"/>
@@ -407,7 +407,7 @@
                                                 <cells/>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Advantages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-vy-yWg">
-                                                <rect key="frame" x="10" y="1330" width="394" height="30.333333333333258"/>
+                                                <rect key="frame" x="10" y="1340" width="394" height="30.333333333333258"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -439,7 +439,7 @@
                                             <constraint firstItem="CdR-R0-uwK" firstAttribute="top" secondItem="ar4-vy-yWg" secondAttribute="bottom" constant="20" id="2uR-dg-jYI"/>
                                             <constraint firstItem="buP-KP-WDR" firstAttribute="top" secondItem="34H-1w-6s6" secondAttribute="bottom" constant="20" id="3AN-pZ-PAV"/>
                                             <constraint firstItem="JWl-1c-Q1w" firstAttribute="top" secondItem="5rf-kc-QSf" secondAttribute="top" id="4nY-Xv-0qB"/>
-                                            <constraint firstItem="ar4-vy-yWg" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="bottom" constant="10" id="5q6-j3-Pzw"/>
+                                            <constraint firstItem="ar4-vy-yWg" firstAttribute="top" secondItem="4z1-8P-33T" secondAttribute="bottom" constant="20" id="5q6-j3-Pzw"/>
                                             <constraint firstItem="qZ7-bi-3gN" firstAttribute="top" secondItem="Hfm-Mk-FSO" secondAttribute="bottom" constant="10" id="6T0-DH-7eV"/>
                                             <constraint firstAttribute="trailing" secondItem="qZ7-bi-3gN" secondAttribute="trailing" constant="10" id="737-Wa-LVG"/>
                                             <constraint firstAttribute="trailing" secondItem="4z1-8P-33T" secondAttribute="trailing" id="EHY-N7-oks"/>

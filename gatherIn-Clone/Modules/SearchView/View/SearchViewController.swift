@@ -143,7 +143,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     }
     
     @objc private func searchTextHasBeenTapped(){
-        let storyBoard = UIStoryboard(name: "Cities", bundle: nil).instantiateViewController(identifier: "CitiesViewController") as! CitiesViewController
+        let storyBoard = UIStoryboard(name: "Cities", bundle: nil).instantiateViewController(withIdentifier: "CitiesViewController") as! CitiesViewController
         let navController = UINavigationController(rootViewController: storyBoard)
         navController.navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 30)
         self.present(navController, animated: true, completion: nil)

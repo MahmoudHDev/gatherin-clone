@@ -11,6 +11,7 @@ class ChooseCityTableViewCell: UITableViewCell {
     
     static let id = "ChooseCityTableViewCell"
     
+    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
@@ -27,9 +28,5 @@ class ChooseCityTableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "ChooseCityTableViewCell", bundle: nil)
     }
-    
-    func setupCell(img: UIImage, title: String) {
-        self.img.image  = img
-        self.title.text = title
-    }
+
 }

@@ -46,22 +46,3 @@ class CitiesViewController: UIViewController {
     }
 }
 
-// CitiesVC + UITextField
-extension CitiesViewController: UITextFieldDelegate  {
-
-    
-    func setupTextFieldDelegate() {
-        searchTextField.delegate = self
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let searchText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-        filteredData = arrCities.filter{
-            $0.range(of: searchText, options: [.caseInsensitive,.diacriticInsensitive] ) != nil
-        }
-        citiesTableView.reloadData()
-        return true
-    }
-    
-    
-}

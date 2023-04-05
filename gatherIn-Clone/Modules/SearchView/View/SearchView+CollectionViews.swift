@@ -69,21 +69,21 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     func addDataToFourthCollectionView() {
         advantagesModel.append(AdvantagesModel(
                                 title: NSLocalizedString("Verified", comment: ""),
-                                icon: UIImage(systemName: "pencil")!,
+                                icon: UIImage(named: "Verified")!.resize(to: CGSize(width: 20, height: 20)),
                                 description: NSLocalizedString("VerifiedDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
-                                title: NSLocalizedString("Credibility", comment: ""), icon: UIImage(systemName: "star")!,
+                                title: NSLocalizedString("Credibility", comment: ""), icon: UIImage(named: "Credibility")!.resize(to: CGSize(width: 20, height: 20)),
                                 description: NSLocalizedString("CredibilityDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
                                 title: NSLocalizedString("InstantBooking", comment: ""),
-                                icon: UIImage(systemName: "doc")!,
+                                icon: UIImage(named: "InstantBooking")!.resize(to: CGSize(width: 20, height: 20)),
                                 description: NSLocalizedString("InstantBookingDesc", comment: "")))
         
         advantagesModel.append(AdvantagesModel(
                                 title: NSLocalizedString("Options", comment: ""),
-                                icon: UIImage(systemName: "magnifyingglass")!,
+                                icon: UIImage(named: "Options")!.resize(to: CGSize(width: 20, height: 20)),
                                 description:NSLocalizedString("OptionsDesc", comment: "")))
     }
     
@@ -158,8 +158,12 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         switch collectionView {
         
         case secondCollectionView:
-            print("IndexPath: \(indexPath.row)")
-
+            let ChooseCityVC = UIStoryboard(name: "ChooseCity", bundle: nil).instantiateViewController(identifier: "ChooseCityViewController") as! ChooseCityViewController
+            ChooseCityVC.selectedUrban = urbansModel[indexPath.row]
+            let navigationContr = UINavigationController(rootViewController: ChooseCityVC)
+            navigationContr.navigationBar.prefersLargeTitles = true
+            self.present(navigationContr, animated: true, completion: nil)
+            
             self.secondCollectionView.deselectItem(at: indexPath, animated: true)
         
         case thirdCollectionView:

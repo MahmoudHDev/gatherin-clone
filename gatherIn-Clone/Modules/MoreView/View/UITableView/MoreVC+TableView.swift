@@ -45,9 +45,16 @@ extension MoreViewController: UITableViewDataSource, UITableViewDelegate, UIScro
             let cell = moreTableView.dequeueReusableCell(withIdentifier: SecondMoreTableViewCell.id, for: indexPath) as! SecondMoreTableViewCell
             cell.isUserInteractionEnabled = true
             let title = optionListModel[indexPath.row].title
-            let img = optionListModel[indexPath.row].img.resize(to: CGSize(width: 20, height: 20)).withTintColor(UIColor(named: "purpleButton")!)
+            let img = optionListModel[indexPath.row].img.resize(to: CGSize(width: 20, height: 20))
             
-            cell.setupCell(img: img, title: title, chevronImg: UIImage(systemName: "chevron.right")!)
+            cell.setupCell(img: img, title: title, chevronImg: UIImage(named: "chevron.right")!)
+            
+            if systemVersion == "12.5.7" {
+                print("No Color Tint")
+            }else{
+                cell.img.tintColor = UIColor.blue
+            }
+            
             return cell
         }
     }

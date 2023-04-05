@@ -11,10 +11,16 @@ class PaymentMethodsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Payment Options"
+        self.title = NSLocalizedString("PaymentOptions", comment: "")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+
+    }
 
     /*
     // MARK: - Navigation

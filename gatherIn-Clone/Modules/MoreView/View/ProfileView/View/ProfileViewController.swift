@@ -11,8 +11,14 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
-        // Do any additional setup after loading the view.
+        title = NSLocalizedString("Profile", comment: "")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        print("View Dismissed")
     }
     
 

@@ -101,7 +101,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
         var arrViewControllers = [UIViewController]()
 
         let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        
+                
         let searchTab = UITabBarItem(title: NSLocalizedString("Search", comment: "Search"), image: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)), selectedImage: HomeIcons.search!.resize(to: CGSize(width: 25, height: 25)))
         searchVC.tabBarItem = searchTab
         
