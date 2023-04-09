@@ -933,7 +933,6 @@
 				BCB2B726297ABA080083975C /* Frameworks */,
 				BCB2B727297ABA080083975C /* Resources */,
 				A9400CF149FC7BBB71D97420 /* [CP] Embed Pods Frameworks */,
-				AB319E8FD4FEA72F01EF9F78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1056,23 +1055,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB319E8FD4FEA72F01EF9F78 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gatherIn-Clone/Pods-gatherIn-Clone-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

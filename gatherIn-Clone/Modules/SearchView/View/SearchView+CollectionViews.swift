@@ -192,7 +192,7 @@ extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         firstPagerView.delegate    = self
         firstPagerView.transformer = FSPagerViewTransformer(type: .overlap)
         firstPagerView.itemSize    = CGSize(width: 250, height: 120)
-        firstPagerView.automaticSlidingInterval = 5.0
+//        firstPagerView.automaticSlidingInterval = 5.0
     }
     
 

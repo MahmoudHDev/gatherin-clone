@@ -59,7 +59,7 @@ class BasicInformationViewController: UIViewController, InterfaceStyleProtocol, 
     }
     
     func localizationForButtons() {
-        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitle(NSLocalizedString("Register", comment: ""), for: .normal)
     }
     
     func localizationForLabels() {

@@ -88,7 +88,7 @@
 
 "HostWithUs"            = "Host with us";
 "HostWithUsDesc"        = "Apartment, Chaleet, Villa, Village, Caravans, Yacht, Camp or room. You can register your property and get an extra income";
-"Licence"               = "Licence by the ministry of tourism";
+"Licence"               = "* Licence by the ministry of tourism";
     
 "OurAdv"                = "Our Advantages";
 "Credibility"           = "Credibility";
@@ -97,7 +97,7 @@
 "VerifiedDesc"          = "A platform which verified from the ministry of the tourism";
 "Options"               = "Options";
 "OptionsDesc"           = "The largest varitey of prices and spaces";
-"InstantBooking"        = "InstantBooking";
+"InstantBooking"        = "Instant Booking";
 "InstantBookingDesc"    = "Instant and guranteed booking";
 
 // Reservations View

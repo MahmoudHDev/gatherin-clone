@@ -8,7 +8,12 @@
 import UIKit
 import IQKeyboardManagerSwift
 import FirebaseCore
-import GoogleMaps
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+
+
+
 
 @available(iOS 13.0, *)
 @main
@@ -16,16 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let defaults = UserDefaults.standard
-    let googleApiKey = "AIzaSyBkvctfs9kwSFTRfuU9F57T7hCeT76N284"
-
+    let appCenterKey = "b098f934-fc14-460f-8c33-f59cc66c20ea"
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppCenter.start(withAppSecret: appCenterKey, services: [
+            Analytics.self,
+            Crashes.self
+        ])
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let onBoardinghasSeenByUser = defaults.bool(forKey: "HasSeenOnBoarding")
-        GMSServices.provideAPIKey(googleApiKey)
 
         if onBoardinghasSeenByUser {
             let isLoginSuccessfully = defaults.bool(forKey: "isLogin")

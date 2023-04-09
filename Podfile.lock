@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (5.0.2):
+    - AppCenter/Analytics (= 5.0.2)
+    - AppCenter/Crashes (= 5.0.2)
+  - AppCenter/Analytics (5.0.2):
+    - AppCenter/Core
+  - AppCenter/Core (5.0.2)
+  - AppCenter/Crashes (5.0.2):
+    - AppCenter/Core
   - DWAnimatedLabel (1.2)
   - Firebase/Auth (10.3.0):
     - Firebase/CoreOnly
@@ -17,11 +25,6 @@ PODS:
   - FirebaseCoreInternal (10.3.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
   - FSPagerView (0.8.3)
-  - GoogleMaps (6.0.1):
-    - GoogleMaps/Maps (= 6.0.1)
-  - GoogleMaps/Base (6.0.1)
-  - GoogleMaps/Maps (6.0.1):
-    - GoogleMaps/Base
   - GoogleUtilities/AppDelegateSwizzler (7.10.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -51,23 +54,23 @@ PODS:
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
+  - AppCenter
   - DWAnimatedLabel
   - Firebase/Auth
   - FSPagerView
-  - GoogleMaps (= 6.0.1)
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - PhoneNumberKit
 
 SPEC REPOS:
   trunk:
+    - AppCenter
     - DWAnimatedLabel
     - Firebase
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreInternal
     - FSPagerView
-    - GoogleMaps
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
@@ -76,13 +79,13 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  AppCenter: 355ba776b273d30147c3ac385c558bec60a7d4b1
   DWAnimatedLabel: 2c5742ea5584187592508e5cee0a9b0e8e8c6af0
   Firebase: f92fc551ead69c94168d36c2b26188263860acd9
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
   FirebaseCore: 988754646ab3bd4bdcb740f1bfe26b9f6c0d5f2a
   FirebaseCoreInternal: 29b76f784d607df8b2a1259d73c3f04f1210137b
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
-  GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
@@ -90,6 +93,6 @@ SPEC CHECKSUMS:
   PhoneNumberKit: 441e8b26ec88d598e3591de9061eff18f5dd12e8
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 2352c032ad3e58c96616e83b3e923a4f3bfdf885
+PODFILE CHECKSUM: 56dfddfd408e1e9add0cd8adac9c98f1cf799dbd
 
 COCOAPODS: 1.11.3
