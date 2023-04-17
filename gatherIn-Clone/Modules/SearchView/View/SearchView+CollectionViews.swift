@@ -15,6 +15,13 @@ import FSPagerView
 extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func setupCollectionView() {
+        let firstLayout = UICollectionViewFlowLayout()
+        firstLayout.minimumLineSpacing = 0
+        firstLayout.minimumInteritemSpacing = 0
+        firstLayout.scrollDirection = .horizontal
+        firstCollectionView.collectionViewLayout = firstLayout
+        
+        
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -24,8 +31,11 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         secondLayout.minimumLineSpacing = 10
         secondLayout.minimumInteritemSpacing = 10
         secondLayout.scrollDirection = .horizontal
-
         
+        firstCollectionView.register(FirstCollectionViewCell.nib(), forCellWithReuseIdentifier: FirstCollectionViewCell.id)
+        firstCollectionView.dataSource  = self
+        firstCollectionView.delegate    = self
+        firstCollectionView.showsHorizontalScrollIndicator = false
         
         secondCollectionView.register(SecondCollectiionViewCell.nib(), forCellWithReuseIdentifier: SecondCollectiionViewCell.id)
         secondCollectionView.dataSource = self
@@ -46,14 +56,19 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         
     }
     
-
+    func addDataToFirstCollectionView() {
+        self.firstArr.append(UIImage(named: "Pyramids")!)
+        self.firstArr.append(UIImage(named: "DownTown")!)
+        self.firstArr.append(UIImage(named: "Sharm El-Sheikh")!)
+    }
+    
     func addDataToSecondCollectionView() {
         self.urbansModel.append(PlacesModel(image: UIImage(named: "House")!, title: NSLocalizedString("House", comment: "")))
         self.urbansModel.append(PlacesModel(image: UIImage(named: "Villa")!, title: NSLocalizedString("Villa", comment: "")))
         self.urbansModel.append(PlacesModel(image: UIImage(named: "Chaleet")!, title: NSLocalizedString("Chaleet", comment: "")))
         self.urbansModel.append(PlacesModel(image: UIImage(named: "Villages")!, title: NSLocalizedString("Village", comment: "")))
     }
-
+    
     func addDataToThirdCollectionView() {
         self.placesModel.append(PlacesModel(image: UIImage(named: "Cairo")!         , title: NSLocalizedString("Cairo", comment: "")))
         self.placesModel.append(PlacesModel(image: UIImage(named: "Pyramids-2")!    , title: NSLocalizedString("Giza", comment: "")))
@@ -64,7 +79,6 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
         self.placesModel.append(PlacesModel(image: UIImage(named: "Siwa")!          , title: NSLocalizedString("Siwa Oasis", comment: "")))
         
     }
-    
     
     func addDataToFourthCollectionView() {
         advantagesModel.append(AdvantagesModel(
@@ -89,6 +103,8 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
+        case firstCollectionView:
+            return firstArr.count
         case secondCollectionView:
             return urbansModel.count
         case thirdCollectionView:
@@ -101,14 +117,24 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         switch collectionView {
+        
+        case firstCollectionView:
+            let cell = firstCollectionView.dequeueReusableCell(withReuseIdentifier: FirstCollectionViewCell.id, for: indexPath) as! FirstCollectionViewCell
+            
+            let images = firstArr[indexPath.row]
+            cell.img.image = images
+            
+            return cell
+            
         case secondCollectionView:
             let cell = secondCollectionView.dequeueReusableCell(withReuseIdentifier: SecondCollectiionViewCell.id, for: indexPath) as! SecondCollectiionViewCell
             let images = urbansModel[indexPath.row].image
             let titles = urbansModel[indexPath.row].title
             cell.setupCell(image: images, title: titles)
             return cell
-
+            
         case thirdCollectionView:
             if indexPath.row == placesModel.count {
                 let cell = thirdCollectionView.dequeueReusableCell(withReuseIdentifier: ThirdCollectionViewCell.id, for: indexPath) as! ThirdCollectionViewCell
@@ -143,6 +169,8 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
+        case firstCollectionView:
+            return CGSize(width: firstCollectionView.frame.width, height: firstCollectionView.frame.height)
         case secondCollectionView:
             return CGSize(width: 170 , height: 190)
         case thirdCollectionView:
@@ -153,10 +181,14 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             return CGSize(width: 100, height: 100)
         }
     }
+
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView {
-        
+        case firstCollectionView:
+            print(indexPath.row)
+            
         case secondCollectionView:
             let ChooseCityVC = UIStoryboard(name: "ChooseCity", bundle: nil).instantiateViewController(identifier: "ChooseCityViewController") as! ChooseCityViewController
             ChooseCityVC.selectedUrban = urbansModel[indexPath.row]
@@ -165,75 +197,18 @@ extension SearchViewController: UICollectionViewDataSource ,UICollectionViewDele
             self.present(navigationContr, animated: true, completion: nil)
             
             self.secondCollectionView.deselectItem(at: indexPath, animated: true)
-        
+            
         case thirdCollectionView:
             if indexPath.row == placesModel.count {
                 print("Do someting with 'more button' and show the all cities view ")
             }else{
                 print("do something with selected index: \(indexPath.row)")
             }
+            
         case fourthCollectionView:
             print("indexPath \(indexPath.row)")
         default:
             print("indexPath \(indexPath.row)")
-        }
-    }
-}
-
-// MARK:- FSPagerView   DataSource & Delegate
-
-@available (iOS 13, *)
-
-extension SearchViewController: FSPagerViewDataSource, FSPagerViewDelegate {
-    
-    func setupFirstFSpagerView() {
-        firstPagerView.register(FirstFSPagerViewCell.nib(), forCellWithReuseIdentifier: FirstFSPagerViewCell.id)
-        firstPagerView.dataSource  = self
-        firstPagerView.delegate    = self
-        firstPagerView.transformer = FSPagerViewTransformer(type: .overlap)
-        firstPagerView.itemSize    = CGSize(width: 250, height: 120)
-//        firstPagerView.automaticSlidingInterval = 5.0
-    }
-    
-
-    
-    func addDataToFirstFSPagerView() {
-        self.firstArr.append(UIImage(named: "Pyramids")!)
-        self.firstArr.append(UIImage(named: "DownTown")!)
-        self.firstArr.append(UIImage(named: "Sharm El-Sheikh")!)
-    }
-    
-    
-    func numberOfItems(in pagerView: FSPagerView) -> Int {
-        switch pagerView {
-        case firstPagerView:
-            return firstArr.count
-        default:
-            return 0
-        }
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        
-        switch pagerView {
-        case firstPagerView:
-            let cell = firstPagerView.dequeueReusableCell(withReuseIdentifier: FirstFSPagerViewCell.id, at: index) as! FirstFSPagerViewCell
-            let images = firstArr[index]
-            cell.imageView?.image = images
-            return cell
-        default:
-            return FSPagerViewCell()
-        }
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-        switch pagerView {
-        case firstPagerView:
-            self.firstPagerView.scrollToItem(at: index, animated: true)
-            print(index)
-            self.firstPagerView.deselectItem(at: index, animated: true)
-        default:
-            print("Nothing")
         }
     }
 }

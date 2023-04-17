@@ -17,7 +17,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     @IBOutlet weak var TopTabBarView            : TopBar!
     @IBOutlet weak var greetingLbl              : UILabel!
     @IBOutlet weak var quotesLbl                : UILabel!
-    @IBOutlet weak var firstPagerView           : FSPagerView!
+    @IBOutlet weak var firstCollectionView      : UICollectionView!
     @IBOutlet weak var whereToLbl               : UILabel!
     @IBOutlet weak var searchContainerView      : UIView!
     @IBOutlet weak var textInLbl                : DWAnimatedLabel!
@@ -36,6 +36,7 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     @IBOutlet weak var advantagesLbl            : UILabel!
     @IBOutlet weak var fourthCollectionView     : UICollectionView!
     
+    
         
     // MARK:- Properties
     var username            = ""       // For TopTabBar Greeting
@@ -49,6 +50,17 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     var timer = Timer()
     var lastContentOffset   : CGFloat = 0
 
+    var reachabilityCheck: Bool  {
+        if Reachability.isConnectedToNetwork() {
+            print("Network is connected")
+            return Reachability.isConnectedToNetwork()
+        }else{
+            print("Network is not connected")
+            return Reachability.isConnectedToNetwork()
+        }
+        
+    }
+    
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +73,8 @@ class SearchViewController: UIViewController, LocalizationProtocol {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.setupCollectionView()
-        self.setupFirstFSpagerView()
-        self.addDataToFirstFSPagerView()
+        self.addDataToFirstCollectionView()
         self.addDataToSecondCollectionView()
         self.addDataToThirdCollectionView()
         self.addDataToFourthCollectionView()
@@ -78,6 +88,8 @@ class SearchViewController: UIViewController, LocalizationProtocol {
         super.viewDidAppear(true)
         
     }
+    
+    
     // MARK:- Methods
     private func buttonStyles() {
         leftOfferButton .layer.masksToBounds = true
@@ -181,10 +193,22 @@ extension SearchViewController: UIScrollViewDelegate {
         } else {
             // scrolling down
             print("Scrolling Down")
-
         }
         lastContentOffset = scrollView.contentOffset.y
 
-
+    }
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if firstCollectionView == scrollView as? UICollectionView,
+           let layout = firstCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            
+            let cellWidth = layout.itemSize.width + layout.minimumLineSpacing
+            let contentOffSet = targetContentOffset.pointee.x
+            let index = round(contentOffSet / cellWidth)
+            let newOffSet = CGPoint(x: index * cellWidth, y: 0 )
+            targetContentOffset.pointee = newOffSet
+            
+        }
     }
 }
