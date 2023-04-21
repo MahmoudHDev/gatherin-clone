@@ -5,6 +5,7 @@ target 'gatherIn-Clone' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  
   # Pods for gatherIn-Clone
 	pod 'IQKeyboardManagerSwift'
 	pod 'PhoneNumberKit'
@@ -12,5 +13,5 @@ target 'gatherIn-Clone' do
   pod 'NVActivityIndicatorView'
   pod 'DWAnimatedLabel'
   pod 'FSPagerView'
-
+  
 end

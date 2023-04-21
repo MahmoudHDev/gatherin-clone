@@ -34,7 +34,7 @@ class ReservationsViewController: UIViewController, LocalizationProtocol {
     // MARK:- Methods
     private func navigationControllerStyle() {
         title = NSLocalizedString("MyReservations", comment: "")
-        
+        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "purpleButton")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
@@ -48,7 +48,6 @@ class ReservationsViewController: UIViewController, LocalizationProtocol {
         
     }
 
-    
     // MARK:- Actions
 
 }
